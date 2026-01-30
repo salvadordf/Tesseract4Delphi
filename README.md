@@ -9,6 +9,10 @@ It's required to install the Microsoft Visual C++ 2017 Redistributable package [
 
 Tesseract4Delphi was developed and tested on Delphi 13, Delphi 7 and Lazarus 4.4/FPC 3.2.2. It Delphi and Lazarus components.
 
+## Installation instructions
+* [Installation in Delphi](https://github.com/salvadordf/Tesseract4Delphi/wiki/Installation-in-Delphi)
+* [Installation in Lazarus FPC](https://github.com/salvadordf/Tesseract4Delphi/wiki/Installation-in-Lazarus-FPC)
+
 ## Links
 * [Developer Forums](https://www.briskbard.com/forum)
 
