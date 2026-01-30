@@ -3,6 +3,10 @@ Tesseract4Delphi is a [Delphi](https://www.embarcadero.com/products/delphi/start
 
 Tesseract4Delphi is based in the [TTesseractOCR4 project](https://github.com/r1me/TTesseractOCR4) made by Damian Woroch.
 
+The _bin32_ and _bin64_ directories contain the Windows binaries of Tesseract 5.5.2. 
+
+It's required to install the Microsoft Visual C++ 2017 Redistributable package [available here](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-supported-redistributable-version).
+
 Tesseract4Delphi was developed and tested on Delphi 13, Delphi 7 and Lazarus 4.4/FPC 3.2.2. It Delphi and Lazarus components.
 
 ## Links
