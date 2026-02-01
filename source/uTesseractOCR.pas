@@ -14,7 +14,8 @@ uses
   {$ELSE}
     Classes, SysUtils, {$IFDEF FPC}dynlibs, LResources,{$ENDIF}
   {$ENDIF}
-  uTesseractTypes, uLeptonicaLoader, uTesseractLoader, uTesseractBaseAPI, uTesseractMonitor;
+  uTesseractTypes, uLeptonicaLoader, uTesseractLoader, uTesseractBaseAPI,
+  uTesseractMonitor, uTesseractConstants;
 
 type
   TOnCancelEvent   = procedure(Sender: TObject; words: integer; var aResult: boolean) of object;

@@ -188,6 +188,22 @@
 <param name="Local" value="uLeptonicaConstants.html#DEFAULT_REDUCTION_FACTOR">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="VCPPREG_PATH1_32BITS">
+<param name="Local" value="uLeptonicaConstants.html#VCPPREG_PATH1_32BITS">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="VCPPREG_PATH1_64BITS">
+<param name="Local" value="uLeptonicaConstants.html#VCPPREG_PATH1_64BITS">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="VCPPREG_PATH2_32BITS">
+<param name="Local" value="uLeptonicaConstants.html#VCPPREG_PATH2_32BITS">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="VCPPREG_PATH2_64BITS">
+<param name="Local" value="uLeptonicaConstants.html#VCPPREG_PATH2_64BITS">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="CRLF">
 <param name="Local" value="uLeptonicaConstants.html#CRLF">
 </object>
@@ -246,6 +262,10 @@
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FShowMessageDlg">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="FCheckRequiredLibs">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FCheckRequiredLibs">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="FStatus">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FStatus">
 </object>
@@ -283,6 +303,10 @@
 <param name="Name" value="ShowMessageDlg">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#ShowMessageDlg">
 </object>
+<li><object type="text/sitemap">
+<param name="Name" value="CheckRequiredLibs">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#CheckRequiredLibs">
+</object>
 </ul>
 <li><object type="text/sitemap">
 <param name="Name" value="Methods">
@@ -292,6 +316,14 @@
 <li><object type="text/sitemap">
 <param name="Name" value="GetInitialized">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#GetInitialized">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="CheckRegistry">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#CheckRegistry">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="IsVisualCppInstalled">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#IsVisualCppInstalled">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="FreeLeptonicaLibrary">
@@ -768,6 +800,10 @@
 <param name="Local" value="uLeptonicaTypes.html#PUTF8Char">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="NativeUInt">
+<param name="Local" value="uLeptonicaTypes.html#NativeUInt">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="l_ok">
 <param name="Local" value="uLeptonicaTypes.html#l_ok">
 </object>
@@ -1042,6 +1078,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="ClearAdaptiveClassifier">
 <param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#ClearAdaptiveClassifier">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="SetImage">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#SetImage">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="SetImage">
@@ -1535,10 +1575,6 @@
 <param name="Name" value="TESSERACT_MICRO_VERSION">
 <param name="Local" value="uTesseractConstants.html#TESSERACT_MICRO_VERSION">
 </object>
-<li><object type="text/sitemap">
-<param name="Name" value="CRLF">
-<param name="Local" value="uTesseractConstants.html#CRLF">
-</object>
 </ul>
 </ul>
 <li><object type="text/sitemap">
@@ -1666,6 +1702,10 @@
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FShowMessageDlg">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="FCheckRequiredLibs">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#FCheckRequiredLibs">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="FStatus">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FStatus">
 </object>
@@ -1711,6 +1751,10 @@
 <param name="Name" value="ShowMessageDlg">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#ShowMessageDlg">
 </object>
+<li><object type="text/sitemap">
+<param name="Name" value="CheckRequiredLibs">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#CheckRequiredLibs">
+</object>
 </ul>
 <li><object type="text/sitemap">
 <param name="Name" value="Methods">
@@ -1720,6 +1764,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="GetInitialized">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#GetInitialized">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="CheckRegistry">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#CheckRegistry">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="IsVisualCppInstalled">
@@ -2688,6 +2736,10 @@
 </object>
 <ul>
 <li><object type="text/sitemap">
+<param name="Name" value="FCheckRequiredLibs">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FCheckRequiredLibs">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="FLastErrorMessage">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FLastErrorMessage">
 </object>
@@ -2721,6 +2773,10 @@
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#@Properties">
 </object>
 <ul>
+<li><object type="text/sitemap">
+<param name="Name" value="CheckRequiredLibs">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#CheckRequiredLibs">
+</object>
 <li><object type="text/sitemap">
 <param name="Name" value="Initialized">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#Initialized">
@@ -2764,8 +2820,16 @@
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#Initialize">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="CheckRegistry">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#CheckRegistry">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="GetInitialized">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#GetInitialized">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="IsVisualCppInstalled">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#IsVisualCppInstalled">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="FreeLeptonicaLibrary">
@@ -3394,6 +3458,10 @@
 <param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#SetImage">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="SetImage">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#SetImage">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="SetRectangle">
 <param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#SetRectangle">
 </object>
@@ -3580,6 +3648,10 @@
 </object>
 <ul>
 <li><object type="text/sitemap">
+<param name="Name" value="FCheckRequiredLibs">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#FCheckRequiredLibs">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="FComponents">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FComponents">
 </object>
@@ -3621,6 +3693,10 @@
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#@Properties">
 </object>
 <ul>
+<li><object type="text/sitemap">
+<param name="Name" value="CheckRequiredLibs">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#CheckRequiredLibs">
+</object>
 <li><object type="text/sitemap">
 <param name="Name" value="Initialized">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#Initialized">
@@ -3674,6 +3750,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="InternalUnregisterMonitor">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#InternalUnregisterMonitor">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="CheckRegistry">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#CheckRegistry">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="GetInitialized">

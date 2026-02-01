@@ -9,7 +9,7 @@ The _assets\tessdata_ directory contains the models for the English language. Fo
 
 It's required to install the Microsoft Visual C++ 2017 Redistributable package [available here](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-supported-redistributable-version).
 
-Tesseract4Delphi was developed and tested on Delphi 13, Delphi 7 and Lazarus 4.4/FPC 3.2.2. It Delphi and Lazarus components.
+Tesseract4Delphi was developed and tested on Delphi 13, Delphi 6 and Lazarus 4.4/FPC 3.2.2. It Delphi and Lazarus components.
 
 ## Installation instructions
 * [Installation in Delphi](https://github.com/salvadordf/Tesseract4Delphi/wiki/Installation-in-Delphi)

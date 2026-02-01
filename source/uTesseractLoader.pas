@@ -29,6 +29,7 @@ type
       FReRaiseExceptions                 : boolean;
       FSetCurrentDir                     : boolean;
       FShowMessageDlg                    : boolean;
+      FCheckRequiredLibs                 : boolean;
       FStatus                            : TTesseractLoaderStatus;
       FLastErrorMessage                  : string;
       FMonitors                          : TList;
@@ -37,6 +38,7 @@ type
       function  GetInitialized : boolean;
 
       {$IFDEF MSWINDOWS}
+      function  CheckRegistry(const aPath, aValue : string) : boolean;
       function  IsVisualCppInstalled : boolean;
       {$ENDIF}
       procedure FreeTesseractLibrary;
@@ -98,6 +100,10 @@ type
       /// Set to true when you need to use a showmessage dialog to show the error messages.
       /// </summary>
       property ShowMessageDlg                    : boolean                                  read FShowMessageDlg                    write FShowMessageDlg;
+      /// <summary>
+      /// Check if other required libraries are installed before initialization.
+      /// </summary>
+      property CheckRequiredLibs                 : boolean                                  read FCheckRequiredLibs                 write FCheckRequiredLibs;
   end;
 
 var
@@ -116,7 +122,7 @@ uses
   {$ELSE}
   Math,
   {$ENDIF}
-  uTesseractConstants, uTesseractMiscFunctions;
+  uTesseractConstants, uTesseractMiscFunctions, uLeptonicaConstants;
 
 procedure DestroyGlobalTesseractLoader;
 begin
@@ -135,8 +141,9 @@ begin
   FShowMessageDlg    := True;
   FStatus            := tlsLoading;
   FLastErrorMessage  := '';
-  FMonitors          := TList.Create;
-  FComponents        := TList.Create;
+  FMonitors          := nil;
+  FComponents        := nil;
+  FCheckRequiredLibs := True;
 
   IsMultiThread := True;
 
@@ -551,14 +558,7 @@ begin
 end;
 
 {$IFDEF MSWINDOWS}
-function TTesseractLoader.IsVisualCppInstalled : boolean;
-const
-  // https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170#install-the-redistributable-packages
-  {$IFDEF TARGET_32BITS}
-  VCPPREG_PATH = 'SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\VC\Runtimes\x86';
-  {$ELSE}
-  VCPPREG_PATH = 'SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\VC\Runtimes\x64';
-  {$ENDIF}
+function TTesseractLoader.CheckRegistry(const aPath, aValue : string) : boolean;
 var
   TempReg : TRegistry;
 begin
@@ -570,20 +570,34 @@ begin
       TempReg         := TRegistry.Create;
       TempReg.RootKey := HKEY_LOCAL_MACHINE;
 
-      if TempReg.KeyExists(VCPPREG_PATH)       and
-         TempReg.OpenKeyReadOnly(VCPPREG_PATH) and
-         TempReg.ValueExists('Installed')      then
+      if TempReg.KeyExists(aPath)       and
+         TempReg.OpenKeyReadOnly(aPath) and
+         TempReg.ValueExists(aValue)    then
         begin
-          Result := (TempReg.ReadInteger('Installed') > 0);
+          Result := (TempReg.ReadInteger(aValue) > 0);
           TempReg.CloseKey;
         end;
     except
       on e : exception do
-        if CustomExceptionHandler('TTesseractLoader.IsVisualCppInstalled', e) then raise;
+        if CustomExceptionHandler('TTesseractLoader.CheckRegistry', e) then raise;
     end;
   finally
     if (TempReg <> nil) then FreeAndNil(TempReg);
   end;
+end;
+
+function TTesseractLoader.IsVisualCppInstalled : boolean;
+begin
+  {$IFDEF TARGET_32BITS}
+  Result := CheckRegistry(VCPPREG_PATH1_32BITS, 'Installed') or
+            CheckRegistry(VCPPREG_PATH2_32BITS, 'Installed');
+  {$ELSE}
+  Result := CheckRegistry(VCPPREG_PATH1_64BITS, 'Installed') or
+            CheckRegistry(VCPPREG_PATH2_64BITS, 'Installed');
+  {$ENDIF}
+
+  if not(Result) then
+    FLastErrorMessage := 'Microsoft Visual C++ 2017 Redistributable is not installed.';
 end;
 {$ENDIF}
 
@@ -601,9 +615,8 @@ begin
     end;
 
   {$IFDEF MSWINDOWS}
-  if not(IsVisualCppInstalled()) then
+  if FCheckRequiredLibs and not(IsVisualCppInstalled()) then
     begin
-      FLastErrorMessage := 'Microsoft Visual C++ 2017 Redistributable is not installed.';
       ShowErrorMessageDlg({$IFDEF FPC}UTF8Encode({$ENDIF}FLastErrorMessage{$IFDEF FPC}){$ENDIF});
       exit;
     end;

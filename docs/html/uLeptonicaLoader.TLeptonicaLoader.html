@@ -47,9 +47,13 @@
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
-<td class="itemcode"><code><strong><a href="uLeptonicaLoader.TLeptonicaLoader.html#FStatus">FStatus</a></strong>: <a href="uLeptonicaTypes.html#TLeptonicaLoaderStatus">TLeptonicaLoaderStatus</a>;</code></td>
+<td class="itemcode"><code><strong><a href="uLeptonicaLoader.TLeptonicaLoader.html#FCheckRequiredLibs">FCheckRequiredLibs</a></strong>: boolean;</code></td>
 </tr>
 <tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="uLeptonicaLoader.TLeptonicaLoader.html#FStatus">FStatus</a></strong>: <a href="uLeptonicaTypes.html#TLeptonicaLoaderStatus">TLeptonicaLoaderStatus</a>;</code></td>
+</tr>
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><code><strong><a href="uLeptonicaLoader.TLeptonicaLoader.html#FLastErrorMessage">FLastErrorMessage</a></strong>: string;</code></td>
 </tr>
@@ -59,6 +63,14 @@
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><code>function <strong><a href="uLeptonicaLoader.TLeptonicaLoader.html#GetInitialized">GetInitialized</a></strong>: boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>function <strong><a href="uLeptonicaLoader.TLeptonicaLoader.html#CheckRegistry-string-string-">CheckRegistry</a></strong>(const aPath, aValue : string) : boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>function <strong><a href="uLeptonicaLoader.TLeptonicaLoader.html#IsVisualCppInstalled">IsVisualCppInstalled</a></strong>: boolean;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
@@ -102,6 +114,10 @@
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>property <strong><a href="uLeptonicaLoader.TLeptonicaLoader.html#ShowMessageDlg">ShowMessageDlg</a></strong>                    : boolean                                  read <a href="uLeptonicaLoader.TLeptonicaLoader.html#FShowMessageDlg">FShowMessageDlg</a>                    write <a href="uLeptonicaLoader.TLeptonicaLoader.html#FShowMessageDlg">FShowMessageDlg</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="uLeptonicaLoader.TLeptonicaLoader.html#CheckRequiredLibs">CheckRequiredLibs</a></strong>                 : boolean                                  read <a href="uLeptonicaLoader.TLeptonicaLoader.html#FCheckRequiredLibs">FCheckRequiredLibs</a>                 write <a href="uLeptonicaLoader.TLeptonicaLoader.html#FCheckRequiredLibs">FCheckRequiredLibs</a>;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -149,6 +165,14 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="FCheckRequiredLibs"></span><code><strong>FCheckRequiredLibs</strong>: boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><span id="FStatus"></span><code><strong>FStatus</strong>: <a href="uLeptonicaTypes.html#TLeptonicaLoaderStatus">TLeptonicaLoaderStatus</a>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -167,6 +191,22 @@
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><span id="GetInitialized"></span><code>function <strong>GetInitialized</strong>: boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="CheckRegistry-string-string-"></span><code>function <strong>CheckRegistry</strong>(const aPath, aValue : string) : boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="IsVisualCppInstalled"></span><code>function <strong>IsVisualCppInstalled</strong>: boolean;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -262,6 +302,16 @@
 <tr><td colspan="2">
 <p>
  Set to true when you need to use a showmessage dialog to show the error messages. </p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CheckRequiredLibs"></span><code>property <strong>CheckRequiredLibs</strong>                 : boolean                                  read <a href="uLeptonicaLoader.TLeptonicaLoader.html#FCheckRequiredLibs">FCheckRequiredLibs</a>                 write <a href="uLeptonicaLoader.TLeptonicaLoader.html#FCheckRequiredLibs">FCheckRequiredLibs</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Check if other required libraries are installed before initialization. </p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>

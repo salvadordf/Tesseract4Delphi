@@ -205,6 +205,13 @@ type
       /// will automatically perform recognition.</para>
       /// </summary>
       function    SetImage(const imagedata: TStream; width, height, bytes_per_pixel, bytes_per_line: Integer) : boolean; overload;
+      /// <summary>
+      /// <para>Provide an image for Tesseract to recognize. Format is as
+      /// TesseractRect above. Copies the image buffer and converts to Pix.</para>
+      /// <para>SetImage clears all recognition results, and sets the rectangle to the
+      /// full image, so it may be followed immediately by a GetUTF8Text, and it
+      /// will automatically perform recognition.</para>
+      /// </summary>
       function    SetImage(const imagedata: TStream) : boolean; overload;
       /// <summary>
       /// <para>Provide an image for Tesseract to recognize. As with SetImage above,

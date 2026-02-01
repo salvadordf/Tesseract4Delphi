@@ -141,7 +141,7 @@ begin
       Result := aString;
       {$ELSE}
         {$IFDEF DELPHI12_UP}
-        Result := UTF8ToString(aString);
+        Result := UTF8ToString(RawByteString(aString));
         {$ELSE}
         Result := UTF8Decode(UTF8String(aString));
         {$ENDIF}

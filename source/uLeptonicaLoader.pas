@@ -10,9 +10,11 @@ interface
 
 uses
   {$IFDEF DELPHI16_UP}
-    {$IFDEF MSWINDOWS}WinApi.Windows,{$ENDIF} System.Classes, System.SysUtils,
+    {$IFDEF MSWINDOWS}WinApi.Windows, System.Win.Registry,{$ENDIF}
+    System.Classes, System.SysUtils,
   {$ELSE}
-    {$IFDEF MSWINDOWS}Windows,{$ENDIF} Classes, SysUtils, {$IFDEF FPC}dynlibs,{$ENDIF}
+    {$IFDEF MSWINDOWS}Windows, Registry,{$ENDIF} Classes, SysUtils,
+    {$IFDEF FPC}dynlibs,{$ENDIF}
   {$ENDIF}
   uLeptonicaLibFunctions, uLeptonicaTypes;
 
@@ -27,11 +29,16 @@ type
       FReRaiseExceptions                 : boolean;
       FSetCurrentDir                     : boolean;
       FShowMessageDlg                    : boolean;
+      FCheckRequiredLibs                 : boolean;
       FStatus                            : TLeptonicaLoaderStatus;
       FLastErrorMessage                  : string;
 
       function  GetInitialized : boolean;
 
+      {$IFDEF MSWINDOWS}
+      function  CheckRegistry(const aPath, aValue : string) : boolean;
+      function  IsVisualCppInstalled : boolean;
+      {$ENDIF}
       procedure FreeLeptonicaLibrary;
 
     public
@@ -63,6 +70,10 @@ type
       /// Set to true when you need to use a showmessage dialog to show the error messages.
       /// </summary>
       property ShowMessageDlg                    : boolean                                  read FShowMessageDlg                    write FShowMessageDlg;
+      /// <summary>
+      /// Check if other required libraries are installed before initialization.
+      /// </summary>
+      property CheckRequiredLibs                 : boolean                                  read FCheckRequiredLibs                 write FCheckRequiredLibs;
   end;
 
 var
@@ -93,6 +104,7 @@ begin
   FReRaiseExceptions := False;
   FSetCurrentDir     := False;
   FShowMessageDlg    := True;
+  FCheckRequiredLibs := True;
   FStatus            := llsLoading;
   FLastErrorMessage  := '';
 end;
@@ -107,6 +119,50 @@ function TLeptonicaLoader.GetInitialized : boolean;
 begin
   Result := (FStatus = llsInitialized);
 end;
+
+{$IFDEF MSWINDOWS}
+function TLeptonicaLoader.CheckRegistry(const aPath, aValue : string) : boolean;
+var
+  TempReg : TRegistry;
+begin
+  Result   := false;
+  TempReg  := nil;
+
+  try
+    try
+      TempReg         := TRegistry.Create;
+      TempReg.RootKey := HKEY_LOCAL_MACHINE;
+
+      if TempReg.KeyExists(aPath)       and
+         TempReg.OpenKeyReadOnly(aPath) and
+         TempReg.ValueExists(aValue)    then
+        begin
+          Result := (TempReg.ReadInteger(aValue) > 0);
+          TempReg.CloseKey;
+        end;
+    except
+      on e : exception do
+        if CustomExceptionHandler('TLeptonicaLoader.CheckRegistry', e) then raise;
+    end;
+  finally
+    if (TempReg <> nil) then FreeAndNil(TempReg);
+  end;
+end;
+
+function TLeptonicaLoader.IsVisualCppInstalled : boolean;
+begin
+  {$IFDEF TARGET_32BITS}
+  Result := CheckRegistry(VCPPREG_PATH1_32BITS, 'Installed') or
+            CheckRegistry(VCPPREG_PATH2_32BITS, 'Installed');
+  {$ELSE}
+  Result := CheckRegistry(VCPPREG_PATH1_64BITS, 'Installed') or
+            CheckRegistry(VCPPREG_PATH2_64BITS, 'Installed');
+  {$ENDIF}
+
+  if not(Result) then
+    FLastErrorMessage := 'Microsoft Visual C++ 2017 Redistributable is not installed.';
+end;
+{$ENDIF}
 
 procedure TLeptonicaLoader.FreeLeptonicaLibrary;
 begin
@@ -137,6 +193,14 @@ begin
       Result := True;
       exit;
     end;
+
+  {$IFDEF MSWINDOWS}
+  if FCheckRequiredLibs and not(IsVisualCppInstalled()) then
+    begin
+      ShowErrorMessageDlg({$IFDEF FPC}UTF8Encode({$ENDIF}FLastErrorMessage{$IFDEF FPC}){$ENDIF});
+      exit;
+    end;
+  {$ENDIF}
 
   if FSetCurrentDir then
     begin

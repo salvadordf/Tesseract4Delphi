@@ -19,9 +19,13 @@ uses
   {$ENDIF}
 
 type
-  {$IFNDEF DELPHI12_UP}
+  {$IF NOT DECLARED(PUTF8Char)}
   PUTF8Char = ^AnsiChar;
-  {$ENDIF}
+  {$IFEND}
+
+  {$IF NOT DECLARED(NativeUInt)}
+  NativeUInt  = Cardinal;
+  {$IFEND}
 
   /// <summary>
   /// return 0 if OK, 1 on error
