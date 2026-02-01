@@ -191,6 +191,10 @@
 </object>
 </ul>
 <li><object type="text/sitemap">
+<param name="Name" value="PBOOL">
+<param name="Local" value="uLeptonicaTypes.html#PBOOL">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="PBox">
 <param name="Local" value="uLeptonicaTypes.html#PBox">
 </object>
@@ -1070,16 +1074,16 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Create">
-<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-l_int32-">
+<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-PBoxa-">
 </object>
 <ul>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaBoxArray - uLeptonicaBoxArray Unit">
-<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-l_int32-">
+<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-PBoxa-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaBoxArray - uLeptonicaBoxArray Unit">
-<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-PBoxa-">
+<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-l_int32-">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -1147,6 +1151,10 @@
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FLibLoaded">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="FMustFreeLibrary">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FMustFreeLibrary">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="FreeLeptonicaLibrary">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FreeLeptonicaLibrary">
 </object>
@@ -1187,6 +1195,10 @@
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#LastErrorMessage">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="MustFreeLibrary">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#MustFreeLibrary">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="ReRaiseExceptions">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#ReRaiseExceptions">
 </object>
@@ -1212,12 +1224,12 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Create">
-<param name="Local" value="uLeptonicaPix.TLeptonicaPix.html#Create-Pointer-NativeUInt-">
+<param name="Local" value="uLeptonicaPix.TLeptonicaPix.html#Create-PPix-">
 </object>
 <ul>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaPix - uLeptonicaPix Unit">
-<param name="Local" value="uLeptonicaPix.TLeptonicaPix.html#Create-Pointer-NativeUInt-">
+<param name="Local" value="uLeptonicaPix.TLeptonicaPix.html#Create-PPix-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaPix - uLeptonicaPix Unit">
@@ -1225,7 +1237,7 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaPix - uLeptonicaPix Unit">
-<param name="Local" value="uLeptonicaPix.TLeptonicaPix.html#Create-PPix-">
+<param name="Local" value="uLeptonicaPix.TLeptonicaPix.html#Create-Pointer-NativeUInt-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaPix - uLeptonicaPix Unit">
@@ -1550,16 +1562,16 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="GetComponentImages">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-boolean-Integer-TLeptonicaPixClassArray-TIntegerArray-TIntegerArray-TRectArray-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-TLeptonicaPixClassArray-TIntegerArray-TRectArray-">
 </object>
 <ul>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-boolean-Integer-TLeptonicaPixClassArray-TIntegerArray-TIntegerArray-TRectArray-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-TLeptonicaPixClassArray-TIntegerArray-TRectArray-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-TLeptonicaPixClassArray-TIntegerArray-TRectArray-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-boolean-Integer-TLeptonicaPixClassArray-TIntegerArray-TIntegerArray-TRectArray-">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -1778,13 +1790,9 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="SetImage">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#SetImage-TStream-Integer-Integer-Integer-Integer-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#SetImage-TLeptonicaPix-">
 </object>
 <ul>
-<li><object type="text/sitemap">
-<param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#SetImage-TStream-Integer-Integer-Integer-Integer-">
-</object>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
 <param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#SetImage-TLeptonicaPix-">
@@ -1792,6 +1800,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
 <param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#SetImage-TStream-">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#SetImage-TStream-Integer-Integer-Integer-Integer-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
@@ -1981,6 +1993,10 @@
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FMonitors">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="FMustFreeLibrary">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#FMustFreeLibrary">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="FreeTesseractLibrary">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FreeTesseractLibrary">
 </object>
@@ -2071,6 +2087,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="LoadResultIteratorFunctions">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#LoadResultIteratorFunctions">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="MustFreeLibrary">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#MustFreeLibrary">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="ReRaiseExceptions">

@@ -1,0 +1,90 @@
+object MainForm: TMainForm
+  Left = 294
+  Height = 475
+  Top = 250
+  Width = 870
+  Caption = 'MainForm'
+  ClientHeight = 475
+  ClientWidth = 870
+  Position = poScreenCenter
+  LCLVersion = '4.4.0.0'
+  OnCreate = FormCreate
+  object ButtonPnl: TPanel
+    Left = 0
+    Height = 40
+    Top = 0
+    Width = 870
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 40
+    ClientWidth = 870
+    TabOrder = 0
+    object Button1: TButton
+      Left = 8
+      Height = 25
+      Top = 5
+      Width = 120
+      Caption = 'Open sample'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 142
+      Height = 25
+      Top = 5
+      Width = 120
+      Caption = 'Open...'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 272
+      Height = 25
+      Top = 5
+      Width = 120
+      Caption = 'Recognize'
+      TabOrder = 2
+      OnClick = Button3Click
+    end
+    object ProgressBar1: TProgressBar
+      Left = 416
+      Height = 20
+      Top = 8
+      Width = 168
+      TabOrder = 3
+    end
+  end
+  object Memo1: TMemo
+    Left = 0
+    Height = 90
+    Top = 385
+    Width = 870
+    Align = alBottom
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 5
+    Top = 380
+    Width = 870
+    Align = alBottom
+    ResizeAnchor = akBottom
+  end
+  object Image1: TImage
+    Left = 0
+    Height = 340
+    Top = 40
+    Width = 870
+    Align = alClient
+  end
+  object TesseractOCR1: TTesseractOCR
+    Left = 403
+    Top = 107
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 258
+    Top = 104
+  end
+end

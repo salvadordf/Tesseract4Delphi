@@ -176,6 +176,7 @@ type
 implementation
 
 uses
+  {$IFDEF LINUXFPC}lcltype,{$ENDIF}
   uTesseractLoader;
 
 constructor TTesseractPageIterator.Create(aHandle: TessPageIterator);

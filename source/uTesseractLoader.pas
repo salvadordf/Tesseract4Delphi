@@ -30,6 +30,7 @@ type
       FSetCurrentDir                     : boolean;
       FShowMessageDlg                    : boolean;
       FCheckRequiredLibs                 : boolean;
+      FMustFreeLibrary                   : boolean;
       FStatus                            : TTesseractLoaderStatus;
       FLastErrorMessage                  : string;
       FMonitors                          : TList;
@@ -104,6 +105,10 @@ type
       /// Check if other required libraries are installed before initialization.
       /// </summary>
       property CheckRequiredLibs                 : boolean                                  read FCheckRequiredLibs                 write FCheckRequiredLibs;
+      /// <summary>
+      /// Set to true to free the library handle when the loader is destroyed.
+      /// </summary>
+      property MustFreeLibrary                   : boolean                                  read FMustFreeLibrary                   write FMustFreeLibrary;
   end;
 
 var
@@ -144,6 +149,7 @@ begin
   FMonitors          := nil;
   FComponents        := nil;
   FCheckRequiredLibs := True;
+  FMustFreeLibrary   := {$IFDEF LINUXFPC}False{$ELSE}True{$ENDIF};
 
   IsMultiThread := True;
 
@@ -182,8 +188,8 @@ procedure TTesseractLoader.FreeTesseractLibrary;
 begin
   try
     try
-      if (FLibHandle <> 0) then
-        FreeLibrary(FLibHandle);
+      if FMustFreeLibrary and (FLibHandle <> 0) then
+         FreeLibrary(FLibHandle);
     except
       on e : exception do
         if CustomExceptionHandler('TTesseractLoader.FreeTesseractLibrary', e) then raise;
@@ -237,7 +243,7 @@ begin
             assigned(TessHOcrRendererCreate) and
             assigned(TessHOcrRendererCreate2) and
             assigned(TessAltoRendererCreate) and
-            assigned(TessPAGERendererCreate) and
+            {$IFNDEF LINUXFPC}assigned(TessPAGERendererCreate) and{$ENDIF}
             assigned(TessTsvRendererCreate) and
             assigned(TessPDFRendererCreate) and
             assigned(TessUnlvRendererCreate) and
@@ -363,7 +369,7 @@ begin
             assigned(TessBaseAPISetSourceResolution) and
             assigned(TessBaseAPISetRectangle) and
             assigned(TessBaseAPIGetThresholdedImage) and
-            assigned(TessBaseAPIGetGradient) and
+            {$IFNDEF LINUXFPC}assigned(TessBaseAPIGetGradient) and{$ENDIF}
             assigned(TessBaseAPIGetRegions) and
             assigned(TessBaseAPIGetTextlines) and
             assigned(TessBaseAPIGetTextlines1) and
@@ -407,7 +413,7 @@ begin
             assigned(TessBaseAPIGetUTF8Text) and
             assigned(TessBaseAPIGetHOCRText) and
             assigned(TessBaseAPIGetAltoText) and
-            assigned(TessBaseAPIGetPAGEText) and
+            {$IFNDEF LINUXFPC}assigned(TessBaseAPIGetPAGEText) and{$ENDIF}
             assigned(TessBaseAPIGetTsvText) and
             assigned(TessBaseAPIGetBoxText) and
             assigned(TessBaseAPIGetLSTMBoxText) and

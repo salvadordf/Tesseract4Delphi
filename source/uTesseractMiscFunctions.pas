@@ -34,6 +34,7 @@ function  StringToTessUTF8(const aString: string): AnsiString;
 implementation
 
 uses
+  {$IFDEF LINUXFPC}lcltype, Forms,{$ENDIF}
   uTesseractLoader, uTesseractLibFunctions;
 
 function GetModulePath : string;
@@ -113,11 +114,7 @@ begin
 
       {$IFDEF LINUX}
         {$IFDEF FPC}
-        if (WidgetSet <> nil) then
-          Application.MessageBox(PChar(aError + #0), PChar('Error' + #0), MB_ICONERROR or MB_OK)
-         else
-          if (DisplayServer = ldsX11) then
-            ShowX11Message(aError);
+        Application.MessageBox(PChar(aError + #0), PChar('Error' + #0), MB_ICONERROR or MB_OK)
         {$ELSE}
         // TO-DO: Find a way to show message boxes in FMXLinux
         {$ENDIF}

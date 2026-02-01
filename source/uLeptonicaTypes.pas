@@ -13,9 +13,9 @@ interface
 
 uses
   {$IFDEF DELPHI16_UP}
-    System.Types;
+    {$IFDEF MSWINDOWS}WinApi.Windows,{$ENDIF} System.Types;
   {$ELSE}
-    Types;
+    {$IFDEF MSWINDOWS}Windows,{$ENDIF} Types {$IFDEF LINUXFPC}, lcltype{$ENDIF};
   {$ENDIF}
 
 type
@@ -25,6 +25,10 @@ type
 
   {$IF NOT DECLARED(NativeUInt)}
   NativeUInt  = Cardinal;
+  {$IFEND}
+
+  {$IF NOT DECLARED(PBOOL)}
+  PBOOL  = ^BOOL;
   {$IFEND}
 
   /// <summary>

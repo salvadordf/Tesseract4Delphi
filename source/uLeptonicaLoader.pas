@@ -29,7 +29,8 @@ type
       FReRaiseExceptions                 : boolean;
       FSetCurrentDir                     : boolean;
       FShowMessageDlg                    : boolean;
-      FCheckRequiredLibs                 : boolean;
+      FCheckRequiredLibs                 : boolean;  
+      FMustFreeLibrary                   : boolean;
       FStatus                            : TLeptonicaLoaderStatus;
       FLastErrorMessage                  : string;
 
@@ -74,6 +75,10 @@ type
       /// Check if other required libraries are installed before initialization.
       /// </summary>
       property CheckRequiredLibs                 : boolean                                  read FCheckRequiredLibs                 write FCheckRequiredLibs;
+      /// <summary>
+      /// Set to true to free the library handle when the loader is destroyed.
+      /// </summary>
+      property MustFreeLibrary                   : boolean                                  read FMustFreeLibrary                   write FMustFreeLibrary;
   end;
 
 var
@@ -104,7 +109,8 @@ begin
   FReRaiseExceptions := False;
   FSetCurrentDir     := False;
   FShowMessageDlg    := True;
-  FCheckRequiredLibs := True;
+  FCheckRequiredLibs := True;      
+  FMustFreeLibrary   := True;
   FStatus            := llsLoading;
   FLastErrorMessage  := '';
 end;
@@ -168,7 +174,7 @@ procedure TLeptonicaLoader.FreeLeptonicaLibrary;
 begin
   try
     try
-      if (FLibHandle <> 0) then
+      if FMustFreeLibrary and (FLibHandle <> 0) then
         FreeLibrary(FLibHandle);
     except
       on e : exception do

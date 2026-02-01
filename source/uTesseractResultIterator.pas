@@ -101,7 +101,8 @@ type
 
 implementation
 
-uses
+uses              
+  {$IFDEF LINUXFPC}lcltype,{$ENDIF}
   uTesseractMiscFunctions;
 
 function TTesseractResultIterator.GetChoiceIterator : TTesseractChoiceIterator;

@@ -3,17 +3,24 @@ Tesseract4Delphi is a [Delphi](https://www.embarcadero.com/products/delphi/start
 
 Tesseract4Delphi is based in the [TTesseractOCR4 project](https://github.com/r1me/TTesseractOCR4) made by Damian Woroch.
 
-The _bin32_ and _bin64_ directories contain the Windows binaries of Tesseract 5.5.2. 
+The _assets\tessdata_ directory contains the models for several languages. For additional languages and trained models visit the [Tessdata repository](https://github.com/tesseract-ocr/tessdata).
 
-The _assets\tessdata_ directory contains the models for the English language. For additional languages and trained models visit the [Tessdata repository](https://github.com/tesseract-ocr/tessdata).
+Tesseract4Delphi was developed and tested on Delphi 13, Delphi 6 and Lazarus 4.4/FPC 3.2.2. 
 
-It's required to install the Microsoft Visual C++ 2017 Redistributable package [available here](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-supported-redistributable-version).
-
-Tesseract4Delphi was developed and tested on Delphi 13, Delphi 6 and Lazarus 4.4/FPC 3.2.2. It Delphi and Lazarus components.
+Tesseract4Delphi demos have been tested in Windows 10, Windows 11, Linux Mint 22.2
 
 ## Installation instructions
 * [Installation in Delphi](https://github.com/salvadordf/Tesseract4Delphi/wiki/Installation-in-Delphi)
 * [Installation in Lazarus FPC](https://github.com/salvadordf/Tesseract4Delphi/wiki/Installation-in-Lazarus-FPC)
+
+## Tesseract and Leptonica binaries
+* **Windows:** The _bin32_ and _bin64_ directories contain the Windows binaries of Tesseract 5.5.2. It's required to install the Microsoft Visual C++ 2017 Redistributable package [available here](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-supported-redistributable-version).
+* **Linux:** Install the libtesseract-dev and libleptonica-dev packages with the following command on Debian, Ubuntu or Linux Mint.
+```
+sudo apt install libtesseract-dev libleptonica-dev
+```
+
+Read the build instructions at the [Tesseract](https://tesseract-ocr.github.io/tessdoc/Compiling.html) and [Leptonica](https://github.com/DanBloomberg/leptonica/wiki) project pages in case you prefer to build the binaries yourself.
 
 ## Links
 * [Developer Forums](https://www.briskbard.com/forum)

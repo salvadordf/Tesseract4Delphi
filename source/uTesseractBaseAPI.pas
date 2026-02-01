@@ -791,7 +791,8 @@ type
 
 implementation
 
-uses
+uses           
+  {$IFDEF LINUXFPC}lcltype,{$ENDIF}
   uTesseractMiscFunctions, uTesseractLoader;
 
 constructor TTesseractBaseAPI.Create(aHandle: TessChoiceIterator);
@@ -1567,7 +1568,7 @@ end;
 
 function TTesseractBaseAPI.GetPAGEText(page_number: Integer) : string;
 begin
-  if Initialized then
+  if Initialized and assigned(TessBaseAPIGetPAGEText) then
     Result := TessUTF8ToString(TessBaseAPIGetPAGEText(FHandle, page_number))
    else
     Result := '';
@@ -1794,7 +1795,7 @@ end;
 
 function TTesseractBaseAPI.GetGradient : single;
 begin
-  if Initialized then
+  if Initialized and assigned(TessBaseAPIGetGradient) then
     Result := TessBaseAPIGetGradient(FHandle)
    else
     Result := 0;
@@ -2215,7 +2216,10 @@ end;
 
 constructor TTesseractPAGERenderer.Create(const outputbase : string);
 begin
-  inherited Create(TessPAGERendererCreate(PUTF8Char(StringToTessUTF8(outputbase))));
+  if assigned(TessPAGERendererCreate) then
+    inherited Create(TessPAGERendererCreate(PUTF8Char(StringToTessUTF8(outputbase))))
+   else
+    inherited Create(nil);
 end;
 
 

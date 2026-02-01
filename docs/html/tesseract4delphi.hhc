@@ -266,6 +266,10 @@
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FCheckRequiredLibs">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="FMustFreeLibrary">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FMustFreeLibrary">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="FStatus">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FStatus">
 </object>
@@ -306,6 +310,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="CheckRequiredLibs">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#CheckRequiredLibs">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="MustFreeLibrary">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#MustFreeLibrary">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -802,6 +810,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="NativeUInt">
 <param name="Local" value="uLeptonicaTypes.html#NativeUInt">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="PBOOL">
+<param name="Local" value="uLeptonicaTypes.html#PBOOL">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="l_ok">
@@ -1706,6 +1718,10 @@
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FCheckRequiredLibs">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="FMustFreeLibrary">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#FMustFreeLibrary">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="FStatus">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FStatus">
 </object>
@@ -1754,6 +1770,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="CheckRequiredLibs">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#CheckRequiredLibs">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="MustFreeLibrary">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#MustFreeLibrary">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -2752,6 +2772,10 @@
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FLibLoaded">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="FMustFreeLibrary">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FMustFreeLibrary">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="FReRaiseExceptions">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#FReRaiseExceptions">
 </object>
@@ -2784,6 +2808,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="LastErrorMessage">
 <param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#LastErrorMessage">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="MustFreeLibrary">
+<param name="Local" value="uLeptonicaLoader.TLeptonicaLoader.html#MustFreeLibrary">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="ReRaiseExceptions">
@@ -3672,6 +3700,10 @@
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FMonitors">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="FMustFreeLibrary">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#FMustFreeLibrary">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="FReRaiseExceptions">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FReRaiseExceptions">
 </object>
@@ -3704,6 +3736,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="LastErrorMessage">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#LastErrorMessage">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="MustFreeLibrary">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#MustFreeLibrary">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="ReRaiseExceptions">
