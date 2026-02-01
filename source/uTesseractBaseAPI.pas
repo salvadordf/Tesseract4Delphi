@@ -205,6 +205,7 @@ type
       /// will automatically perform recognition.</para>
       /// </summary>
       function    SetImage(const imagedata: TStream; width, height, bytes_per_pixel, bytes_per_line: Integer) : boolean; overload;
+      function    SetImage(const imagedata: TStream) : boolean; overload;
       /// <summary>
       /// <para>Provide an image for Tesseract to recognize. As with SetImage above,
       /// Tesseract takes its own copy of the image, so it need not persist until
@@ -918,61 +919,59 @@ begin
 end;
 
 function TTesseractBaseAPI.GetLoadedLanguagesAsVector : TStringList;
-type
-  TUTF8Arr = array[0..0] of PUTF8Char;
-  PUTF8Arr = ^TUTF8Arr;
 var
-  TempArray : PUTF8Arr;
-  i         : Integer;
+  Languages: PPUTF8Char;
+  LangPtr: PUTF8Char;
 begin
   Result := nil;
 
   if Initialized then
+  begin
+    Languages := TessBaseAPIGetLoadedLanguagesAsVector(FHandle);
+    if Assigned(Languages) then
     begin
-      TempArray := PUTF8Arr(TessBaseAPIGetLoadedLanguagesAsVector(FHandle));
+      Result := TStringList.Create;
+      LangPtr := Languages^;
 
-      if assigned(TempArray) then
-        begin
-          Result := TStringList.Create;
+      while Assigned(LangPtr) do
+      begin
+        Result.Add(TessUTF8ToString(LangPtr, False));
+        Inc(Languages);
+        LangPtr := Languages^;
+      end;
 
-          i := 0;
-          repeat
-            Result.Add(TessUTF8ToString(PUTF8Char(TempArray[i])));
-            Inc(i);
-          until not(assigned(Pointer(TempArray[i])));
-        end;
-
-      TessDeleteTextArray(PPUTF8Char(TempArray));
+      Dec(Languages, Result.Count);
+      TessDeleteTextArray(Languages);
     end;
+  end;
 end;
 
 function TTesseractBaseAPI.GetAvailableLanguagesAsVector : TStringList;
-type
-  TUTF8Arr = array[0..0] of PUTF8Char;
-  PUTF8Arr = ^TUTF8Arr;
 var
-  TempArray : PUTF8Arr;
-  i         : Integer;
+  Languages: PPUTF8Char;
+  LangPtr: PUTF8Char;
 begin
   Result := nil;
 
   if Initialized then
+  begin
+    Languages := TessBaseAPIGetAvailableLanguagesAsVector(FHandle);
+    if Assigned(Languages) then
     begin
-      TempArray := PUTF8Arr(TessBaseAPIGetAvailableLanguagesAsVector(FHandle));
+      Result := TStringList.Create;
+      LangPtr := Languages^;
 
-      if assigned(TempArray) then
-        begin
-          Result := TStringList.Create;
+      while Assigned(LangPtr) do
+      begin
+        Result.Add(TessUTF8ToString(LangPtr, False));
+        Inc(Languages);
+        LangPtr := Languages^;
+      end;
 
-          i := 0;
-          repeat
-            Result.Add(TessUTF8ToString(PUTF8Char(TempArray[i])));
-            Inc(i);
-          until not(assigned(Pointer(TempArray[i])));
-        end;
-
-      TessDeleteTextArray(PPUTF8Char(TempArray));
+      Dec(Languages, Result.Count);
+      TessDeleteTextArray(Languages);
     end;
+  end;
 end;
 
 function TTesseractBaseAPI.IsLanguageLoaded(const aLanguage: string): Boolean;
@@ -1072,6 +1071,15 @@ var
   TempImg : TLeptonicaPix;
 begin
   TempImg := TLeptonicaPix.Create(aFilename);
+  Result  := SetImage(TempImg);
+  TempImg.Free;
+end;
+
+function TTesseractBaseAPI.SetImage(const imagedata: TStream): boolean;
+var
+  TempImg : TLeptonicaPix;
+begin
+  TempImg := TLeptonicaPix.Create(imagedata);
   Result  := SetImage(TempImg);
   TempImg.Free;
 end;

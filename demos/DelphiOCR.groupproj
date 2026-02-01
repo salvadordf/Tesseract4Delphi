@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{89EE359A-F67D-4354-AB83-DFD436A4EA66}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Delphi_VCL\SimpleOCR\SimpleOCR.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi_FMX\SimpleOCR_FMX.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SimpleOCR">
+        <MSBuild Projects="Delphi_VCL\SimpleOCR\SimpleOCR.dproj"/>
+    </Target>
+    <Target Name="SimpleOCR:Clean">
+        <MSBuild Projects="Delphi_VCL\SimpleOCR\SimpleOCR.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SimpleOCR:Make">
+        <MSBuild Projects="Delphi_VCL\SimpleOCR\SimpleOCR.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SimpleOCR_FMX">
+        <MSBuild Projects="Delphi_FMX\SimpleOCR_FMX.dproj"/>
+    </Target>
+    <Target Name="SimpleOCR_FMX:Clean">
+        <MSBuild Projects="Delphi_FMX\SimpleOCR_FMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SimpleOCR_FMX:Make">
+        <MSBuild Projects="Delphi_FMX\SimpleOCR_FMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SimpleOCR;SimpleOCR_FMX"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SimpleOCR:Clean;SimpleOCR_FMX:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SimpleOCR:Make;SimpleOCR_FMX:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
