@@ -1,14 +1,14 @@
-program SimpleOCR_FMX;
+program SimpleOCR;
 
 uses
   System.StartUpCopy,
   FMX.Forms,
-  Unit3 in 'Unit3.pas' {Form2};
+  uMainForm in 'uMainForm.pas' {MainForm};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TMainForm, MainForm);
   Application.Run;
 end.

@@ -1,7 +1,7 @@
-object Form2: TForm2
+object MainForm: TMainForm
   Left = 0
   Top = 0
-  Caption = 'Form2'
+  Caption = 'Simple OCR'
   ClientHeight = 664
   ClientWidth = 999
   FormFactor.Width = 320

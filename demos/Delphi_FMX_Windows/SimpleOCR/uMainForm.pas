@@ -1,4 +1,4 @@
-unit Unit3;
+unit uMainForm;
 
 interface
 
@@ -9,7 +9,7 @@ uses
   FMX.Controls.Presentation, uTesseractBaseAPI, uTesseractOCR;
 
 type
-  TForm2 = class(TForm)
+  TMainForm = class(TForm)
     ToolBar1: TToolBar;
     Button1: TButton;
     Button2: TButton;
@@ -34,7 +34,7 @@ type
   end;
 
 var
-  Form2: TForm2;
+  MainForm: TMainForm;
 
 implementation
 
@@ -43,7 +43,7 @@ implementation
 uses
   FMX.Surfaces, uLeptonicaLoader, uTesseractLoader, uLeptonicaPix, uTesseractTypes;
 
-procedure TForm2.OpenImage(const aFileName: string);
+procedure TMainForm.OpenImage(const aFileName: string);
 var
   TempImage: TBitmap;
   Stream: TMemoryStream;
@@ -76,7 +76,7 @@ begin
   end;
 end;
 
-procedure TForm2.TesseractOCR1Progress(Sender: TObject; progress, left, right, top, bottom: Integer);
+procedure TMainForm.TesseractOCR1Progress(Sender: TObject; progress, left, right, top, bottom: Integer);
 begin
   if (progress in [0..99]) then
   begin
@@ -87,18 +87,18 @@ begin
     ProgressBar1.Visible := False;
 end;
 
-procedure TForm2.Button1Click(Sender: TObject);
+procedure TMainForm.Button1Click(Sender: TObject);
 begin
   OpenImage('..\assets\samples\eng-text.bmp');
 end;
 
-procedure TForm2.Button2Click(Sender: TObject);
+procedure TMainForm.Button2Click(Sender: TObject);
 begin
   if OpenDialog1.Execute then
     OpenImage(OpenDialog1.FileName);
 end;
 
-procedure TForm2.Button3Click(Sender: TObject);
+procedure TMainForm.Button3Click(Sender: TObject);
 begin
   if TesseractOCR1.Recognize then
     Memo1.Lines.SetText(PChar(TesseractOCR1.BaseAPI.GetText))
@@ -108,7 +108,7 @@ begin
   ProgressBar1.Visible := False;
 end;
 
-procedure TForm2.FormCreate(Sender: TObject);
+procedure TMainForm.FormCreate(Sender: TObject);
 begin
   TesseractOCR1 := TTesseractOCR.Create(Self);
   TesseractOCR1.OnProgress := TesseractOCR1Progress;
@@ -119,11 +119,7 @@ begin
   begin
     Memo1.Lines.Add('There was an issue initializing Tesseract.');
     ToolBar1.Enabled := False;
-    Exit;
   end;
-  var Langs := TesseractOCR1.BaseAPI.GetLoadedLanguagesAsVector;
-  Memo1.Lines.AddStrings(Langs);
-  Langs.Free;
 end;
 
 end.
