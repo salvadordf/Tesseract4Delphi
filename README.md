@@ -7,7 +7,7 @@ The _assets\tessdata_ directory contains the models for several languages. For a
 
 Tesseract4Delphi was developed and tested on Delphi 13, Delphi 6 and Lazarus 4.4/FPC 3.2.2. 
 
-Tesseract4Delphi demos have been tested in Windows 10, Windows 11, Linux Mint 22.2
+Tesseract4Delphi demos have been tested in Windows 10, Windows 11 and Linux Mint 22.3.
 
 ## Installation instructions
 * [Installation in Delphi](https://github.com/salvadordf/Tesseract4Delphi/wiki/Installation-in-Delphi)
