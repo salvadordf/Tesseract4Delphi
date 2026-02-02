@@ -2003,7 +2003,7 @@ var
   TempBuffer : pointer;
 begin
   Result := False;
-  if (FHandle = nil) or FInit then exit;
+  if (FHandle = nil) or FInit or not(assigned(TessBaseAPIInit5)) then exit;
 
   if assigned(configs) then
     TempConfigsSize := configs.Count

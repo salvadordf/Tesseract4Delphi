@@ -243,7 +243,7 @@ begin
             assigned(TessHOcrRendererCreate) and
             assigned(TessHOcrRendererCreate2) and
             assigned(TessAltoRendererCreate) and
-            {$IFNDEF LINUXFPC}assigned(TessPAGERendererCreate) and{$ENDIF}
+            // assigned(TessPAGERendererCreate) and // Not available in older Tesseract versions
             assigned(TessTsvRendererCreate) and
             assigned(TessPDFRendererCreate) and
             assigned(TessUnlvRendererCreate) and
@@ -314,8 +314,8 @@ begin
             assigned(TessBaseAPIInit1) and
             assigned(TessBaseAPIInit2) and
             assigned(TessBaseAPIInit3) and
-            assigned(TessBaseAPIInit4) and
-            assigned(TessBaseAPIInit5);
+            //assigned(TessBaseAPIInit5) and        // Not available in older Tesseract versions
+            assigned(TessBaseAPIInit4);
 end;
 
 function TTesseractLoader.LoadBaseAPIFunctions2 : boolean;
@@ -369,7 +369,7 @@ begin
             assigned(TessBaseAPISetSourceResolution) and
             assigned(TessBaseAPISetRectangle) and
             assigned(TessBaseAPIGetThresholdedImage) and
-            {$IFNDEF LINUXFPC}assigned(TessBaseAPIGetGradient) and{$ENDIF}
+            //assigned(TessBaseAPIGetGradient) and // Not available in older Tesseract versions
             assigned(TessBaseAPIGetRegions) and
             assigned(TessBaseAPIGetTextlines) and
             assigned(TessBaseAPIGetTextlines1) and
@@ -413,7 +413,7 @@ begin
             assigned(TessBaseAPIGetUTF8Text) and
             assigned(TessBaseAPIGetHOCRText) and
             assigned(TessBaseAPIGetAltoText) and
-            {$IFNDEF LINUXFPC}assigned(TessBaseAPIGetPAGEText) and{$ENDIF}
+            //assigned(TessBaseAPIGetPAGEText) and // Not available in older Tesseract versions
             assigned(TessBaseAPIGetTsvText) and
             assigned(TessBaseAPIGetBoxText) and
             assigned(TessBaseAPIGetLSTMBoxText) and

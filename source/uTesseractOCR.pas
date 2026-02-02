@@ -34,6 +34,8 @@ type
       FOnProgress : TOnProgressEvent;
 
       function  GetInitialized : boolean;
+      function  GetVersion : string;
+      function  GetComponentVersion : string;
 
       procedure doOnCancelEvent(aWords: integer; var aResult: boolean); virtual;
       procedure doOnProgressEvent(aLeft, aRight, aTop, aBottom: integer); virtual;
@@ -65,15 +67,23 @@ type
       /// <summary>
       /// Returns the TTesseractBaseAPI instance.
       /// </summary>
-      property    BaseAPI         : TTesseractBaseAPI    read FBaseAPI;
+      property    BaseAPI          : TTesseractBaseAPI    read FBaseAPI;
       /// <summary>
       /// Returns the TTesseractMonitor instance.
       /// </summary>
-      property    Monitor         : TTesseractMonitor    read FMonitor;
+      property    Monitor          : TTesseractMonitor    read FMonitor;
       /// <summary>
       /// Returns true if all the loaders, the base api and the monitor are initialized.
       /// </summary>
-      property    Initialized     : boolean              read GetInitialized;
+      property    Initialized      : boolean              read GetInitialized;
+      /// <summary>
+      /// Returns the Tesseract4Delphi version.
+      /// </summary>
+      property    ComponentVersion : string               read GetComponentVersion;
+      /// <summary>
+      /// Returns the Tesseract version.
+      /// </summary>
+      property    Version          : string               read GetVersion;
 
     published
       /// <summary>
@@ -156,6 +166,24 @@ begin
             assigned(GlobalTesseractLoader) and GlobalTesseractLoader.Initialized and
             assigned(FBaseAPI) and FBaseAPI.Initialized and
             assigned(FMonitor) and FMonitor.Initialized;
+end;
+
+function TTesseractOCR.GetVersion : string;
+begin
+  if assigned(FBaseAPI) then
+    Result := FBaseAPI.Version
+   else
+    Result := inttostr(TESSERACT_MAJOR_VERSION) + '.' +
+              inttostr(TESSERACT_MINOR_VERSION) + '.' +
+              inttostr(TESSERACT_MICRO_VERSION);
+end;
+
+function TTesseractOCR.GetComponentVersion : string;
+begin
+  Result := inttostr(TESSERACT4DELPHI_MAJOR_VERSION)   + '.' +
+            inttostr(TESSERACT4DELPHI_MINOR_VERSION)   + '.' +
+            inttostr(TESSERACT4DELPHI_RELEASE_VERSION) + '.' +
+            inttostr(TESSERACT4DELPHI_BUILD_VERSION);
 end;
 
 procedure TTesseractOCR.doOnCancelEvent(aWords: integer; var aResult: boolean);
