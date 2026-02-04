@@ -10,16 +10,16 @@ interface
 
 uses
   {$IFDEF DELPHI16_UP}
-    System.Classes, System.SysUtils,
+    System.Classes, System.SysUtils, System.Types,
   {$ELSE}
-    Classes, SysUtils, {$IFDEF FPC}dynlibs, LResources,{$ENDIF}
+    Classes, SysUtils, Types, {$IFDEF FPC}dynlibs, LResources,{$ENDIF}
   {$ENDIF}
   uTesseractTypes, uLeptonicaLoader, uTesseractLoader, uTesseractBaseAPI,
   uTesseractMonitor, uTesseractConstants;
 
 type
   TOnCancelEvent   = procedure(Sender: TObject; words: integer; var aResult: boolean) of object;
-  TOnProgressEvent = procedure(Sender: TObject; progress, left, right, top, bottom: Integer) of object;
+  TOnProgressEvent = procedure(Sender: TObject; progress, left_, right_, top_, bottom_: Integer) of object;
 
   /// <summary>
   /// This is the main component you use in a form to handle all Tesseract
@@ -42,7 +42,7 @@ type
 
       procedure InitializeLeptonica(const aLeptonicaLib : string); virtual;
       procedure InitializeTesseract(const aTesseractLib : string); virtual;
-      procedure InitializeBaseAPI(const aDatapath, aLanguage : string); virtual;
+      procedure InitializeBaseAPI(const aDatapath, aLanguage : string; aOcrEngineMode : TessOcrEngineMode = OEM_DEFAULT; const aConfigs: TStringList = nil); virtual;
       procedure InitializeMonitor; virtual;
 
     public
@@ -56,7 +56,7 @@ type
       /// <param name="aTesseractLib">Path to the Tesseract library.</param>
       /// <param name="aDatapath">Path to the tessdata directory.</param>
       /// <param name="aLanguage">The language is (usually) an ISO 639-3 string or empty will default to eng.</param>
-      function    Initialize(const aLeptonicaLib, aTesseractLib, aDatapath, aLanguage : string) : boolean;
+      function    Initialize(const aLeptonicaLib, aTesseractLib, aDatapath, aLanguage : string; aOcrEngineMode : TessOcrEngineMode = OEM_DEFAULT; const aConfigs: TStringList = nil) : boolean;
       /// <summary>
       /// Recognize the image from SetAndThresholdImage, generating Tesseract
       /// internal structures.
@@ -106,6 +106,9 @@ procedure Register;
 {$ENDIF}
 
 implementation
+
+uses
+  uTesseractResultIterator, uTesseractPageIterator, uTesseractMiscFunctions;
 
 function CancelCallback(cancel_this: Pointer; words: Integer): Boolean; cdecl;
 begin
@@ -218,12 +221,12 @@ begin
     end;
 end;
 
-procedure TTesseractOCR.InitializeBaseAPI(const aDatapath, aLanguage : string);
+procedure TTesseractOCR.InitializeBaseAPI(const aDatapath, aLanguage : string; aOcrEngineMode: TessOcrEngineMode; const aConfigs: TStringList);
 begin
   if not(assigned(FBaseAPI)) then
     begin
       FBaseAPI := TTesseractBaseAPI.Create;
-      FBaseAPI.Init(aDatapath, aLanguage);
+      FBaseAPI.Init(aDatapath, aLanguage, aOcrEngineMode, aConfigs);
     end;
 end;
 
@@ -240,11 +243,11 @@ begin
     end;
 end;
 
-function TTesseractOCR.Initialize(const aLeptonicaLib, aTesseractLib, aDatapath, aLanguage : string) : boolean;
+function TTesseractOCR.Initialize(const aLeptonicaLib, aTesseractLib, aDatapath, aLanguage : string; aOcrEngineMode: TessOcrEngineMode; const aConfigs: TStringList) : boolean;
 begin
   InitializeLeptonica(aLeptonicaLib);
   InitializeTesseract(aTesseractLib);
-  InitializeBaseAPI(aDatapath, aLanguage);
+  InitializeBaseAPI(aDatapath, aLanguage, aOcrEngineMode, aConfigs);
   InitializeMonitor;
 
   Result := Initialized;
@@ -254,12 +257,12 @@ function TTesseractOCR.Recognize : boolean;
 begin
   Result := Initialized and
             FBaseAPI.Recognize(FMonitor);
-end;              
+end;
 
 {$IFDEF FPC}
 procedure Register;
 begin
-  {$I res/ttesseractocr.lrs}
+  {$I ttesseractocr.lrs}
   RegisterComponents('Tesseract4Delphi', [TTesseractOCR]);
 end;
 {$ENDIF}

@@ -2,9 +2,9 @@
   "UpdateLazPackages" : [
     {
       "ForceNotify" : true,
-      "InternalVersion" : 4,
+      "InternalVersion" : 5,
       "Name" : "virtualtouchkeyboard4delphi.lpk",
-      "Version" : "1.1.1"
+      "Version" : "1.2.0"
     }
   ],
   "UpdatePackageData" : {

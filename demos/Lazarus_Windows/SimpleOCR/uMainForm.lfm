@@ -1,11 +1,11 @@
 object MainForm: TMainForm
   Left = 0
-  Height = 571
+  Height = 635
   Top = 0
-  Width = 760
+  Width = 955
   Caption = 'Simple OCR'
-  ClientHeight = 571
-  ClientWidth = 760
+  ClientHeight = 635
+  ClientWidth = 955
   Color = clBtnFace
   Font.Color = clWindowText
   Font.Height = -12
@@ -15,91 +15,188 @@ object MainForm: TMainForm
   OnCreate = FormCreate
   object ButtonPnl: TPanel
     Left = 0
-    Height = 41
+    Height = 23
     Top = 0
-    Width = 760
+    Width = 955
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 41
-    ClientWidth = 760
+    ClientHeight = 23
+    ClientWidth = 955
     ParentBackground = False
     TabOrder = 0
-    object OpenBtn: TButton
-      Left = 136
-      Height = 25
-      Top = 8
-      Width = 120
-      Caption = 'Open image...'
-      TabOrder = 1
-      OnClick = OpenBtnClick
-    end
-    object RecognizeBtn: TButton
-      Left = 268
-      Height = 25
-      Top = 8
-      Width = 120
-      Caption = 'Recognize'
-      TabOrder = 2
-      OnClick = RecognizeBtnClick
-    end
-    object ProgressBar1: TProgressBar
-      Left = 430
-      Height = 17
-      Top = 12
-      Width = 150
-      TabOrder = 3
-      Visible = False
-    end
-    object OpenSampleBtn: TButton
-      Left = 8
-      Height = 25
-      Top = 8
-      Width = 120
-      Caption = 'Open sample'
+    object Panel1: TPanel
+      Left = 0
+      Height = 23
+      Top = 0
+      Width = 377
+      Align = alLeft
+      BevelOuter = bvNone
+      ClientHeight = 23
+      ClientWidth = 377
+      ParentBackground = False
       TabOrder = 0
-      OnClick = OpenSampleBtnClick
+      object OpenSampleBtn: TButton
+        Left = 0
+        Height = 23
+        Top = 0
+        Width = 120
+        Align = alLeft
+        Caption = 'Open sample'
+        TabOrder = 0
+        OnClick = OpenSampleBtnClick
+      end
+      object OpenBtn: TButton
+        Left = 128
+        Height = 23
+        Top = 0
+        Width = 120
+        Caption = 'Open image...'
+        TabOrder = 1
+        OnClick = OpenBtnClick
+      end
+      object RecognizeBtn: TButton
+        Left = 257
+        Height = 23
+        Top = 0
+        Width = 120
+        Align = alRight
+        Caption = 'Recognize'
+        TabOrder = 2
+        OnClick = RecognizeBtnClick
+      end
+    end
+    object Panel2: TPanel
+      Left = 377
+      Height = 23
+      Top = 0
+      Width = 578
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 23
+      ClientWidth = 578
+      ParentBackground = False
+      TabOrder = 1
+      object Label1: TLabel
+        Left = 0
+        Height = 23
+        Top = 0
+        Width = 56
+        Align = alLeft
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Mode'
+        Layout = tlCenter
+      end
+      object ModeCb: TComboBox
+        Left = 56
+        Height = 23
+        Top = 0
+        Width = 522
+        Align = alClient
+        ItemHeight = 15
+        ItemIndex = 0
+        Items.Strings = (
+          'Orientation and script detection only'
+          'Automatic page segmentation with orientation and script detection'
+          'Automatic page segmentation, but no OSD, or OCR'
+          'Fully automatic page segmentation, but no OSD'
+          'Assume a single column of text of variable sizes'
+          'Assume a single uniform block of vertically aligned text'
+          'Assume a single uniform block of text'
+          'Treat the image as a single text line'
+          'Treat the image as a single word'
+          'Treat the image as a single word in a circle'
+          'Treat the image as a single character'
+          'Find as much text as possible in no particular order'
+          'Sparse text with orientation and script det.'
+          'Treat the image as a single text line, Tesseract-specific'
+        )
+        TabOrder = 0
+        Text = 'Orientation and script detection only'
+      end
     end
   end
   object MainPnl: TPanel
     Left = 0
-    Height = 530
-    Top = 41
-    Width = 760
+    Height = 589
+    Top = 23
+    Width = 955
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 530
-    ClientWidth = 760
+    ClientHeight = 589
+    ClientWidth = 955
     ParentBackground = False
     TabOrder = 1
     object Splitter1: TSplitter
       Cursor = crVSplit
       Left = 0
       Height = 3
-      Top = 319
-      Width = 760
+      Top = 336
+      Width = 955
       Align = alBottom
       ResizeAnchor = akBottom
     end
     object Image1: TImage
       Left = 0
-      Height = 319
+      Height = 336
       Top = 0
-      Width = 760
+      Width = 955
       Align = alClient
       Center = True
       Proportional = True
       Stretch = True
     end
-    object Memo1: TMemo
+    object PageControl1: TPageControl
       Left = 0
-      Height = 208
-      Top = 322
-      Width = 760
+      Height = 250
+      Top = 339
+      Width = 955
+      ActivePage = TabSheet1
       Align = alBottom
-      ReadOnly = True
-      ScrollBars = ssBoth
-      TabOrder = 0
+      TabIndex = 0
+      TabOrder = 1
+      object TabSheet1: TTabSheet
+        Caption = 'Text result'
+        ClientHeight = 222
+        ClientWidth = 947
+        object Memo1: TMemo
+          Left = 0
+          Height = 222
+          Top = 0
+          Width = 947
+          Align = alClient
+          ReadOnly = True
+          ScrollBars = ssBoth
+          TabOrder = 0
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Analysis'
+        ClientHeight = 222
+        ClientWidth = 947
+        object Memo2: TMemo
+          Left = 0
+          Height = 222
+          Top = 0
+          Width = 947
+          Align = alClient
+          ReadOnly = True
+          ScrollBars = ssBoth
+          TabOrder = 0
+        end
+      end
     end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 612
+    Width = 955
+    Panels = <    
+      item
+        Width = 500
+      end>
+    SimplePanel = False
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Bitmap files (*.bmp)|*.BMP'

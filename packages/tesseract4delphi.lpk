@@ -9,14 +9,14 @@
       <Version Value="11"/>
       <PathDelim Value="\"/>
       <SearchPaths>
-        <IncludeFiles Value="..\source"/>
+        <IncludeFiles Value="..\source;res"/>
         <OtherUnitFiles Value="..\source"/>
         <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
     </CompilerOptions>
     <Description Value="Tesseract4Delphi"/>
     <License Value="MIT"/>
-    <Version Major="1" Minor="1" Release="1"/>
+    <Version Major="1" Minor="2"/>
     <Files>
       <Item>
         <Filename Value="..\source\tesseract.inc"/>
@@ -110,6 +110,10 @@
       <Item>
         <Filename Value="..\source\uTesseractVersion.inc"/>
         <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="res\ttesseractocr.lrs"/>
+        <Type Value="LRS"/>
       </Item>
     </Files>
     <RequiredPkgs>

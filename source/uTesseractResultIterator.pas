@@ -33,8 +33,13 @@ type
   /// LTRResultIterator adds text-specific methods for access to OCR output.</para>
   /// </summary>
   TTesseractResultIterator = class(TTesseractPageIterator)
+    protected
+      function  GetPageIterator : TTesseractPageIterator;
+      function  GetChoiceIterator : TTesseractChoiceIterator;
+
+      procedure CopyHandle(aHandle: TessPageIterator); override;
+
     public
-      function GetChoiceIterator : TTesseractChoiceIterator;
       /// <summary>
       /// <para>Moves to the start of the next object at the given level in the
       /// page hierarchy, and returns false if the end of the page was reached.
@@ -97,13 +102,46 @@ type
       /// this will return the attributes of the first symbol in that word.
       /// </summary>
       function SymbolIsDropcap : boolean;
+      /// <summary>
+      /// Returns a TTesseractPageIterator instance. It's a copy of this iterator.
+      /// It must be destroyed.
+      /// </summary>
+      property PageIterator     : TTesseractPageIterator     read  GetPageIterator;
+      /// <summary>
+      /// Returns a new TTesseractChoiceIterator instance.
+      /// It must be destroyed.
+      /// </summary>
+      property ChoiceIterator   : TTesseractChoiceIterator   read  GetChoiceIterator;
   end;
 
 implementation
 
 uses              
   {$IFDEF LINUXFPC}lcltype,{$ENDIF}
-  uTesseractMiscFunctions;
+  uTesseractMiscFunctions, uTesseractLoader;
+
+procedure TTesseractResultIterator.CopyHandle(aHandle: TessPageIterator);
+begin
+  if assigned(GlobalTesseractLoader) and GlobalTesseractLoader.Initialized then
+    FHandle := TessResultIteratorCopy(TessResultIterator(aHandle))
+   else
+    FHandle := nil;
+end;
+
+function TTesseractResultIterator.GetPageIterator : TTesseractPageIterator;
+var
+  TempHandle : TTesseractPageIterator;
+begin
+  Result := nil;
+
+  if Initialized then
+    begin
+      TempHandle := TTesseractPageIterator(TessResultIterator(FHandle));
+
+      if assigned(TempHandle) then
+        Result := TTesseractPageIterator.Create(TempHandle);
+    end;
+end;
 
 function TTesseractResultIterator.GetChoiceIterator : TTesseractChoiceIterator;
 var
@@ -144,8 +182,10 @@ end;
 
 function TTesseractResultIterator.WordRecognitionLanguage : string;
 begin
+  // The code comments for LTRResultIterator::WordRecognitionLanguage explicitly say that this
+  // function must NOT delete the returned pointer.
   if Initialized then
-    Result := TessUTF8ToString(TessResultIteratorWordRecognitionLanguage(TessResultIterator(FHandle)))
+    Result := TessUTF8ToString(TessResultIteratorWordRecognitionLanguage(TessResultIterator(FHandle)), False)
    else
     Result := '';
 end;
@@ -156,15 +196,17 @@ var
 begin
   if Initialized then
     begin
-      Result        := TessUTF8ToString(TessResultIteratorWordFontAttributes(TessResultIterator(FHandle),
-                                                                             TempIsBold,
-                                                                             TempIsItalic,
-                                                                             TempIsUnderlined,
-                                                                             TempIsMonospace,
-                                                                             TempIsSerif,
-                                                                             TempIsSmallcaps,
-                                                                             pointsize,
-                                                                             font_id));
+      // The code comments for LTRResultIterator::WordFontAttributes explicitly say that this
+      // function must NOT delete the returned pointer.
+      Result := TessUTF8ToString(TessResultIteratorWordFontAttributes(TessResultIterator(FHandle),
+                                                                      TempIsBold,
+                                                                      TempIsItalic,
+                                                                      TempIsUnderlined,
+                                                                      TempIsMonospace,
+                                                                      TempIsSerif,
+                                                                      TempIsSmallcaps,
+                                                                      pointsize,
+                                                                      font_id), False);
 
       is_bold       := TempIsBold;
       is_italic     := TempIsItalic;

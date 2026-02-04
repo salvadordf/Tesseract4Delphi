@@ -107,6 +107,9 @@
 <tr class="list">
 <td class="itemcode"><code><strong><a href="uTesseractTypes.html#TTesseractLoaderStatus">TTesseractLoaderStatus</a></strong> = (...);</code></td>
 </tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="uTesseractTypes.html#TTesseractBaseLine">TTesseractBaseLine</a></strong> = array[0..1] of TPoint;</code></td>
+</tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Types</h3>
@@ -192,16 +195,26 @@
 <td class="itemcode"><span id="TessOcrEngineMode"></span><code><strong>TessOcrEngineMode</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Values</h6>
+<p>
+
+
+<p>When Tesseract/Cube is initialized we can choose to instantiate/load/run only the Tesseract part, only the Cube part or both along with the combiner. The preference of which engine to use is stored in tessedit_ocr_engine_mode.
+
+<p>ATTENTION: When modifying this enum, please make sure to make the appropriate changes to all the enums mirroring it (e.g. OCREngine in cityblock/workflow/detection/detection_storage.proto). Such enums will mention the connection to OcrEngineMode in the comments.
+
+<p></p>
+<h6 class="description_section">Values</h6>
 <ul>
 <li>
-<span id="OEM_TESSERACT_ONLY">OEM_TESSERACT_ONLY</span></li>
+<span id="OEM_TESSERACT_ONLY">OEM_TESSERACT_ONLY</span>:  Run Tesseract only - fastest; deprecated </li>
 <li>
-<span id="OEM_LSTM_ONLY">OEM_LSTM_ONLY</span></li>
+<span id="OEM_LSTM_ONLY">OEM_LSTM_ONLY</span>:  Run just the LSTM line recognizer. </li>
 <li>
-<span id="OEM_TESSERACT_LSTM_COMBINED">OEM_TESSERACT_LSTM_COMBINED</span></li>
+<span id="OEM_TESSERACT_LSTM_COMBINED">OEM_TESSERACT_LSTM_COMBINED</span>:  Run the LSTM recognizer, but allow fallback to Tesseract when things get difficult. deprecated </li>
 <li>
-<span id="OEM_DEFAULT">OEM_DEFAULT</span></li>
+<span id="OEM_DEFAULT">OEM_DEFAULT</span>:  Specify this mode when calling init_*(), to indicate that any of the above modes should be automatically inferred from the variables in the language-specific config, command-line configs, or if not specified in any of the above should be set to the default OEM_TESSERACT_ONLY. </li>
+<li>
+<span id="OEM_COUNT">OEM_COUNT</span>:  Number of OEMs </li>
 </ul>
 </td></tr>
 </table>
@@ -210,38 +223,40 @@
 <td class="itemcode"><span id="TessPageSegMode"></span><code><strong>TessPageSegMode</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Values</h6>
+<p>
+ Possible modes for page layout analysis. These *must* be kept in order of decreasing amount of layout analysis to be done, except for OSD_ONLY, so that the inequality test macros below work. </p>
+<h6 class="description_section">Values</h6>
 <ul>
 <li>
-<span id="PSM_OSD_ONLY">PSM_OSD_ONLY</span></li>
+<span id="PSM_OSD_ONLY">PSM_OSD_ONLY</span>:  Orientation and script detection only. </li>
 <li>
-<span id="PSM_AUTO_OSD">PSM_AUTO_OSD</span></li>
+<span id="PSM_AUTO_OSD">PSM_AUTO_OSD</span>:  Automatic page segmentation with orientation and script detection. (OSD) </li>
 <li>
-<span id="PSM_AUTO_ONLY">PSM_AUTO_ONLY</span></li>
+<span id="PSM_AUTO_ONLY">PSM_AUTO_ONLY</span>:  Automatic page segmentation, but no OSD, or OCR. </li>
 <li>
-<span id="PSM_AUTO">PSM_AUTO</span></li>
+<span id="PSM_AUTO">PSM_AUTO</span>:  Fully automatic page segmentation, but no OSD. </li>
 <li>
-<span id="PSM_SINGLE_COLUMN">PSM_SINGLE_COLUMN</span></li>
+<span id="PSM_SINGLE_COLUMN">PSM_SINGLE_COLUMN</span>:  Assume a single column of text of variable sizes. </li>
 <li>
-<span id="PSM_SINGLE_BLOCK_VERT_TEXT">PSM_SINGLE_BLOCK_VERT_TEXT</span></li>
+<span id="PSM_SINGLE_BLOCK_VERT_TEXT">PSM_SINGLE_BLOCK_VERT_TEXT</span>:  Assume a single uniform block of vertically aligned text. </li>
 <li>
-<span id="PSM_SINGLE_BLOCK">PSM_SINGLE_BLOCK</span></li>
+<span id="PSM_SINGLE_BLOCK">PSM_SINGLE_BLOCK</span>:  Assume a single uniform block of text. (Default.) </li>
 <li>
-<span id="PSM_SINGLE_LINE">PSM_SINGLE_LINE</span></li>
+<span id="PSM_SINGLE_LINE">PSM_SINGLE_LINE</span>:  Treat the image as a single text line. </li>
 <li>
-<span id="PSM_SINGLE_WORD">PSM_SINGLE_WORD</span></li>
+<span id="PSM_SINGLE_WORD">PSM_SINGLE_WORD</span>:  Treat the image as a single word. </li>
 <li>
-<span id="PSM_CIRCLE_WORD">PSM_CIRCLE_WORD</span></li>
+<span id="PSM_CIRCLE_WORD">PSM_CIRCLE_WORD</span>:  Treat the image as a single word in a circle. </li>
 <li>
-<span id="PSM_SINGLE_CHAR">PSM_SINGLE_CHAR</span></li>
+<span id="PSM_SINGLE_CHAR">PSM_SINGLE_CHAR</span>:  Treat the image as a single character. </li>
 <li>
-<span id="PSM_SPARSE_TEXT">PSM_SPARSE_TEXT</span></li>
+<span id="PSM_SPARSE_TEXT">PSM_SPARSE_TEXT</span>:  Find as much text as possible in no particular order. </li>
 <li>
-<span id="PSM_SPARSE_TEXT_OSD">PSM_SPARSE_TEXT_OSD</span></li>
+<span id="PSM_SPARSE_TEXT_OSD">PSM_SPARSE_TEXT_OSD</span>:  Sparse text with orientation and script det. </li>
 <li>
-<span id="PSM_RAW_LINE">PSM_RAW_LINE</span></li>
+<span id="PSM_RAW_LINE">PSM_RAW_LINE</span>:  Treat the image as a single text line, bypassing hacks that are Tesseract-specific. </li>
 <li>
-<span id="PSM_COUNT">PSM_COUNT</span></li>
+<span id="PSM_COUNT">PSM_COUNT</span>:  Number of enum entries. </li>
 </ul>
 </td></tr>
 </table>
@@ -250,18 +265,20 @@
 <td class="itemcode"><span id="TessPageIteratorLevel"></span><code><strong>TessPageIteratorLevel</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Values</h6>
+<p>
+ enum of the elements of the page hierarchy, used in ResultIterator to provide functions that operate on each level without having to have 5x as many functions. </p>
+<h6 class="description_section">Values</h6>
 <ul>
 <li>
-<span id="RIL_BLOCK">RIL_BLOCK</span></li>
+<span id="RIL_BLOCK">RIL_BLOCK</span>:  Block of text/image/separator line. </li>
 <li>
-<span id="RIL_PARA">RIL_PARA</span></li>
+<span id="RIL_PARA">RIL_PARA</span>:  Paragraph within a block. </li>
 <li>
-<span id="RIL_TEXTLINE">RIL_TEXTLINE</span></li>
+<span id="RIL_TEXTLINE">RIL_TEXTLINE</span>:  Line within a paragraph. </li>
 <li>
-<span id="RIL_WORD">RIL_WORD</span></li>
+<span id="RIL_WORD">RIL_WORD</span>:  Word within a textline. </li>
 <li>
-<span id="RIL_SYMBOL">RIL_SYMBOL</span></li>
+<span id="RIL_SYMBOL">RIL_SYMBOL</span>:  Symbol/character within a word. </li>
 </ul>
 </td></tr>
 </table>
@@ -270,40 +287,42 @@
 <td class="itemcode"><span id="TessPolyBlockType"></span><code><strong>TessPolyBlockType</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Values</h6>
+<p>
+ Possible types for a POLY_BLOCK or ColPartition. Must be kept in sync with kPBColors in polyblk.cpp and PTIs*Type functions below, as well as kPolyBlockNames in layout_test.cc. Used extensively by ColPartition, and POLY_BLOCK. </p>
+<h6 class="description_section">Values</h6>
 <ul>
 <li>
-<span id="PT_UNKNOWN">PT_UNKNOWN</span></li>
+<span id="PT_UNKNOWN">PT_UNKNOWN</span>:  Type is not yet known. Keep as the first element. </li>
 <li>
-<span id="PT_FLOWING_TEXT">PT_FLOWING_TEXT</span></li>
+<span id="PT_FLOWING_TEXT">PT_FLOWING_TEXT</span>:  Text that lives inside a column. </li>
 <li>
-<span id="PT_HEADING_TEXT">PT_HEADING_TEXT</span></li>
+<span id="PT_HEADING_TEXT">PT_HEADING_TEXT</span>:  Text that spans more than one column. </li>
 <li>
-<span id="PT_PULLOUT_TEXT">PT_PULLOUT_TEXT</span></li>
+<span id="PT_PULLOUT_TEXT">PT_PULLOUT_TEXT</span>:  Text that is in a cross-column pull-out region. </li>
 <li>
-<span id="PT_EQUATION">PT_EQUATION</span></li>
+<span id="PT_EQUATION">PT_EQUATION</span>:  Partition belonging to an equation region. </li>
 <li>
-<span id="PT_INLINE_EQUATION">PT_INLINE_EQUATION</span></li>
+<span id="PT_INLINE_EQUATION">PT_INLINE_EQUATION</span>:  Partition has inline equation. </li>
 <li>
-<span id="PT_TABLE">PT_TABLE</span></li>
+<span id="PT_TABLE">PT_TABLE</span>:  Partition belonging to a table region. </li>
 <li>
-<span id="PT_VERTICAL_TEXT">PT_VERTICAL_TEXT</span></li>
+<span id="PT_VERTICAL_TEXT">PT_VERTICAL_TEXT</span>:  Text-line runs vertically. </li>
 <li>
-<span id="PT_CAPTION_TEXT">PT_CAPTION_TEXT</span></li>
+<span id="PT_CAPTION_TEXT">PT_CAPTION_TEXT</span>:  Text that belongs to an image. </li>
 <li>
-<span id="PT_FLOWING_IMAGE">PT_FLOWING_IMAGE</span></li>
+<span id="PT_FLOWING_IMAGE">PT_FLOWING_IMAGE</span>:  Image that lives inside a column. </li>
 <li>
-<span id="PT_HEADING_IMAGE">PT_HEADING_IMAGE</span></li>
+<span id="PT_HEADING_IMAGE">PT_HEADING_IMAGE</span>:  Image that spans more than one column. </li>
 <li>
-<span id="PT_PULLOUT_IMAGE">PT_PULLOUT_IMAGE</span></li>
+<span id="PT_PULLOUT_IMAGE">PT_PULLOUT_IMAGE</span>:  Image that is in a cross-column pull-out region. </li>
 <li>
-<span id="PT_HORZ_LINE">PT_HORZ_LINE</span></li>
+<span id="PT_HORZ_LINE">PT_HORZ_LINE</span>:  Horizontal Line. </li>
 <li>
-<span id="PT_VERT_LINE">PT_VERT_LINE</span></li>
+<span id="PT_VERT_LINE">PT_VERT_LINE</span>:  Vertical Line. </li>
 <li>
-<span id="PT_NOISE">PT_NOISE</span></li>
+<span id="PT_NOISE">PT_NOISE</span>:  Lies outside of any column. </li>
 <li>
-<span id="PT_COUNT">PT_COUNT</span></li>
+<span id="PT_COUNT">PT_COUNT</span>:  Number of enum entries. </li>
 </ul>
 </td></tr>
 </table>
@@ -312,7 +331,43 @@
 <td class="itemcode"><span id="TessOrientation"></span><code><strong>TessOrientation</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Values</h6>
+<p>
+
+
+<p>Orientation Example:
+
+<p>To left is a diagram of some (1) English and (2) Chinese text and a (3) photo credit.
+
+<p>Upright Latin characters are represented as A and a. '&lt;' represents a latin character rotated anti-clockwise 90 degrees.
+
+<p>Upright Chinese characters are represented C and c.
+
+<p>NOTA BENE: enum values here should match goodoc.proto </p>
+
+<pre class="preformatted">
++------------------+
+| 1 Aaaa Aaaa Aaaa |
+| Aaa aa aaa aa    |
+| aaaaaa A aa aaa. |
+|                2 |
+|   #######  c c C |
+|   #######  c c c |
+| &lt; #######  c c c |
+| &lt; #######  c   c |
+| &lt; #######  .   c |
+| 3 #######      c |
++------------------+</pre>
+
+<p>
+
+<p>If you orient your head so that &quot;up&quot; aligns with Orientation, then the characters will appear &quot;right side up&quot; and readable.
+
+<p>In the example above, both the English and Chinese paragraphs are oriented so their &quot;up&quot; is the top of the page (page up). The photo credit is read with one's head turned leftward (&quot;up&quot; is to page left).
+
+<p>The values of this enum match the convention of Tesseract's osdetect.h
+
+<p></p>
+<h6 class="description_section">Values</h6>
 <ul>
 <li>
 <span id="ORIENTATION_PAGE_UP">ORIENTATION_PAGE_UP</span></li>
@@ -330,16 +385,24 @@
 <td class="itemcode"><span id="TessParagraphJustification"></span><code><strong>TessParagraphJustification</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Values</h6>
+<p>
+
+
+<p>NOTA BENE: Fully justified paragraphs (text aligned to both left and right margins) are marked by Tesseract with JUSTIFICATION_LEFT if their text is written with a left-to-right script and with JUSTIFICATION_RIGHT if their text is written in a right-to-left script.
+
+<p>Interpretation for text read in vertical lines: &quot;Left&quot; is wherever the starting reading position is.
+
+<p></p>
+<h6 class="description_section">Values</h6>
 <ul>
 <li>
-<span id="JUSTIFICATION_UNKNOWN">JUSTIFICATION_UNKNOWN</span></li>
+<span id="JUSTIFICATION_UNKNOWN">JUSTIFICATION_UNKNOWN</span>:  The alignment is not clearly one of the other options. This could happen for example if there are only one or two lines of text or the text looks like source code or poetry. </li>
 <li>
-<span id="JUSTIFICATION_LEFT">JUSTIFICATION_LEFT</span></li>
+<span id="JUSTIFICATION_LEFT">JUSTIFICATION_LEFT</span>:  Each line, except possibly the first, is flush to the same left tab stop. </li>
 <li>
-<span id="JUSTIFICATION_CENTER">JUSTIFICATION_CENTER</span></li>
+<span id="JUSTIFICATION_CENTER">JUSTIFICATION_CENTER</span>:  The text lines of the paragraph are centered about a line going down through their middle of the text lines. </li>
 <li>
-<span id="JUSTIFICATION_RIGHT">JUSTIFICATION_RIGHT</span></li>
+<span id="JUSTIFICATION_RIGHT">JUSTIFICATION_RIGHT</span>:  Each line, except possibly the first, is flush to the same right tab stop. </li>
 </ul>
 </td></tr>
 </table>
@@ -348,7 +411,15 @@
 <td class="itemcode"><span id="TessWritingDirection"></span><code><strong>TessWritingDirection</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Values</h6>
+<p>
+
+
+<p>The grapheme clusters within a line of text are laid out logically in this direction, judged when looking at the text line rotated so that its Orientation is &quot;page up&quot;.
+
+<p>For English text, the writing direction is left-to-right. For the Chinese text in the above example, the writing direction is top-to-bottom.
+
+<p></p>
+<h6 class="description_section">Values</h6>
 <ul>
 <li>
 <span id="WRITING_DIRECTION_LEFT_TO_RIGHT">WRITING_DIRECTION_LEFT_TO_RIGHT</span></li>
@@ -364,7 +435,19 @@
 <td class="itemcode"><span id="TessTextlineOrder"></span><code><strong>TessTextlineOrder</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Values</h6>
+<p>
+
+
+<p>The text lines are read in the given sequence.
+
+<p>In English, the order is top-to-bottom.
+
+<p>In Chinese, vertical text lines are read right-to-left. Mongolian is written in vertical columns top to bottom like Chinese, but the lines order left-to right.
+
+<p>Note that only some combinations make sense. For example, WRITING_DIRECTION_LEFT_TO_RIGHT implies TEXTLINE_ORDER_TOP_TO_BOTTOM
+
+<p></p>
+<h6 class="description_section">Values</h6>
 <ul>
 <li>
 <span id="TEXTLINE_ORDER_LEFT_TO_RIGHT">TEXTLINE_ORDER_LEFT_TO_RIGHT</span></li>
@@ -439,6 +522,13 @@
 <span id="tlsErrorInitializingLibrary">tlsErrorInitializingLibrary</span></li>
 </ul>
 </td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TTesseractBaseLine"></span><code><strong>TTesseractBaseLine</strong> = array[0..1] of TPoint;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>
 </span>

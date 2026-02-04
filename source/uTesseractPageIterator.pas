@@ -35,7 +35,8 @@ type
     protected
       FHandle : TessPageIterator;
 
-      function GetInitialized : boolean;
+      function  GetInitialized : boolean;
+      procedure CopyHandle(aHandle: TessPageIterator); virtual;
 
     public
       constructor Create(aHandle: TessPageIterator);
@@ -99,7 +100,17 @@ type
       /// from a grey image. The padding argument to GetImage can be used to expand
       /// the image to include more foreground pixels. See GetImage below.</para>
       /// </summary>
-      function    BoundingBox(level: TessPageIteratorLevel; out left, top, right, bottom: Integer) : boolean;
+      function    BoundingBox(level: TessPageIteratorLevel; out left, top, right, bottom: Integer) : boolean; overload;
+      /// <summary>
+      /// <para>Returns the bounding rectangle of the current object at the given level.
+      /// See comment on coordinate system above.</para>
+      /// <para>Returns false if there is no such object at the current position.</para>
+      /// <para>The returned bounding box is guaranteed to match the size and position
+      /// of the image returned by GetBinaryImage, but may clip foreground pixels
+      /// from a grey image. The padding argument to GetImage can be used to expand
+      /// the image to include more foreground pixels. See GetImage below.</para>
+      /// </summary>
+      function    BoundingBox(level: TessPageIteratorLevel; out aRect: TRect) : boolean; overload;
       /// <summary>
       /// Returns the type of the current block.
       /// </summary>
@@ -127,7 +138,14 @@ type
       /// <para>WARNING: with vertical text, baselines may be vertical!</para>
       /// <para>Returns false if there is no baseline at the current position.</para>
       /// </summary>
-      function    Baseline(level: TessPageIteratorLevel; out x1, y1, x2, y2: Integer) : boolean;
+      function    Baseline(level: TessPageIteratorLevel; out x1, y1, x2, y2: Integer) : boolean; overload;
+      /// <summary>
+      /// <para>Returns the baseline of the current object at the given level.</para>
+      /// <para>The baseline is the line that passes through (x1, y1) and (x2, y2).</para>
+      /// <para>WARNING: with vertical text, baselines may be vertical!</para>
+      /// <para>Returns false if there is no baseline at the current position.</para>
+      /// </summary>
+      function    Baseline(level: TessPageIteratorLevel; out aBaseline : TTesseractBaseLine) : boolean; overload;
       /// <summary>
       /// <para>Returns orientation for the block the iterator points to.</para>
       /// <para>orientation, writing_direction, textline_order: see publictypes.h</para>
@@ -183,10 +201,7 @@ constructor TTesseractPageIterator.Create(aHandle: TessPageIterator);
 begin
   inherited Create;
 
-  if assigned(GlobalTesseractLoader) and GlobalTesseractLoader.Initialized then
-    FHandle := TessPageIteratorCopy(aHandle)
-   else
-    FHandle := nil;
+  CopyHandle(aHandle);
 end;
 
 destructor TTesseractPageIterator.Destroy;
@@ -198,6 +213,14 @@ begin
     end;
 
   inherited Destroy;
+end;
+
+procedure TTesseractPageIterator.CopyHandle(aHandle: TessPageIterator);
+begin
+  if assigned(GlobalTesseractLoader) and GlobalTesseractLoader.Initialized then
+    FHandle := TessPageIteratorCopy(aHandle)
+   else
+    FHandle := nil;
 end;
 
 function TTesseractPageIterator.GetInitialized : boolean;
@@ -233,6 +256,26 @@ function TTesseractPageIterator.BoundingBox(level: TessPageIteratorLevel; out le
 begin
   Result := Initialized and
             TessPageIteratorBoundingBox(FHandle, level, left, top, right, bottom);
+end;
+
+function TTesseractPageIterator.BoundingBox(level: TessPageIteratorLevel; out aRect: TRect) : boolean;
+var
+  TempLeft, TempTop, TempRight, TempBottom: Integer;
+begin
+  Result       := False;
+  aRect.Left   := 0;
+  aRect.Top    := 0;
+  aRect.Right  := 0;
+  aRect.Bottom := 0;
+
+  if BoundingBox(level, TempLeft, TempTop, TempRight, TempBottom) then
+    begin
+      aRect.Left   := TempLeft;
+      aRect.Top    := TempTop;
+      aRect.Right  := TempRight;
+      aRect.Bottom := TempBottom;
+      Result       := True;
+    end;
 end;
 
 function TTesseractPageIterator.BlockType : TessPolyBlockType;
@@ -277,6 +320,26 @@ function TTesseractPageIterator.Baseline(level: TessPageIteratorLevel; out x1, y
 begin
   Result := Initialized and
             TessPageIteratorBaseline(FHandle, level, x1, y1, x2, y2);
+end;
+
+function TTesseractPageIterator.Baseline(level: TessPageIteratorLevel; out aBaseline : TTesseractBaseLine) : boolean;
+var
+  x1, y1, x2, y2: Integer;
+begin
+  Result         := False;
+  aBaseline[0].x := 0;
+  aBaseline[0].y := 0;
+  aBaseline[1].x := 0;
+  aBaseline[1].y := 0;
+
+  if Baseline(level, x1, y1, x2, y2) then
+    begin
+      aBaseline[0].x := x1;
+      aBaseline[0].y := y1;
+      aBaseline[1].x := x2;
+      aBaseline[1].y := y2;
+      Result         := True;
+    end;
 end;
 
 function TTesseractPageIterator.Orientation(out orientation_: TessOrientation; out writing_direction: TessWritingDirection; out textline_order: TessTextlineOrder; out deskew_angle: single) : boolean;

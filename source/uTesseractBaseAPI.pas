@@ -1820,7 +1820,13 @@ begin
       TempHandle := TessBaseAPIGetIterator(FHandle);
 
       if assigned(TempHandle) then
-        Result := TTesseractResultIterator.Create(TempHandle);
+        try
+          // TTesseractResultIterator makes a copy of the handle
+          Result := TTesseractResultIterator.Create(TempHandle);
+        finally
+          // We must destroy the original handle
+          TessResultIteratorDelete(TempHandle);
+        end;
     end;
 end;
 

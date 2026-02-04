@@ -45,32 +45,40 @@
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#GetInitialized">GetInitialized</a></strong>: boolean;</code></td>
 </tr>
 <tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#CopyHandle-TessPageIterator-">CopyHandle</a></strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); virtual;</code></td>
+</tr>
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>constructor <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Create-TessPageIterator-">Create</a></strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>);</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>destructor <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Destroy">Destroy</a></strong>; override;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>procedure <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Begin_">Begin_</a></strong>;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Next-TessPageIteratorLevel-">Next</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean; virtual;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#IsAtBeginningOf-TessPageIteratorLevel-">IsAtBeginningOf</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#IsAtFinalElement-TessPageIteratorLevel-TessPageIteratorLevel-">IsAtFinalElement</a></strong>(level, element: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean;</code></td>
 </tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#BoundingBox-TessPageIteratorLevel-Integer-Integer-Integer-Integer-">BoundingBox</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out left, top, right, bottom: Integer) : boolean; overload;</code></td>
+</tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#BoundingBox-TessPageIteratorLevel-Integer-Integer-Integer-Integer-">BoundingBox</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out left, top, right, bottom: Integer) : boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#BoundingBox-TessPageIteratorLevel-TRect-">BoundingBox</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out aRect: TRect) : boolean; overload;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
@@ -86,13 +94,17 @@
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Baseline-TessPageIteratorLevel-Integer-Integer-Integer-Integer-">Baseline</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out x1, y1, x2, y2: Integer) : boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Baseline-TessPageIteratorLevel-Integer-Integer-Integer-Integer-">Baseline</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out x1, y1, x2, y2: Integer) : boolean; overload;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Orientation-TessOrientation-TessWritingDirection-TessTextlineOrder-single-">Orientation</a></strong>(out orientation_: <a href="uTesseractTypes.html#TessOrientation">TessOrientation</a>; out writing_direction: <a href="uTesseractTypes.html#TessWritingDirection">TessWritingDirection</a>; out textline_order: <a href="uTesseractTypes.html#TessTextlineOrder">TessTextlineOrder</a>; out deskew_angle: single) : boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Baseline-TessPageIteratorLevel-TTesseractBaseLine-">Baseline</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out aBaseline : <a href="uTesseractTypes.html#TTesseractBaseLine">TTesseractBaseLine</a>) : boolean; overload;</code></td>
 </tr>
 <tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Orientation-TessOrientation-TessWritingDirection-TessTextlineOrder-single-">Orientation</a></strong>(out orientation_: <a href="uTesseractTypes.html#TessOrientation">TessOrientation</a>; out writing_direction: <a href="uTesseractTypes.html#TessWritingDirection">TessWritingDirection</a>; out textline_order: <a href="uTesseractTypes.html#TessTextlineOrder">TessTextlineOrder</a>; out deskew_angle: single) : boolean;</code></td>
+</tr>
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#ParagraphInfo-TessParagraphJustification-boolean-boolean-Integer-">ParagraphInfo</a></strong>(out justification: <a href="uTesseractTypes.html#TessParagraphJustification">TessParagraphJustification</a>; out is_list_item: boolean; out is_crown: boolean; out first_line_indent: Integer) : boolean;</code></td>
 </tr>
@@ -123,6 +135,14 @@
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><span id="GetInitialized"></span><code>function <strong>GetInitialized</strong>: boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="CopyHandle-TessPageIterator-"></span><code>procedure <strong>CopyHandle</strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); virtual;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -234,7 +254,25 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="BoundingBox-TessPageIteratorLevel-Integer-Integer-Integer-Integer-"></span><code>function <strong>BoundingBox</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out left, top, right, bottom: Integer) : boolean;</code></td>
+<td class="itemcode"><span id="BoundingBox-TessPageIteratorLevel-Integer-Integer-Integer-Integer-"></span><code>function <strong>BoundingBox</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out left, top, right, bottom: Integer) : boolean; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+
+
+<p>Returns the bounding rectangle of the current object at the given level. See comment on coordinate system above.
+
+<p>Returns false if there is no such object at the current position.
+
+<p>The returned bounding box is guaranteed to match the size and position of the image returned by GetBinaryImage, but may clip foreground pixels from a grey image. The padding argument to GetImage can be used to expand the image to include more foreground pixels. See GetImage below.
+
+<p></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BoundingBox-TessPageIteratorLevel-TRect-"></span><code>function <strong>BoundingBox</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out aRect: TRect) : boolean; overload;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -296,7 +334,27 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Baseline-TessPageIteratorLevel-Integer-Integer-Integer-Integer-"></span><code>function <strong>Baseline</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out x1, y1, x2, y2: Integer) : boolean;</code></td>
+<td class="itemcode"><span id="Baseline-TessPageIteratorLevel-Integer-Integer-Integer-Integer-"></span><code>function <strong>Baseline</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out x1, y1, x2, y2: Integer) : boolean; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+
+
+<p>Returns the baseline of the current object at the given level.
+
+<p>The baseline is the line that passes through (x1, y1) and (x2, y2).
+
+<p>WARNING: with vertical text, baselines may be vertical!
+
+<p>Returns false if there is no baseline at the current position.
+
+<p></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Baseline-TessPageIteratorLevel-TTesseractBaseLine-"></span><code>function <strong>Baseline</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out aBaseline : <a href="uTesseractTypes.html#TTesseractBaseLine">TTesseractBaseLine</a>) : boolean; overload;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>

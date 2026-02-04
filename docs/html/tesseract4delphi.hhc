@@ -1587,6 +1587,22 @@
 <param name="Name" value="TESSERACT_MICRO_VERSION">
 <param name="Local" value="uTesseractConstants.html#TESSERACT_MICRO_VERSION">
 </object>
+<li><object type="text/sitemap">
+<param name="Name" value="TESSERACT4DELPHI_MAJOR_VERSION">
+<param name="Local" value="uTesseractConstants.html#TESSERACT4DELPHI_MAJOR_VERSION">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="TESSERACT4DELPHI_MINOR_VERSION">
+<param name="Local" value="uTesseractConstants.html#TESSERACT4DELPHI_MINOR_VERSION">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="TESSERACT4DELPHI_RELEASE_VERSION">
+<param name="Local" value="uTesseractConstants.html#TESSERACT4DELPHI_RELEASE_VERSION">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="TESSERACT4DELPHI_BUILD_VERSION">
+<param name="Local" value="uTesseractConstants.html#TESSERACT4DELPHI_BUILD_VERSION">
+</object>
 </ul>
 </ul>
 <li><object type="text/sitemap">
@@ -1919,6 +1935,30 @@
 <param name="Name" value="StringToTessUTF8">
 <param name="Local" value="uTesseractMiscFunctions.html#StringToTessUTF8">
 </object>
+<li><object type="text/sitemap">
+<param name="Name" value="TessParagraphJustificationToStr">
+<param name="Local" value="uTesseractMiscFunctions.html#TessParagraphJustificationToStr">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="TessPolyBlockTypeToStr">
+<param name="Local" value="uTesseractMiscFunctions.html#TessPolyBlockTypeToStr">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="TessOrientationToStr">
+<param name="Local" value="uTesseractMiscFunctions.html#TessOrientationToStr">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="TessWritingDirectionToStr">
+<param name="Local" value="uTesseractMiscFunctions.html#TessWritingDirectionToStr">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="TessTextlineOrderToStr">
+<param name="Local" value="uTesseractMiscFunctions.html#TessTextlineOrderToStr">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="RectToStr">
+<param name="Local" value="uTesseractMiscFunctions.html#RectToStr">
+</object>
 </ul>
 </ul>
 <li><object type="text/sitemap">
@@ -2068,6 +2108,14 @@
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#Initialized">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="ComponentVersion">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#ComponentVersion">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="Version">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#Version">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="OnCancel">
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#OnCancel">
 </object>
@@ -2084,6 +2132,14 @@
 <li><object type="text/sitemap">
 <param name="Name" value="GetInitialized">
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#GetInitialized">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="GetVersion">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#GetVersion">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="GetComponentVersion">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#GetComponentVersion">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="doOnCancelEvent">
@@ -2206,6 +2262,10 @@
 <param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#GetInitialized">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="CopyHandle">
+<param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#CopyHandle">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="Create">
 <param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#Create">
 </object>
@@ -2234,6 +2294,10 @@
 <param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#BoundingBox">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="BoundingBox">
+<param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#BoundingBox">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="BlockType">
 <param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#BlockType">
 </object>
@@ -2244,6 +2308,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="GetImage">
 <param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#GetImage">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="Baseline">
+<param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#Baseline">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Baseline">
@@ -2277,13 +2345,35 @@
 </object>
 <ul>
 <li><object type="text/sitemap">
+<param name="Name" value="Properties">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#@Properties">
+</object>
+<ul>
+<li><object type="text/sitemap">
+<param name="Name" value="PageIterator">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#PageIterator">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="ChoiceIterator">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#ChoiceIterator">
+</object>
+</ul>
+<li><object type="text/sitemap">
 <param name="Name" value="Methods">
 <param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#@Methods">
 </object>
 <ul>
 <li><object type="text/sitemap">
+<param name="Name" value="GetPageIterator">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#GetPageIterator">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="GetChoiceIterator">
 <param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#GetChoiceIterator">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="CopyHandle">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#CopyHandle">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Next">
@@ -2496,6 +2586,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractLoaderStatus">
 <param name="Local" value="uTesseractTypes.html#TTesseractLoaderStatus">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="TTesseractBaseLine">
+<param name="Local" value="uTesseractTypes.html#TTesseractBaseLine">
 </object>
 </ul>
 </ul>
@@ -3982,6 +4076,10 @@
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#BaseAPI">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="ComponentVersion">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#ComponentVersion">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="Initialized">
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#Initialized">
 </object>
@@ -3996,6 +4094,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="OnProgress">
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#OnProgress">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="Version">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#Version">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -4020,8 +4122,16 @@
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#Recognize">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="GetComponentVersion">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#GetComponentVersion">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="GetInitialized">
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#GetInitialized">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="GetVersion">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#GetVersion">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="BeforeDestruction">
@@ -4100,8 +4210,16 @@
 <param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#Baseline">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="Baseline">
+<param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#Baseline">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="BlockType">
 <param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#BlockType">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="BoundingBox">
+<param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#BoundingBox">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="BoundingBox">
@@ -4143,6 +4261,10 @@
 <param name="Name" value="Begin_">
 <param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#Begin_">
 </object>
+<li><object type="text/sitemap">
+<param name="Name" value="CopyHandle">
+<param name="Local" value="uTesseractPageIterator.TTesseractPageIterator.html#CopyHandle">
+</object>
 </ul>
 </ul>
 <li><object type="text/sitemap">
@@ -4183,6 +4305,20 @@
 </object>
 <ul>
 <li><object type="text/sitemap">
+<param name="Name" value="Properties">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#@Properties">
+</object>
+<ul>
+<li><object type="text/sitemap">
+<param name="Name" value="ChoiceIterator">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#ChoiceIterator">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="PageIterator">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#PageIterator">
+</object>
+</ul>
+<li><object type="text/sitemap">
 <param name="Name" value="Methods">
 <param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#@Methods">
 </object>
@@ -4190,10 +4326,6 @@
 <li><object type="text/sitemap">
 <param name="Name" value="Confidence">
 <param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#Confidence">
-</object>
-<li><object type="text/sitemap">
-<param name="Name" value="GetChoiceIterator">
-<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#GetChoiceIterator">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="GetText">
@@ -4230,6 +4362,18 @@
 <li><object type="text/sitemap">
 <param name="Name" value="WordRecognitionLanguage">
 <param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#WordRecognitionLanguage">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="GetChoiceIterator">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#GetChoiceIterator">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="GetPageIterator">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#GetPageIterator">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="CopyHandle">
+<param name="Local" value="uTesseractResultIterator.TTesseractResultIterator.html#CopyHandle">
 </object>
 </ul>
 </ul>

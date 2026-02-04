@@ -52,6 +52,14 @@
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>function <strong><a href="uTesseractOCR.TTesseractOCR.html#GetVersion">GetVersion</a></strong>: string;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>function <strong><a href="uTesseractOCR.TTesseractOCR.html#GetComponentVersion">GetComponentVersion</a></strong>: string;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><code>procedure <strong><a href="uTesseractOCR.TTesseractOCR.html#doOnCancelEvent-integer-boolean-">doOnCancelEvent</a></strong>(aWords: integer; var aResult: boolean); virtual;</code></td>
 </tr>
 <tr class="list">
@@ -68,7 +76,7 @@
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
-<td class="itemcode"><code>procedure <strong><a href="uTesseractOCR.TTesseractOCR.html#InitializeBaseAPI-string-string-">InitializeBaseAPI</a></strong>(const aDatapath, aLanguage : string); virtual;</code></td>
+<td class="itemcode"><code>procedure <strong><a href="uTesseractOCR.TTesseractOCR.html#InitializeBaseAPI-string-string-TessOcrEngineMode-TStringList-">InitializeBaseAPI</a></strong>(const aDatapath, aLanguage : string; aOcrEngineMode : <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a> = <a href="uTesseractTypes.html#OEM_DEFAULT">OEM_DEFAULT</a>; const aConfigs: TStringList = nil); virtual;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
@@ -88,7 +96,7 @@
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <strong><a href="uTesseractOCR.TTesseractOCR.html#Initialize-string-string-string-string-">Initialize</a></strong>(const aLeptonicaLib, aTesseractLib, aDatapath, aLanguage : string) : boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="uTesseractOCR.TTesseractOCR.html#Initialize-string-string-string-string-TessOcrEngineMode-TStringList-">Initialize</a></strong>(const aLeptonicaLib, aTesseractLib, aDatapath, aLanguage : string; aOcrEngineMode : <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a> = <a href="uTesseractTypes.html#OEM_DEFAULT">OEM_DEFAULT</a>; const aConfigs: TStringList = nil) : boolean;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
@@ -99,15 +107,23 @@
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>property <strong><a href="uTesseractOCR.TTesseractOCR.html#BaseAPI">BaseAPI</a></strong>         : <a href="uTesseractBaseAPI.TTesseractBaseAPI.html">TTesseractBaseAPI</a>    read <a href="uTesseractOCR.TTesseractOCR.html#FBaseAPI">FBaseAPI</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uTesseractOCR.TTesseractOCR.html#BaseAPI">BaseAPI</a></strong>          : <a href="uTesseractBaseAPI.TTesseractBaseAPI.html">TTesseractBaseAPI</a>    read <a href="uTesseractOCR.TTesseractOCR.html#FBaseAPI">FBaseAPI</a>;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>property <strong><a href="uTesseractOCR.TTesseractOCR.html#Monitor">Monitor</a></strong>         : <a href="uTesseractMonitor.TTesseractMonitor.html">TTesseractMonitor</a>    read <a href="uTesseractOCR.TTesseractOCR.html#FMonitor">FMonitor</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uTesseractOCR.TTesseractOCR.html#Monitor">Monitor</a></strong>          : <a href="uTesseractMonitor.TTesseractMonitor.html">TTesseractMonitor</a>    read <a href="uTesseractOCR.TTesseractOCR.html#FMonitor">FMonitor</a>;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>property <strong><a href="uTesseractOCR.TTesseractOCR.html#Initialized">Initialized</a></strong>     : boolean              read <a href="uTesseractOCR.TTesseractOCR.html#GetInitialized">GetInitialized</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uTesseractOCR.TTesseractOCR.html#Initialized">Initialized</a></strong>      : boolean              read <a href="uTesseractOCR.TTesseractOCR.html#GetInitialized">GetInitialized</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="uTesseractOCR.TTesseractOCR.html#ComponentVersion">ComponentVersion</a></strong> : string               read <a href="uTesseractOCR.TTesseractOCR.html#GetComponentVersion">GetComponentVersion</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="uTesseractOCR.TTesseractOCR.html#Version">Version</a></strong>          : string               read <a href="uTesseractOCR.TTesseractOCR.html#GetVersion">GetVersion</a>;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
@@ -164,6 +180,22 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="GetVersion"></span><code>function <strong>GetVersion</strong>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="GetComponentVersion"></span><code>function <strong>GetComponentVersion</strong>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><span id="doOnCancelEvent-integer-boolean-"></span><code>procedure <strong>doOnCancelEvent</strong>(aWords: integer; var aResult: boolean); virtual;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -196,7 +228,7 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
-<td class="itemcode"><span id="InitializeBaseAPI-string-string-"></span><code>procedure <strong>InitializeBaseAPI</strong>(const aDatapath, aLanguage : string); virtual;</code></td>
+<td class="itemcode"><span id="InitializeBaseAPI-string-string-TessOcrEngineMode-TStringList-"></span><code>procedure <strong>InitializeBaseAPI</strong>(const aDatapath, aLanguage : string; aOcrEngineMode : <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a> = <a href="uTesseractTypes.html#OEM_DEFAULT">OEM_DEFAULT</a>; const aConfigs: TStringList = nil); virtual;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -236,7 +268,7 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Initialize-string-string-string-string-"></span><code>function <strong>Initialize</strong>(const aLeptonicaLib, aTesseractLib, aDatapath, aLanguage : string) : boolean;</code></td>
+<td class="itemcode"><span id="Initialize-string-string-string-string-TessOcrEngineMode-TStringList-"></span><code>function <strong>Initialize</strong>(const aLeptonicaLib, aTesseractLib, aDatapath, aLanguage : string; aOcrEngineMode : <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a> = <a href="uTesseractTypes.html#OEM_DEFAULT">OEM_DEFAULT</a>; const aConfigs: TStringList = nil) : boolean;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -276,7 +308,7 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="BaseAPI"></span><code>property <strong>BaseAPI</strong>         : <a href="uTesseractBaseAPI.TTesseractBaseAPI.html">TTesseractBaseAPI</a>    read <a href="uTesseractOCR.TTesseractOCR.html#FBaseAPI">FBaseAPI</a>;</code></td>
+<td class="itemcode"><span id="BaseAPI"></span><code>property <strong>BaseAPI</strong>          : <a href="uTesseractBaseAPI.TTesseractBaseAPI.html">TTesseractBaseAPI</a>    read <a href="uTesseractOCR.TTesseractOCR.html#FBaseAPI">FBaseAPI</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -286,7 +318,7 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Monitor"></span><code>property <strong>Monitor</strong>         : <a href="uTesseractMonitor.TTesseractMonitor.html">TTesseractMonitor</a>    read <a href="uTesseractOCR.TTesseractOCR.html#FMonitor">FMonitor</a>;</code></td>
+<td class="itemcode"><span id="Monitor"></span><code>property <strong>Monitor</strong>          : <a href="uTesseractMonitor.TTesseractMonitor.html">TTesseractMonitor</a>    read <a href="uTesseractOCR.TTesseractOCR.html#FMonitor">FMonitor</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -296,11 +328,31 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Initialized"></span><code>property <strong>Initialized</strong>     : boolean              read <a href="uTesseractOCR.TTesseractOCR.html#GetInitialized">GetInitialized</a>;</code></td>
+<td class="itemcode"><span id="Initialized"></span><code>property <strong>Initialized</strong>      : boolean              read <a href="uTesseractOCR.TTesseractOCR.html#GetInitialized">GetInitialized</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
  Returns true if all the loaders, the base api and the monitor are initialized. </p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ComponentVersion"></span><code>property <strong>ComponentVersion</strong> : string               read <a href="uTesseractOCR.TTesseractOCR.html#GetComponentVersion">GetComponentVersion</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Returns the Tesseract4Delphi version. </p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Version"></span><code>property <strong>Version</strong>          : string               read <a href="uTesseractOCR.TTesseractOCR.html#GetVersion">GetVersion</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Returns the Tesseract version. </p>
 </td></tr>
 </table>
 <table class="detail wide_list">

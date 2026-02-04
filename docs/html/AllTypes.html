@@ -188,12 +188,52 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a></td>
 <td class="itemunit"><a class="bold" href="uTesseractTypes.html">uTesseractTypes</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p>
+
+<p>When Tesseract/Cube is initialized we can choose to instantiate/load/run only the Tesseract part, only the Cube part or both along with the combiner. The preference of which engine to use is stored in tessedit_ocr_engine_mode.
+
+<p>ATTENTION: When modifying this enum, please make sure to make the appropriate changes to all the enums mirroring it (e.g. OCREngine in cityblock/workflow/detection/detection_storage.proto). Such enums will mention the connection to OcrEngineMode in the comments.
+
+<p></p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TessOrientation">TessOrientation</a></td>
 <td class="itemunit"><a class="bold" href="uTesseractTypes.html">uTesseractTypes</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p>
+
+<p>Orientation Example:
+
+<p>To left is a diagram of some (1) English and (2) Chinese text and a (3) photo credit.
+
+<p>Upright Latin characters are represented as A and a. '&lt;' represents a latin character rotated anti-clockwise 90 degrees.
+
+<p>Upright Chinese characters are represented C and c.
+
+<p>NOTA BENE: enum values here should match goodoc.proto </p>
+
+<pre class="preformatted">
++------------------+
+| 1 Aaaa Aaaa Aaaa |
+| Aaa aa aaa aa    |
+| aaaaaa A aa aaa. |
+|                2 |
+|   #######  c c C |
+|   #######  c c c |
+| &lt; #######  c c c |
+| &lt; #######  c   c |
+| &lt; #######  .   c |
+| 3 #######      c |
++------------------+</pre>
+
+<p>
+
+<p>If you orient your head so that &quot;up&quot; aligns with Orientation, then the characters will appear &quot;right side up&quot; and readable.
+
+<p>In the example above, both the English and Chinese paragraphs are oriented so their &quot;up&quot; is the top of the page (page up). The photo credit is read with one's head turned leftward (&quot;up&quot; is to page left).
+
+<p>The values of this enum match the convention of Tesseract's osdetect.h
+
+<p></p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a></td>
@@ -203,22 +243,28 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a></td>
 <td class="itemunit"><a class="bold" href="uTesseractTypes.html">uTesseractTypes</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p> enum of the elements of the page hierarchy, used in ResultIterator to provide functions that operate on each level without having to have 5x as many functions. </p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TessPageSegMode">TessPageSegMode</a></td>
 <td class="itemunit"><a class="bold" href="uTesseractTypes.html">uTesseractTypes</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p> Possible modes for page layout analysis. These *must* be kept in order of decreasing amount of layout analysis to be done, except for OSD_ONLY, so that the inequality test macros below work. </p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TessParagraphJustification">TessParagraphJustification</a></td>
 <td class="itemunit"><a class="bold" href="uTesseractTypes.html">uTesseractTypes</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p>
+
+<p>NOTA BENE: Fully justified paragraphs (text aligned to both left and right margins) are marked by Tesseract with JUSTIFICATION_LEFT if their text is written with a left-to-right script and with JUSTIFICATION_RIGHT if their text is written in a right-to-left script.
+
+<p>Interpretation for text read in vertical lines: &quot;Left&quot; is wherever the starting reading position is.
+
+<p></p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TessPolyBlockType">TessPolyBlockType</a></td>
 <td class="itemunit"><a class="bold" href="uTesseractTypes.html">uTesseractTypes</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p> Possible types for a POLY_BLOCK or ColPartition. Must be kept in sync with kPBColors in polyblk.cpp and PTIs*Type functions below, as well as kPolyBlockNames in layout_test.cc. Used extensively by ColPartition, and POLY_BLOCK. </p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TessProgressFunc">TessProgressFunc</a></td>
@@ -238,12 +284,28 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TessTextlineOrder">TessTextlineOrder</a></td>
 <td class="itemunit"><a class="bold" href="uTesseractTypes.html">uTesseractTypes</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p>
+
+<p>The text lines are read in the given sequence.
+
+<p>In English, the order is top-to-bottom.
+
+<p>In Chinese, vertical text lines are read right-to-left. Mongolian is written in vertical columns top to bottom like Chinese, but the lines order left-to right.
+
+<p>Note that only some combinations make sense. For example, WRITING_DIRECTION_LEFT_TO_RIGHT implies TEXTLINE_ORDER_TOP_TO_BOTTOM
+
+<p></p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TessWritingDirection">TessWritingDirection</a></td>
 <td class="itemunit"><a class="bold" href="uTesseractTypes.html">uTesseractTypes</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p>
+
+<p>The grapheme clusters within a line of text are laid out logically in this direction, judged when looking at the text line rotated so that its Orientation is &quot;page up&quot;.
+
+<p>For English text, the writing direction is left-to-right. For the Chinese text in the above example, the writing direction is top-to-bottom.
+
+<p></p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TFileDescriptor">TFileDescriptor</a></td>
@@ -291,6 +353,11 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uTesseractTypes.html#TTesseractBaseLine">TTesseractBaseLine</a></td>
+<td class="itemunit"><a class="bold" href="uTesseractTypes.html">uTesseractTypes</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="uTesseractTypes.html#TTesseractLoaderStatus">TTesseractLoaderStatus</a></td>
 <td class="itemunit"><a class="bold" href="uTesseractTypes.html">uTesseractTypes</a></td>
 <td class="itemdesc"><p> Status of TTesseractLoader. </p></td>

@@ -18,58 +18,89 @@ object MainForm: TMainForm
     Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    object Button1: TButton
+    object OpenSampleBtn: TButton
       Align = Left
       Margins.Right = 8.000000000000000000
       Position.X = 8.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 97.000000000000000000
+      Size.Width = 120.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 3
+      TabOrder = 0
       Text = 'Open Sample'
-      OnClick = Button1Click
+      OnClick = OpenSampleBtnClick
     end
-    object Button2: TButton
+    object OpenBtn: TButton
       Align = Left
       Margins.Right = 8.000000000000000000
-      Position.X = 113.000000000000000000
+      Position.X = 136.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 88.000000000000000000
-      Size.Height = 24.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 2
-      Text = 'Open ...'
-      OnClick = Button2Click
-    end
-    object Button3: TButton
-      Align = Left
-      Margins.Right = 8.000000000000000000
-      Position.X = 209.000000000000000000
-      Position.Y = 8.000000000000000000
-      Size.Width = 88.000000000000000000
+      Size.Width = 120.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      Text = 'Recognize'
-      OnClick = Button3Click
+      Text = 'Open image ...'
+      OnClick = OpenBtnClick
     end
-    object ProgressBar1: TProgressBar
+    object RecognizeBtn: TButton
       Align = Left
-      Orientation = Horizontal
       Margins.Right = 8.000000000000000000
-      Position.X = 305.000000000000000000
+      Position.X = 264.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 100.000000000000000000
+      Size.Width = 120.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
-      Visible = False
+      TabOrder = 2
+      Text = 'Recognize'
+      OnClick = RecognizeBtnClick
+    end
+    object Layout3: TLayout
+      Align = Client
+      Padding.Left = 16.000000000000000000
+      Size.Width = 599.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object Label1: TLabel
+        Align = Left
+        Position.X = 16.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Mode'
+        TabOrder = 0
+      end
+      object ModeCb: TComboBox
+        Align = Client
+        Items.Strings = (
+          'Orientation and script detection only'
+          
+            'Automatic page segmentation with orientation and script detectio' +
+            'n'
+          'Automatic page segmentation, but no OSD, or OCR'
+          'Fully automatic page segmentation, but no OSD'
+          'Assume a single column of text of variable sizes'
+          'Assume a single uniform block of vertically aligned text'
+          'Assume a single uniform block of text'
+          'Treat the image as a single text line'
+          'Treat the image as a single word'
+          'Treat the image as a single word in a circle'
+          'Treat the image as a single character'
+          'Find as much text as possible in no particular order'
+          'Sparse text with orientation and script det.'
+          'Treat the image as a single text line, Tesseract-specific')
+        ItemIndex = 0
+        Size.Width = 542.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
     end
   end
   object Layout1: TLayout
     Align = Client
-    Size.Width = 649.000000000000000000
-    Size.Height = 624.000000000000000000
+    Size.Width = 696.000000000000000000
+    Size.Height = 602.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object Image1: TImage
@@ -77,43 +108,108 @@ object MainForm: TMainForm
         item
         end>
       Align = Client
-      Size.Width = 649.000000000000000000
-      Size.Height = 624.000000000000000000
+      Size.Width = 696.000000000000000000
+      Size.Height = 602.000000000000000000
       Size.PlatformDefault = False
-    end
-  end
-  object Layout2: TLayout
-    Align = Right
-    Position.X = 657.000000000000000000
-    Position.Y = 40.000000000000000000
-    Size.Width = 342.000000000000000000
-    Size.Height = 624.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 2
-    object Memo1: TMemo
-      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-      DataDetectorTypes = []
-      Align = Client
-      Size.Width = 342.000000000000000000
-      Size.Height = 624.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 0
-      Viewport.Width = 338.000000000000000000
-      Viewport.Height = 620.000000000000000000
     end
   end
   object Splitter1: TSplitter
     Align = Right
     Cursor = crHSplit
     MinSize = 20.000000000000000000
-    Position.X = 649.000000000000000000
+    Position.X = 696.000000000000000000
     Position.Y = 40.000000000000000000
     Size.Width = 8.000000000000000000
-    Size.Height = 624.000000000000000000
+    Size.Height = 602.000000000000000000
     Size.PlatformDefault = False
   end
   object OpenDialog1: TOpenDialog
     Left = 488
     Top = 320
+  end
+  object TabControl1: TTabControl
+    Align = Right
+    Position.X = 704.000000000000000000
+    Position.Y = 40.000000000000000000
+    Size.Width = 295.000000000000000000
+    Size.Height = 602.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 4
+    TabPosition = PlatformDefault
+    Sizes = (
+      295s
+      576s
+      295s
+      576s)
+    object TextTabItem: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 74.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Text result'
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        ReadOnly = True
+        Align = Client
+        Size.Width = 295.000000000000000000
+        Size.Height = 576.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 291.000000000000000000
+        Viewport.Height = 572.000000000000000000
+      end
+    end
+    object AnalysisTabItem: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 63.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Analysis'
+      object Memo2: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        ReadOnly = True
+        Align = Client
+        Size.Width = 295.000000000000000000
+        Size.Height = 576.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 291.000000000000000000
+        Viewport.Height = 572.000000000000000000
+      end
+    end
+  end
+  object StatusBar1: TStatusBar
+    Position.Y = 642.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 999.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object StatusLbl: TLabel
+      Align = Left
+      AutoSize = True
+      Size.Width = 0.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+  object TesseractOCR1: TTesseractOCR
+    OnProgress = TesseractOCR1Progress
+    Left = 248
+    Top = 168
   end
 end

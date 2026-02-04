@@ -10,7 +10,7 @@
 <body>
 <span id="TTesseractResultIterator"></span><h1 class="cio">Class TTesseractResultIterator</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section">Fields</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section">Properties</div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section">Fields</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Properties</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="unit">Unit</h2>
 <p class="unitlink">
 <a href="uTesseractResultIterator.html">uTesseractResultIterator</a></p>
@@ -35,8 +35,16 @@
 <span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#GetPageIterator">GetPageIterator</a></strong>: <a href="uTesseractPageIterator.TTesseractPageIterator.html">TTesseractPageIterator</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#GetChoiceIterator">GetChoiceIterator</a></strong>: <a href="uTesseractChoiceIterator.TTesseractChoiceIterator.html">TTesseractChoiceIterator</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#CopyHandle-TessPageIterator-">CopyHandle</a></strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); override;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
@@ -79,12 +87,39 @@
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#SymbolIsDropcap">SymbolIsDropcap</a></strong>: boolean;</code></td>
 </tr>
 </table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#PageIterator">PageIterator</a></strong>     : <a href="uTesseractPageIterator.TTesseractPageIterator.html">TTesseractPageIterator</a>     read  <a href="uTesseractResultIterator.TTesseractResultIterator.html#GetPageIterator">GetPageIterator</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#ChoiceIterator">ChoiceIterator</a></strong>   : <a href="uTesseractChoiceIterator.TTesseractChoiceIterator.html">TTesseractChoiceIterator</a>   read  <a href="uTesseractResultIterator.TTesseractResultIterator.html#GetChoiceIterator">GetChoiceIterator</a>;</code></td>
+</tr>
+</table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Methods</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="GetPageIterator"></span><code>function <strong>GetPageIterator</strong>: <a href="uTesseractPageIterator.TTesseractPageIterator.html">TTesseractPageIterator</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><span id="GetChoiceIterator"></span><code>function <strong>GetChoiceIterator</strong>: <a href="uTesseractChoiceIterator.TTesseractChoiceIterator.html">TTesseractChoiceIterator</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="CopyHandle-TessPageIterator-"></span><code>procedure <strong>CopyHandle</strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); override;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -201,6 +236,27 @@
 <tr><td colspan="2">
 <p>
  Returns true if the current symbol is a dropcap. If iterating at a higher level object than symbols, eg words, then this will return the attributes of the first symbol in that word. </p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PageIterator"></span><code>property <strong>PageIterator</strong>     : <a href="uTesseractPageIterator.TTesseractPageIterator.html">TTesseractPageIterator</a>     read  <a href="uTesseractResultIterator.TTesseractResultIterator.html#GetPageIterator">GetPageIterator</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Returns a TTesseractPageIterator instance. It's a copy of this iterator. It must be destroyed. </p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ChoiceIterator"></span><code>property <strong>ChoiceIterator</strong>   : <a href="uTesseractChoiceIterator.TTesseractChoiceIterator.html">TTesseractChoiceIterator</a>   read  <a href="uTesseractResultIterator.TTesseractResultIterator.html#GetChoiceIterator">GetChoiceIterator</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Returns a new TTesseractChoiceIterator instance. It must be destroyed. </p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>

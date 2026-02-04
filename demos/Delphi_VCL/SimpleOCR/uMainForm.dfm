@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Top = 0
   Caption = 'Simple OCR'
   ClientHeight = 571
-  ClientWidth = 760
+  ClientWidth = 981
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,70 +16,128 @@ object MainForm: TMainForm
   object ButtonPnl: TPanel
     Left = 0
     Top = 0
-    Width = 760
+    Width = 981
     Height = 41
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    object OpenBtn: TButton
-      Left = 135
-      Top = 8
-      Width = 120
-      Height = 25
-      Caption = 'Open image...'
-      TabOrder = 1
-      OnClick = OpenBtnClick
-    end
-    object RecognizeBtn: TButton
-      Left = 262
-      Top = 8
-      Width = 120
-      Height = 25
-      Caption = 'Recognize'
-      TabOrder = 2
-      OnClick = RecognizeBtnClick
-    end
-    object ProgressBar1: TProgressBar
-      Left = 388
-      Top = 12
-      Width = 150
-      Height = 17
-      TabOrder = 3
-      Visible = False
-    end
-    object OpenSampleBtn: TButton
-      Left = 8
-      Top = 8
-      Width = 120
-      Height = 25
-      Caption = 'Open sample'
+    object Panel1: TPanel
+      Left = 382
+      Top = 0
+      Width = 599
+      Height = 41
+      Align = alClient
+      BevelOuter = bvNone
+      Padding.Left = 10
+      Padding.Top = 10
+      Padding.Right = 10
+      Padding.Bottom = 10
       TabOrder = 0
-      OnClick = OpenSampleBtnClick
+      object Label1: TLabel
+        Left = 10
+        Top = 10
+        Width = 39
+        Height = 21
+        Align = alLeft
+        AutoSize = False
+        Caption = 'Mode'
+        Layout = tlCenter
+      end
+      object ModeCb: TComboBox
+        Left = 49
+        Top = 10
+        Width = 540
+        Height = 23
+        Align = alClient
+        Style = csDropDownList
+        ItemIndex = 0
+        TabOrder = 0
+        Text = 'Orientation and script detection only'
+        Items.Strings = (
+          'Orientation and script detection only'
+          
+            'Automatic page segmentation with orientation and script detectio' +
+            'n'
+          'Automatic page segmentation, but no OSD, or OCR'
+          'Fully automatic page segmentation, but no OSD'
+          'Assume a single column of text of variable sizes'
+          'Assume a single uniform block of vertically aligned text'
+          'Assume a single uniform block of text'
+          'Treat the image as a single text line'
+          'Treat the image as a single word'
+          'Treat the image as a single word in a circle'
+          'Treat the image as a single character'
+          'Find as much text as possible in no particular order'
+          'Sparse text with orientation and script det.'
+          'Treat the image as a single text line, Tesseract-specific')
+      end
+    end
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 382
+      Height = 41
+      Align = alLeft
+      BevelOuter = bvNone
+      Padding.Left = 5
+      Padding.Top = 5
+      Padding.Right = 5
+      Padding.Bottom = 5
+      TabOrder = 1
+      object OpenBtn: TButton
+        Left = 131
+        Top = 5
+        Width = 120
+        Height = 31
+        Caption = 'Open image...'
+        TabOrder = 0
+        OnClick = OpenBtnClick
+      end
+      object OpenSampleBtn: TButton
+        Left = 5
+        Top = 5
+        Width = 120
+        Height = 31
+        Align = alLeft
+        Caption = 'Open sample'
+        TabOrder = 1
+        OnClick = OpenSampleBtnClick
+      end
+      object RecognizeBtn: TButton
+        Left = 257
+        Top = 5
+        Width = 120
+        Height = 31
+        Align = alRight
+        Caption = 'Recognize'
+        TabOrder = 2
+        OnClick = RecognizeBtnClick
+      end
     end
   end
   object MainPnl: TPanel
     Left = 0
     Top = 41
-    Width = 760
+    Width = 981
     Height = 530
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
     object Splitter1: TSplitter
       Left = 0
-      Top = 319
-      Width = 760
+      Top = 315
+      Width = 981
       Height = 3
       Cursor = crVSplit
       Align = alBottom
       ExplicitTop = 0
-      ExplicitWidth = 311
+      ExplicitWidth = 318
     end
     object Image1: TImage
       Left = 0
       Top = 0
-      Width = 760
-      Height = 319
+      Width = 981
+      Height = 315
       Align = alClient
       Center = True
       Proportional = True
@@ -89,15 +147,54 @@ object MainForm: TMainForm
       ExplicitWidth = 105
       ExplicitHeight = 105
     end
-    object Memo1: TMemo
+    object StatusBar1: TStatusBar
       Left = 0
-      Top = 322
-      Width = 760
-      Height = 208
+      Top = 511
+      Width = 981
+      Height = 19
+      Panels = <
+        item
+          Width = 150
+        end
+        item
+          Width = 500
+        end>
+    end
+    object PageControl1: TPageControl
+      Left = 0
+      Top = 318
+      Width = 981
+      Height = 193
+      ActivePage = TabSheet2
       Align = alBottom
-      ReadOnly = True
-      ScrollBars = ssBoth
-      TabOrder = 0
+      TabOrder = 1
+      object TabSheet1: TTabSheet
+        Caption = 'Text result'
+        object Memo1: TMemo
+          Left = 0
+          Top = 0
+          Width = 973
+          Height = 163
+          Align = alClient
+          ReadOnly = True
+          ScrollBars = ssBoth
+          TabOrder = 0
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Analysis'
+        ImageIndex = 1
+        object Memo2: TMemo
+          Left = 0
+          Top = 0
+          Width = 973
+          Height = 163
+          Align = alClient
+          ReadOnly = True
+          ScrollBars = ssBoth
+          TabOrder = 0
+        end
+      end
     end
   end
   object OpenDialog1: TOpenDialog

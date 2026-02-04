@@ -1,83 +1,178 @@
 object MainForm: TMainForm
   Left = 294
-  Height = 475
+  Height = 616
   Top = 250
   Width = 870
   Caption = 'MainForm'
-  ClientHeight = 475
+  ClientHeight = 616
   ClientWidth = 870
   Position = poScreenCenter
   LCLVersion = '4.4.0.0'
   OnCreate = FormCreate
   object ButtonPnl: TPanel
     Left = 0
-    Height = 40
+    Height = 30
     Top = 0
     Width = 870
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 40
+    ClientHeight = 30
     ClientWidth = 870
     TabOrder = 0
-    object Button1: TButton
-      Left = 8
-      Height = 25
-      Top = 5
-      Width = 120
-      Caption = 'Open sample'
+    object Panel1: TPanel
+      Left = 0
+      Height = 30
+      Top = 0
+      Width = 408
+      Align = alLeft
+      BevelOuter = bvNone
+      ClientHeight = 30
+      ClientWidth = 408
       TabOrder = 0
-      OnClick = Button1Click
+      object OpenSampleBtn: TButton
+        Left = 3
+        Height = 25
+        Top = 2
+        Width = 120
+        Caption = 'Open sample'
+        TabOrder = 0
+        OnClick = OpenSampleBtnClick
+      end
+      object OpenBtn: TButton
+        Left = 133
+        Height = 25
+        Top = 2
+        Width = 120
+        Caption = 'Open...'
+        TabOrder = 1
+        OnClick = OpenBtnClick
+      end
+      object RecognizeBtn: TButton
+        Left = 267
+        Height = 25
+        Top = 2
+        Width = 120
+        Caption = 'Recognize'
+        TabOrder = 2
+        OnClick = RecognizeBtnClick
+      end
     end
-    object Button2: TButton
-      Left = 142
-      Height = 25
-      Top = 5
-      Width = 120
-      Caption = 'Open...'
+    object Panel2: TPanel
+      Left = 408
+      Height = 30
+      Top = 0
+      Width = 462
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 30
+      ClientWidth = 462
       TabOrder = 1
-      OnClick = Button2Click
+      object Label1: TLabel
+        Left = 0
+        Height = 30
+        Top = 0
+        Width = 72
+        Align = alLeft
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Mode'
+        Layout = tlCenter
+      end
+      object ModeCb: TComboBox
+        Left = 72
+        Height = 30
+        Top = 0
+        Width = 390
+        Align = alClient
+        ItemHeight = 0
+        ItemIndex = 0
+        Items.Strings = (
+          'Orientation and script detection only'
+          'Automatic page segmentation with orientation and script detection'
+          'Automatic page segmentation, but no OSD, or OCR'
+          'Fully automatic page segmentation, but no OSD'
+          'Assume a single column of text of variable sizes'
+          'Assume a single uniform block of vertically aligned text'
+          'Assume a single uniform block of text'
+          'Treat the image as a single text line'
+          'Treat the image as a single word'
+          'Treat the image as a single word in a circle'
+          'Treat the image as a single character'
+          'Find as much text as possible in no particular order'
+          'Sparse text with orientation and script det.'
+          'Treat the image as a single text line, Tesseract-specific'
+        )
+        TabOrder = 0
+        Text = 'Orientation and script detection only'
+      end
     end
-    object Button3: TButton
-      Left = 272
-      Height = 25
-      Top = 5
-      Width = 120
-      Caption = 'Recognize'
-      TabOrder = 2
-      OnClick = Button3Click
-    end
-    object ProgressBar1: TProgressBar
-      Left = 416
-      Height = 20
-      Top = 8
-      Width = 168
-      TabOrder = 3
-    end
-  end
-  object Memo1: TMemo
-    Left = 0
-    Height = 90
-    Top = 385
-    Width = 870
-    Align = alBottom
-    ReadOnly = True
-    TabOrder = 1
   end
   object Splitter1: TSplitter
     Cursor = crVSplit
     Left = 0
     Height = 5
-    Top = 380
+    Top = 393
     Width = 870
     Align = alBottom
     ResizeAnchor = akBottom
   end
   object Image1: TImage
     Left = 0
-    Height = 340
-    Top = 40
+    Height = 363
+    Top = 30
     Width = 870
     Align = alClient
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 18
+    Top = 598
+    Width = 870
+    Panels = <    
+      item
+        Width = 500
+      end>
+    SimplePanel = False
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 200
+    Top = 398
+    Width = 870
+    ActivePage = TabSheet1
+    Align = alBottom
+    TabIndex = 0
+    TabOrder = 3
+    object TabSheet1: TTabSheet
+      Caption = 'Text result'
+      ClientHeight = 170
+      ClientWidth = 860
+      object Memo1: TMemo
+        Left = 0
+        Height = 170
+        Top = 0
+        Width = 860
+        Align = alClient
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 0
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Analysis'
+      ClientHeight = 170
+      ClientWidth = 860
+      object Memo2: TMemo
+        Left = 0
+        Height = 170
+        Top = 0
+        Width = 860
+        Align = alClient
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 0
+      end
+    end
   end
   object TesseractOCR1: TTesseractOCR
     Left = 403

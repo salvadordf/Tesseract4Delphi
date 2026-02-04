@@ -11,15 +11,23 @@ type
   TMainForm = class(TForm)
     OpenDialog1: TOpenDialog;
     OpenBtn: TButton;
-    Memo1: TMemo;
     ButtonPnl: TPanel;
     MainPnl: TPanel;
     Splitter1: TSplitter;
     Image1: TImage;
     RecognizeBtn: TButton;
     TesseractOCR1: TTesseractOCR;
-    ProgressBar1: TProgressBar;
     OpenSampleBtn: TButton;
+    ModeCb: TComboBox;
+    StatusBar1: TStatusBar;
+    Label1: TLabel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    Memo1: TMemo;
+    Memo2: TMemo;
     procedure FormCreate(Sender: TObject);
     procedure OpenBtnClick(Sender: TObject);
     procedure RecognizeBtnClick(Sender: TObject);
@@ -29,6 +37,7 @@ type
   private
     { Private declarations }
     procedure OpenImage(const aFileName : string);
+    procedure AnalyzeLayout;
   public
     { Public declarations }
   end;
@@ -41,10 +50,14 @@ implementation
 {$R *.dfm}
 
 uses
-  uLeptonicaLoader, uTesseractLoader, uLeptonicaPix, uTesseractTypes;
+  uLeptonicaLoader, uTesseractLoader, uLeptonicaPix, uTesseractTypes,
+  uTesseractResultIterator, uTesseractMiscFunctions;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
+  ModeCb.ItemIndex := Ord(PSM_AUTO_OSD);
+  PageControl1.ActivePageIndex := 0;
+
   if not(TesseractOCR1.Initialize('org.sw.demo.danbloomberg.leptonica-1.86.0.dll',
                                   'google.tesseract.libtesseract-main.dll',
                                   '..\assets\tessdata\',
@@ -66,7 +79,11 @@ begin
       Image1.Picture.Assign(TempImage);
       TempImage.Free;
 
-      TesseractOCR1.BaseAPI.SetImage(aFileName);
+      if not(TesseractOCR1.BaseAPI.SetImage(aFileName)) then
+        begin
+          Memo1.Lines.Clear;
+          Memo1.Lines.Add('There was an issue loading the image.');
+        end;
     end;
 end;
 
@@ -83,24 +100,65 @@ end;
 
 procedure TMainForm.RecognizeBtnClick(Sender: TObject);
 begin
-  if TesseractOCR1.Recognize then
-    Memo1.Lines.SetText(PChar(TesseractOCR1.BaseAPI.GetText))
-   else
-    Memo1.Lines.Clear;
+  if not(TesseractOCR1.Initialized) then exit;
 
-  ProgressBar1.Visible := False;
+  ButtonPnl.Enabled := False;
+  StatusBar1.Panels[0].Text := 'Recognizing text...';
+  Refresh;
+
+  TesseractOCR1.BaseAPI.PageSegMode := TessPageSegMode(ModeCb.ItemIndex);
+
+  if TesseractOCR1.Recognize then
+    begin
+      Memo1.Lines.SetText(PChar(TesseractOCR1.BaseAPI.GetText));
+      AnalyzeLayout;
+    end
+   else
+    begin
+      Memo2.Lines.Clear;
+      Memo1.Lines.Clear;
+      Memo1.Lines.Add('There was an issue recognizing the text.');
+    end;
+
+  StatusBar1.Panels[0].Text := 'OCR completed';
+  PageControl1.ActivePageIndex := 0;
+  ButtonPnl.Enabled := True;
+end;
+
+procedure TMainForm.AnalyzeLayout;
+var
+  TempResultIterator : TTesseractResultIterator;
+  TempBoundingBox : TRect;
+  TempText : string;
+  TempConf : single;
+begin
+  TempResultIterator := TesseractOCR1.BaseAPI.Iterator;
+
+  if assigned(TempResultIterator) then
+    try
+      Memo2.Lines.Clear;
+      TempResultIterator.Begin_;
+
+      repeat
+        TempText := TempResultIterator.GetText(RIL_WORD);
+        TempConf := TempResultIterator.Confidence(RIL_WORD);
+        TempResultIterator.BoundingBox(RIL_WORD, TempBoundingBox);
+
+        Memo2.Lines.Add('Word:' + quotedstr(TempText) + ', ' +
+                        'Confidence:' + FloatToStrF(TempConf, ffFixed, 18, 2) + '%, ' +
+                        'Box:' + RectToStr(TempBoundingBox));
+
+      until not(TempResultIterator.Next(RIL_WORD));
+
+    finally
+      FreeAndNil(TempResultIterator);
+    end;
 end;
 
 procedure TMainForm.TesseractOCR1Progress(Sender: TObject; progress, left,
   right, top, bottom: Integer);
 begin
-  if (progress in [0..99]) then
-    begin
-      ProgressBar1.Visible  := True;
-      ProgressBar1.Position := progress;
-    end
-   else
-    ProgressBar1.Visible := False;
+  StatusBar1.Panels[0].Text := inttostr(progress) + ' %';
 end;
 
 end.
