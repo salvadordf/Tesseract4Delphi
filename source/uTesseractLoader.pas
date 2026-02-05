@@ -11,9 +11,9 @@ interface
 uses
   {$IFDEF DELPHI16_UP}
     {$IFDEF MSWINDOWS}WinApi.Windows, System.Win.Registry,{$ENDIF}
-    System.Classes, System.SysUtils,
+    System.Classes, System.SysUtils, System.SyncObjs,
   {$ELSE}
-    {$IFDEF MSWINDOWS}Windows, Registry,{$ENDIF} Classes, SysUtils,
+    {$IFDEF MSWINDOWS}Windows, Registry,{$ENDIF} Classes, SysUtils, SyncObjs,
     {$IFDEF FPC}dynlibs,{$ENDIF}
   {$ENDIF}
   uTesseractLibFunctions, uTesseractTypes;
@@ -35,6 +35,7 @@ type
       FLastErrorMessage                  : string;
       FMonitors                          : TList;
       FComponents                        : TList;
+      FSyncObj                           : TCriticalSection;
 
       function  GetInitialized : boolean;
 
@@ -53,6 +54,8 @@ type
       function  LoadResultIteratorFunctions : boolean;
       function  LoadChoiceIteratorFunctions : boolean;
       function  LoadProgressMonitorFunctions : boolean;
+      function  Lock : boolean;
+      procedure Unlock;
 
     public
       constructor Create;
@@ -148,6 +151,7 @@ begin
   FLastErrorMessage  := '';
   FMonitors          := nil;
   FComponents        := nil;
+  FSyncObj           := nil;
   FCheckRequiredLibs := True;
   FMustFreeLibrary   := {$IFDEF LINUXFPC}False{$ELSE}True{$ENDIF};
 
@@ -165,6 +169,9 @@ begin
     if assigned(FComponents) then
       FreeAndNil(FComponents);
 
+    if assigned(FSyncObj) then
+      FreeAndNil(FSyncObj);
+
     FreeTesseractLibrary;
   finally
     inherited Destroy;
@@ -177,6 +184,23 @@ begin
 
   FMonitors   := TList.Create;
   FComponents := TList.Create;
+  FSyncObj    := TCriticalSection.Create;
+end;
+
+function TTesseractLoader.Lock : boolean;
+begin
+  Result := False;
+
+  if assigned(FSyncObj) then
+    begin
+      FSyncObj.Acquire;
+      Result := True;
+    end;
+end;
+
+procedure TTesseractLoader.Unlock;
+begin
+  if assigned(FSyncObj) then FSyncObj.Release;
 end;
 
 function TTesseractLoader.GetInitialized : boolean;
@@ -708,14 +732,19 @@ var
 begin
   Result := False;
 
-  if assigned(FMonitors) and assigned(FComponents) then
-    begin
-      i := FMonitors.IndexOf(aHandle);
-      if (i >= 0) then
+  if Lock then
+    try
+      if assigned(FMonitors) and assigned(FComponents) then
         begin
-          aComponent := TComponent(FComponents[i]);
-          Result     := True;
+          i := FMonitors.IndexOf(aHandle);
+          if (i >= 0) then
+            begin
+              aComponent := TComponent(FComponents[i]);
+              Result     := True;
+            end;
         end;
+    finally
+      Unlock;
     end;
 end;
 
@@ -725,15 +754,20 @@ var
 begin
   Result := False;
 
-  if assigned(FMonitors) and assigned(FComponents) then
-    begin
-      i := FMonitors.IndexOf(aHandle);
-      if (i < 0) then
+  if Lock then
+    try
+      if assigned(FMonitors) and assigned(FComponents) then
         begin
-          FMonitors.Add(aHandle);
-          FComponents.Add(aComponent);
-          Result := True;
+          i := FMonitors.IndexOf(aHandle);
+          if (i < 0) then
+            begin
+              FMonitors.Add(aHandle);
+              FComponents.Add(aComponent);
+              Result := True;
+            end;
         end;
+    finally
+      Unlock;
     end;
 end;
 
@@ -743,15 +777,20 @@ var
 begin
   Result := False;
 
-  if assigned(FMonitors) and assigned(FComponents) then
-    begin
-      i := FMonitors.IndexOf(aHandle);
-      if (i >= 0) then
+  if Lock then
+    try
+      if assigned(FMonitors) and assigned(FComponents) then
         begin
-          FMonitors.Delete(i);
-          FComponents.Delete(i);
-          Result := True;
+          i := FMonitors.IndexOf(aHandle);
+          if (i >= 0) then
+            begin
+              FMonitors.Delete(i);
+              FComponents.Delete(i);
+              Result := True;
+            end;
         end;
+    finally
+      Unlock;
     end;
 end;
 

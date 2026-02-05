@@ -102,7 +102,9 @@ begin
   OpenImage('..\assets\samples\eng-text.bmp');
 end;
 
-procedure TMainForm.RecognizeBtnClick(Sender: TObject);
+procedure TMainForm.RecognizeBtnClick(Sender: TObject);      
+var
+  TempTicks : cardinal;
 begin
   if not(TesseractOCR1.Initialized) then exit;
 
@@ -110,10 +112,13 @@ begin
   StatusBar1.Panels[0].Text := 'Recognizing text...';
   Refresh;
 
-  TesseractOCR1.BaseAPI.PageSegMode := TessPageSegMode(ModeCb.ItemIndex);
+  TesseractOCR1.BaseAPI.PageSegMode := TessPageSegMode(ModeCb.ItemIndex);      
+
+  TempTicks := GetTickCount;
 
   if TesseractOCR1.Recognize then
-    begin
+    begin                  
+      StatusBar1.Panels[1].Text := FloatToStrF((GetTickCount - TempTicks) / 1000, ffFixed, 18, 2) + ' seconds';
       Memo1.Lines.SetText(PChar(TesseractOCR1.BaseAPI.GetText));
       AnalyzeLayout;
     end

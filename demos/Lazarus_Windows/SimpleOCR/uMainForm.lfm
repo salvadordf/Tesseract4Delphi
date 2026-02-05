@@ -195,6 +195,9 @@ object MainForm: TMainForm
     Panels = <    
       item
         Width = 500
+      end    
+      item
+        Width = 100
       end>
     SimplePanel = False
   end
