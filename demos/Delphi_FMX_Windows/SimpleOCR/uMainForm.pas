@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Memo.Types,
   FMX.StdCtrls, FMX.ScrollBox, FMX.Memo, FMX.Objects, FMX.Layouts,
   FMX.Controls.Presentation, uTesseractBaseAPI, uTesseractOCR, FMX.TabControl,
-  FMX.ListBox;
+  FMX.ListBox, FMX.Media;
 
 type
   TMainForm = class(TForm)
@@ -30,16 +30,23 @@ type
     StatusBar1: TStatusBar;
     StatusLbl: TLabel;
     TesseractOCR1: TTesseractOCR;
+    CopyVideoFrameBtn: TButton;
     procedure FormCreate(Sender: TObject);
     procedure OpenSampleBtnClick(Sender: TObject);
     procedure OpenBtnClick(Sender: TObject);
     procedure RecognizeBtnClick(Sender: TObject);
     procedure TesseractOCR1Progress(Sender: TObject; progress, left, right, top, bottom: Integer);
-  private
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormShow(Sender: TObject);
+    procedure CopyVideoFrameBtnClick(Sender: TObject);
+
+  protected
+    FVideoCap : TVideoCaptureDevice;
+    FBitmap : TBitmap;
     procedure OpenImage(const aFileName: string);
     procedure AnalyzeLayout;
-  public
-    { Public declarations }
+    procedure SampleBufferSync;
+    procedure VideoCap_OnSampleBufferReady(Sender: TObject; const ATime: TMediaTime);
   end;
 
 var
@@ -53,9 +60,41 @@ uses
   FMX.Surfaces, uLeptonicaLoader, uTesseractLoader, uLeptonicaPix, uTesseractTypes,
   uTesseractResultIterator, uTesseractMiscFunctions;
 
+procedure TMainForm.CopyVideoFrameBtnClick(Sender: TObject);
+var
+  TempStream : TMemoryStream;
+begin
+  if assigned(FVideoCap) and not(FBitmap.IsEmpty) then
+    begin
+      Image1.Bitmap.Assign(FBitmap);
+
+      TempStream := TMemoryStream.Create;
+      FBitmap.SaveToStream(TempStream);
+      TesseractOCR1.BaseAPI.SetImage(TempStream);
+      TempStream.Free;
+    end;
+end;
+
+procedure TMainForm.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  if assigned(FVideoCap) then
+    FVideoCap.StopCapture;
+
+  FBitmap.Free;
+end;
+
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   ModeCb.ItemIndex := Ord(PSM_AUTO_OSD);
+
+  FBitmap := TBitmap.Create;
+
+  FVideoCap := TCaptureDeviceManager.Current.DefaultVideoCaptureDevice;
+  if assigned(FVideoCap) then
+    begin
+      FVideoCap.OnSampleBufferReady := VideoCap_OnSampleBufferReady;
+      FVideoCap.Quality := TVideoCaptureQuality.PhotoQuality;
+    end;
 
   if not(TesseractOCR1.Initialize('org.sw.demo.danbloomberg.leptonica-1.86.0.dll',
                                   'google.tesseract.libtesseract-main.dll',
@@ -65,6 +104,25 @@ begin
       Memo1.Lines.Add('There was an issue initializing Tesseract.');
       ToolBar1.Enabled := False;
     end;
+end;
+
+procedure TMainForm.FormShow(Sender: TObject);
+begin
+  if assigned(FVideoCap) then
+    begin
+      CopyVideoFrameBtn.Enabled := True;
+      FVideoCap.StartCapture;
+    end;
+end;
+
+procedure TMainForm.VideoCap_OnSampleBufferReady(Sender: TObject; const ATime: TMediaTime);
+begin
+  TThread.Synchronize(TThread.CurrentThread, SampleBufferSync);
+end;
+
+procedure TMainForm.SampleBufferSync;
+begin
+  FVideoCap.SampleBufferToBitmap(FBitmap, true);
 end;
 
 procedure TMainForm.OpenImage(const aFileName: string);

@@ -3,18 +3,20 @@ object MainForm: TMainForm
   Top = 0
   Caption = 'Simple OCR'
   ClientHeight = 664
-  ClientWidth = 999
+  ClientWidth = 1065
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnClose = FormClose
+  OnShow = FormShow
   DesignerMasterStyle = 0
   object ToolBar1: TToolBar
     Padding.Left = 8.000000000000000000
     Padding.Top = 8.000000000000000000
     Padding.Right = 8.000000000000000000
     Padding.Bottom = 8.000000000000000000
-    Size.Width = 999.000000000000000000
+    Size.Width = 1065.000000000000000000
     Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
@@ -38,29 +40,29 @@ object MainForm: TMainForm
       Size.Width = 120.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 1
+      TabOrder = 2
       Text = 'Open image ...'
       OnClick = OpenBtnClick
     end
     object RecognizeBtn: TButton
       Align = Left
       Margins.Right = 8.000000000000000000
-      Position.X = 264.000000000000000000
+      Position.X = 392.000000000000000000
       Position.Y = 8.000000000000000000
       Size.Width = 120.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 2
+      TabOrder = 3
       Text = 'Recognize'
       OnClick = RecognizeBtnClick
     end
     object Layout3: TLayout
       Align = Client
       Padding.Left = 16.000000000000000000
-      Size.Width = 599.000000000000000000
+      Size.Width = 537.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 3
+      TabOrder = 4
       object Label1: TLabel
         Align = Left
         Position.X = 16.000000000000000000
@@ -90,16 +92,29 @@ object MainForm: TMainForm
           'Sparse text with orientation and script det.'
           'Treat the image as a single text line, Tesseract-specific')
         ItemIndex = 0
-        Size.Width = 542.000000000000000000
+        Size.Width = 480.000000000000000000
         Size.Height = 24.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
       end
     end
+    object CopyVideoFrameBtn: TButton
+      Align = Left
+      Enabled = False
+      Margins.Right = 8.000000000000000000
+      Position.X = 264.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Copy video frame'
+      OnClick = CopyVideoFrameBtnClick
+    end
   end
   object Layout1: TLayout
     Align = Client
-    Size.Width = 696.000000000000000000
+    Size.Width = 762.000000000000000000
     Size.Height = 602.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
@@ -108,7 +123,7 @@ object MainForm: TMainForm
         item
         end>
       Align = Client
-      Size.Width = 696.000000000000000000
+      Size.Width = 762.000000000000000000
       Size.Height = 602.000000000000000000
       Size.PlatformDefault = False
     end
@@ -117,7 +132,7 @@ object MainForm: TMainForm
     Align = Right
     Cursor = crHSplit
     MinSize = 20.000000000000000000
-    Position.X = 696.000000000000000000
+    Position.X = 762.000000000000000000
     Position.Y = 40.000000000000000000
     Size.Width = 8.000000000000000000
     Size.Height = 602.000000000000000000
@@ -129,7 +144,7 @@ object MainForm: TMainForm
   end
   object TabControl1: TTabControl
     Align = Right
-    Position.X = 704.000000000000000000
+    Position.X = 770.000000000000000000
     Position.Y = 40.000000000000000000
     Size.Width = 295.000000000000000000
     Size.Height = 602.000000000000000000
@@ -153,6 +168,8 @@ object MainForm: TMainForm
       StyleLookup = ''
       TabOrder = 0
       Text = 'Text result'
+      ExplicitSize.cx = 74.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
       object Memo1: TMemo
         Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
         DataDetectorTypes = []
@@ -177,6 +194,8 @@ object MainForm: TMainForm
       StyleLookup = ''
       TabOrder = 0
       Text = 'Analysis'
+      ExplicitSize.cx = 63.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
       object Memo2: TMemo
         Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
         DataDetectorTypes = []
@@ -194,7 +213,7 @@ object MainForm: TMainForm
   object StatusBar1: TStatusBar
     Position.Y = 642.000000000000000000
     ShowSizeGrip = True
-    Size.Width = 999.000000000000000000
+    Size.Width = 1065.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 5
