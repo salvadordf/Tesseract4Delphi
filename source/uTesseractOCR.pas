@@ -150,6 +150,9 @@ begin
       FreeAndNil(FBaseAPI);
     end;
 
+  if assigned(FMonitor) then
+    FreeAndNil(FMonitor);
+
   inherited Destroy;
 end;
 
