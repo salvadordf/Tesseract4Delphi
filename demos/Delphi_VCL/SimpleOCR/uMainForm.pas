@@ -99,6 +99,8 @@ begin
 end;
 
 procedure TMainForm.RecognizeBtnClick(Sender: TObject);
+var
+  TempTicks : cardinal;
 begin
   if not(TesseractOCR1.Initialized) then exit;
 
@@ -108,8 +110,11 @@ begin
 
   TesseractOCR1.BaseAPI.PageSegMode := TessPageSegMode(ModeCb.ItemIndex);
 
+  TempTicks := GetTickCount;
+
   if TesseractOCR1.Recognize then
     begin
+      StatusBar1.Panels[1].Text := FloatToStrF((GetTickCount - TempTicks) / 1000, ffFixed, 18, 2) + ' seconds';
       Memo1.Lines.SetText(PChar(TesseractOCR1.BaseAPI.GetText));
       AnalyzeLayout;
     end

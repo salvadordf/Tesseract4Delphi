@@ -42,7 +42,6 @@ type
 
       procedure InitializeLeptonica(const aLeptonicaLib : string); virtual;
       procedure InitializeTesseract(const aTesseractLib : string); virtual;
-      procedure InitializeBaseAPI(const aDatapath, aLanguage : string; aOcrEngineMode : TessOcrEngineMode = OEM_DEFAULT; const aConfigs: TStringList = nil); virtual;
       procedure InitializeMonitor; virtual;
 
     public
@@ -50,13 +49,33 @@ type
       destructor  Destroy; override;
       procedure   BeforeDestruction; override;
       /// <summary>
-      /// Initalizes all the libraries and the TTesseractBaseAPI instance.
+      /// Initalizes all the libraries, the TTesseractBaseAPI and TTesseractMonitor instances.
       /// </summary>
       /// <param name="aLeptonicaLib">Path to the Leptonica library.</param>
       /// <param name="aTesseractLib">Path to the Tesseract library.</param>
       /// <param name="aDatapath">Path to the tessdata directory.</param>
       /// <param name="aLanguage">The language is (usually) an ISO 639-3 string or empty will default to eng.</param>
+      /// <param name="aOcrEngineMode">The engine mode used for OCR.</param>
+      /// <param name="aConfigs">A set of optional param, value pairs.</param>
+      /// <remarks>
+      /// <para>Read the documentation about TTesseractBaseAPI.Init for more information.</para>
+      /// </remarks>
       function    Initialize(const aLeptonicaLib, aTesseractLib, aDatapath, aLanguage : string; aOcrEngineMode : TessOcrEngineMode = OEM_DEFAULT; const aConfigs: TStringList = nil) : boolean;
+      /// <summary>
+      /// Initalizes the TTesseractBaseAPI instance manually.
+      /// </summary>
+      /// <param name="aDatapath">Path to the tessdata directory.</param>
+      /// <param name="aLanguage">The language is (usually) an ISO 639-3 string or empty will default to eng.</param>
+      /// <param name="aOcrEngineMode">The engine mode used for OCR.</param>
+      /// <param name="aConfigs">A set of optional param, value pairs.</param>
+      /// <remarks>
+      /// <para>Read the documentation about TTesseractBaseAPI.Init for more information.</para>
+      /// </remarks>
+      procedure   InitializeBaseAPI(const aDatapath, aLanguage : string; aOcrEngineMode : TessOcrEngineMode = OEM_DEFAULT; const aConfigs: TStringList = nil); virtual;
+      /// <summary>
+      /// Destroy the TTesseractBaseAPI instance manually.
+      /// </summary>
+      procedure   DestroyBaseAPI;
       /// <summary>
       /// Recognize the image from SetAndThresholdImage, generating Tesseract
       /// internal structures.
@@ -144,16 +163,21 @@ end;
 
 destructor TTesseractOCR.Destroy;
 begin
-  if assigned(FBaseAPI) then
-    begin
-      FBaseAPI.End_;
-      FreeAndNil(FBaseAPI);
-    end;
+  DestroyBaseAPI;
 
   if assigned(FMonitor) then
     FreeAndNil(FMonitor);
 
   inherited Destroy;
+end;
+
+procedure TTesseractOCR.DestroyBaseAPI;
+begin
+  if assigned(FBaseAPI) then
+    begin
+      FBaseAPI.End_;
+      FreeAndNil(FBaseAPI);
+    end;
 end;
 
 procedure TTesseractOCR.BeforeDestruction;

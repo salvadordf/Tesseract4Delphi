@@ -2158,10 +2158,6 @@
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#InitializeTesseract">
 </object>
 <li><object type="text/sitemap">
-<param name="Name" value="InitializeBaseAPI">
-<param name="Local" value="uTesseractOCR.TTesseractOCR.html#InitializeBaseAPI">
-</object>
-<li><object type="text/sitemap">
 <param name="Name" value="InitializeMonitor">
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#InitializeMonitor">
 </object>
@@ -2180,6 +2176,14 @@
 <li><object type="text/sitemap">
 <param name="Name" value="Initialize">
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#Initialize">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="InitializeBaseAPI">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#InitializeBaseAPI">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="DestroyBaseAPI">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#DestroyBaseAPI">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Recognize">
@@ -4138,16 +4142,20 @@
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#BeforeDestruction">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="DestroyBaseAPI">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#DestroyBaseAPI">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="InitializeBaseAPI">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#InitializeBaseAPI">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="doOnCancelEvent">
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#doOnCancelEvent">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="doOnProgressEvent">
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#doOnProgressEvent">
-</object>
-<li><object type="text/sitemap">
-<param name="Name" value="InitializeBaseAPI">
-<param name="Local" value="uTesseractOCR.TTesseractOCR.html#InitializeBaseAPI">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="InitializeLeptonica">

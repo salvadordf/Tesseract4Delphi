@@ -1,6 +1,7 @@
 program SimpleOCR;
 
 uses
+  //FastMM4,
   Vcl.Forms,
   uMainForm in 'uMainForm.pas' {MainForm};
 

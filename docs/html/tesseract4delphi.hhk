@@ -1054,16 +1054,16 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Create">
-<param name="Local" value="uLeptonicaBox.TLeptonicaBox.html#Create-PBox-">
+<param name="Local" value="uLeptonicaBox.TLeptonicaBox.html#Create-l_int32-l_int32-l_int32-l_int32-">
 </object>
 <ul>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaBox - uLeptonicaBox Unit">
-<param name="Local" value="uLeptonicaBox.TLeptonicaBox.html#Create-PBox-">
+<param name="Local" value="uLeptonicaBox.TLeptonicaBox.html#Create-l_int32-l_int32-l_int32-l_int32-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaBox - uLeptonicaBox Unit">
-<param name="Local" value="uLeptonicaBox.TLeptonicaBox.html#Create-l_int32-l_int32-l_int32-l_int32-">
+<param name="Local" value="uLeptonicaBox.TLeptonicaBox.html#Create-PBox-">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -1114,16 +1114,16 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Create">
-<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-l_int32-">
+<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-PBoxa-">
 </object>
 <ul>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaBoxArray - uLeptonicaBoxArray Unit">
-<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-l_int32-">
+<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-PBoxa-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaBoxArray - uLeptonicaBoxArray Unit">
-<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-PBoxa-">
+<param name="Local" value="uLeptonicaBoxArray.TLeptonicaBoxArray.html#Create-l_int32-">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -1334,16 +1334,16 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Create">
-<param name="Local" value="uLeptonicaPixArray.TLeptonicaPixArray.html#Create-l_int32-">
+<param name="Local" value="uLeptonicaPixArray.TLeptonicaPixArray.html#Create-PPixa-">
 </object>
 <ul>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaPixArray - uLeptonicaPixArray Unit">
-<param name="Local" value="uLeptonicaPixArray.TLeptonicaPixArray.html#Create-l_int32-">
+<param name="Local" value="uLeptonicaPixArray.TLeptonicaPixArray.html#Create-PPixa-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TLeptonicaPixArray - uLeptonicaPixArray Unit">
-<param name="Local" value="uLeptonicaPixArray.TLeptonicaPixArray.html#Create-PPixa-">
+<param name="Local" value="uLeptonicaPixArray.TLeptonicaPixArray.html#Create-l_int32-">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -1548,16 +1548,16 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Create">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Create-TessBaseAPI-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Create">
 </object>
 <ul>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Create-TessBaseAPI-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Create">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Create">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Create-TessBaseAPI-">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -1602,16 +1602,16 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="GetComponentImages">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-boolean-Integer-TLeptonicaPixClassArray-TIntegerArray-TIntegerArray-TRectArray-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-TLeptonicaPixClassArray-TIntegerArray-TRectArray-">
 </object>
 <ul>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-boolean-Integer-TLeptonicaPixClassArray-TIntegerArray-TIntegerArray-TRectArray-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-TLeptonicaPixClassArray-TIntegerArray-TRectArray-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-TLeptonicaPixClassArray-TIntegerArray-TRectArray-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#GetComponentImages-TessPageIteratorLevel-boolean-boolean-Integer-TLeptonicaPixClassArray-TIntegerArray-TIntegerArray-TRectArray-">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -1724,16 +1724,16 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Init">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Init-string-string-TessOcrEngineMode-TStringList-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Init-string-string-">
 </object>
 <ul>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Init-string-string-TessOcrEngineMode-TStringList-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Init-string-string-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Init-string-string-TessOcrEngineMode-TStringList-TStringList-TStringList-boolean-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Init-string-string-TessOcrEngineMode-TStringList-">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
@@ -1741,7 +1741,7 @@
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="TTesseractBaseAPI - uTesseractBaseAPI Unit">
-<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Init-string-string-">
+<param name="Local" value="uTesseractBaseAPI.TTesseractBaseAPI.html#Init-string-string-TessOcrEngineMode-TStringList-TStringList-TStringList-boolean-">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -2247,6 +2247,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="Destroy">
 <param name="Local" value="uTesseractOCR.TTesseractOCR.html#Destroy">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="DestroyBaseAPI">
+<param name="Local" value="uTesseractOCR.TTesseractOCR.html#DestroyBaseAPI">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="doOnCancelEvent">

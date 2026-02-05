@@ -76,29 +76,33 @@
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
-<td class="itemcode"><code>procedure <strong><a href="uTesseractOCR.TTesseractOCR.html#InitializeBaseAPI-string-string-TessOcrEngineMode-TStringList-">InitializeBaseAPI</a></strong>(const aDatapath, aLanguage : string; aOcrEngineMode : <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a> = <a href="uTesseractTypes.html#OEM_DEFAULT">OEM_DEFAULT</a>; const aConfigs: TStringList = nil); virtual;</code></td>
-</tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><code>procedure <strong><a href="uTesseractOCR.TTesseractOCR.html#InitializeMonitor">InitializeMonitor</a></strong>; virtual;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>constructor <strong><a href="uTesseractOCR.TTesseractOCR.html#Create-TComponent-">Create</a></strong>(AOwner: TComponent); override;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>destructor <strong><a href="uTesseractOCR.TTesseractOCR.html#Destroy">Destroy</a></strong>; override;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>procedure <strong><a href="uTesseractOCR.TTesseractOCR.html#BeforeDestruction">BeforeDestruction</a></strong>; override;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractOCR.TTesseractOCR.html#Initialize-string-string-string-string-TessOcrEngineMode-TStringList-">Initialize</a></strong>(const aLeptonicaLib, aTesseractLib, aDatapath, aLanguage : string; aOcrEngineMode : <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a> = <a href="uTesseractTypes.html#OEM_DEFAULT">OEM_DEFAULT</a>; const aConfigs: TStringList = nil) : boolean;</code></td>
 </tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="uTesseractOCR.TTesseractOCR.html#InitializeBaseAPI-string-string-TessOcrEngineMode-TStringList-">InitializeBaseAPI</a></strong>(const aDatapath, aLanguage : string; aOcrEngineMode : <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a> = <a href="uTesseractTypes.html#OEM_DEFAULT">OEM_DEFAULT</a>; const aConfigs: TStringList = nil); virtual;</code></td>
+</tr>
 <tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="uTesseractOCR.TTesseractOCR.html#DestroyBaseAPI">DestroyBaseAPI</a></strong>;</code></td>
+</tr>
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractOCR.TTesseractOCR.html#Recognize">Recognize</a></strong>: boolean;</code></td>
 </tr>
@@ -228,14 +232,6 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
-<td class="itemcode"><span id="InitializeBaseAPI-string-string-TessOcrEngineMode-TStringList-"></span><code>procedure <strong>InitializeBaseAPI</strong>(const aDatapath, aLanguage : string; aOcrEngineMode : <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a> = <a href="uTesseractTypes.html#OEM_DEFAULT">OEM_DEFAULT</a>; const aConfigs: TStringList = nil); virtual;</code></td>
-</tr>
-<tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
 <td class="itemcode"><span id="InitializeMonitor"></span><code>procedure <strong>InitializeMonitor</strong>; virtual;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -272,7 +268,7 @@
 </tr>
 <tr><td colspan="2">
 <p>
- Initalizes all the libraries and the TTesseractBaseAPI instance. </p>
+ Initalizes all the libraries, the TTesseractBaseAPI and TTesseractMonitor instances. </p>
 <p>
  
 
@@ -280,7 +276,13 @@
 
 <p>
 
-<p></p>
+<p>
+
+<p>
+
+<p>
+
+<p>Read the documentation about TTesseractBaseAPI.Init for more information.</p>
 <h6 class="description_section">Parameters</h6>
 <dl class="parameters">
 <dt>aLeptonicaLib</dt>
@@ -291,7 +293,52 @@
 <dd>Path to the tessdata directory.</dd>
 <dt>aLanguage</dt>
 <dd>The language is (usually) an ISO 639-3 string or empty will default to eng.</dd>
+<dt>aOcrEngineMode</dt>
+<dd>The engine mode used for OCR.</dd>
+<dt>aConfigs</dt>
+<dd>A set of optional param, value pairs.</dd>
 </dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="InitializeBaseAPI-string-string-TessOcrEngineMode-TStringList-"></span><code>procedure <strong>InitializeBaseAPI</strong>(const aDatapath, aLanguage : string; aOcrEngineMode : <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a> = <a href="uTesseractTypes.html#OEM_DEFAULT">OEM_DEFAULT</a>; const aConfigs: TStringList = nil); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Initalizes the TTesseractBaseAPI instance manually. </p>
+<p>
+ 
+
+<p>
+
+<p>
+
+<p>
+
+<p>Read the documentation about TTesseractBaseAPI.Init for more information.</p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>aDatapath</dt>
+<dd>Path to the tessdata directory.</dd>
+<dt>aLanguage</dt>
+<dd>The language is (usually) an ISO 639-3 string or empty will default to eng.</dd>
+<dt>aOcrEngineMode</dt>
+<dd>The engine mode used for OCR.</dd>
+<dt>aConfigs</dt>
+<dd>A set of optional param, value pairs.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DestroyBaseAPI"></span><code>procedure <strong>DestroyBaseAPI</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Destroy the TTesseractBaseAPI instance manually. </p>
 </td></tr>
 </table>
 <table class="detail wide_list">
