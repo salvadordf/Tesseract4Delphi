@@ -89,12 +89,20 @@ begin
 
   FBitmap := TBitmap.Create;
 
-  FVideoCap := TCaptureDeviceManager.Current.DefaultVideoCaptureDevice;
-  if assigned(FVideoCap) then
+  if assigned(TCaptureDeviceManager.Current) and (TCaptureDeviceManager.Current.Count > 0) then
     begin
-      FVideoCap.OnSampleBufferReady := VideoCap_OnSampleBufferReady;
-      FVideoCap.Quality := TVideoCaptureQuality.PhotoQuality;
-    end;
+      FVideoCap := TCaptureDeviceManager.Current.DefaultVideoCaptureDevice;
+
+      if assigned(FVideoCap) and (FVideoCap.Name <> 'OBS Virtual Camera') then
+        begin
+          FVideoCap.OnSampleBufferReady := VideoCap_OnSampleBufferReady;
+          FVideoCap.Quality             := TVideoCaptureQuality.PhotoQuality;
+        end
+       else
+        FVideoCap := nil;
+    end
+   else
+    FVideoCap := nil;
 
   if not(TesseractOCR1.Initialize('org.sw.demo.danbloomberg.leptonica-1.86.0.dll',
                                   'google.tesseract.libtesseract-main.dll',
