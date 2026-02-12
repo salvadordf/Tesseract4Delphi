@@ -1869,7 +1869,7 @@ end;
 function TTesseractBaseAPI.GetStringVariable(const name_ : string) : string;
 begin
   if Initialized then
-    Result := TessUTF8ToString(TessBaseAPIGetStringVariable(FHandle, PUTF8Char(StringToTessUTF8(name_))))
+    Result := TessUTF8ToString(TessBaseAPIGetStringVariable(FHandle, PUTF8Char(StringToTessUTF8(name_))), False)
    else
     Result := '';
 end;
