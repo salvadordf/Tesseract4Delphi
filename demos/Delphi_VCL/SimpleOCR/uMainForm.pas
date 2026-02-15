@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
-  uTesseractBaseAPI, Vcl.ComCtrls, uTesseractOCR;
+  Winapi.ActiveX, uTesseractBaseAPI, Vcl.ComCtrls, uTesseractOCR;
 
 type
   TMainForm = class(TForm)
@@ -28,12 +28,14 @@ type
     TabSheet2: TTabSheet;
     Memo1: TMemo;
     Memo2: TMemo;
+    ScanBtn: TButton;
     procedure FormCreate(Sender: TObject);
     procedure OpenBtnClick(Sender: TObject);
     procedure RecognizeBtnClick(Sender: TObject);
     procedure TesseractOCR1Progress(Sender: TObject; progress, left, right, top,
       bottom: Integer);
     procedure OpenSampleBtnClick(Sender: TObject);
+    procedure ScanBtnClick(Sender: TObject);
   private
     { Private declarations }
     procedure OpenImage(const aFileName : string);
@@ -51,7 +53,7 @@ implementation
 
 uses
   uLeptonicaLoader, uTesseractLoader, uLeptonicaPix, uTesseractTypes,
-  uTesseractResultIterator, uTesseractMiscFunctions;
+  uTesseractResultIterator, uTesseractMiscFunctions, WIA_TLB;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
@@ -128,6 +130,79 @@ begin
   StatusBar1.Panels[0].Text := 'OCR completed';
   PageControl1.ActivePageIndex := 0;
   ButtonPnl.Enabled := True;
+end;
+
+procedure TMainForm.ScanBtnClick(Sender: TObject);
+const
+  // Read this for other formats:
+  // https://learn.microsoft.com/en-us/previous-versions/windows/desktop/wiaaut/-wiaaut-consts-formatid
+  wiaFormatBMP = '{B96B3CAB-0728-11D3-9D7B-0000F81EF32E}';
+var
+  TempDialog : ICommonDialog;
+  TempImage  : IImageFile;
+  TempVector : IVector;
+  TempStream : TMemoryStream;
+  TempBuffer : System.SysUtils.TBytes;
+  TempBitmap : TBitmap;
+begin
+  // This code shows a very simple way to scan an image using WIA.
+  // For a more advanced way to scan images check these repositories:
+  // https://github.com/maxm74/WIAPascal
+  // https://github.com/maxm74/DelphiTwain
+
+  // Read this for more information about the CommonDialog.ShowAcquireImage method:
+  // https://learn.microsoft.com/en-us/previous-versions/windows/desktop/wiaaut/-wiaaut-icommondialog-showacquireimage
+  TempDialog := nil;
+  TempVector := nil;
+  TempImage  := nil;
+  TempStream := nil;
+  TempBuffer := nil;
+  TempBitmap := nil;
+
+  try
+    CoInitialize(nil);
+
+    TempDialog := CoCommonDialog.Create;
+
+    if (TempDialog <> nil) then
+      begin
+        TempImage := TempDialog.ShowAcquireImage(UnspecifiedDeviceType,
+                                                 UnspecifiedIntent,
+                                                 MaximizeQuality,
+                                                 wiaFormatBMP,
+                                                 True, True, False);
+
+        if assigned(TempImage) and assigned(TempImage.FileData) then
+          begin
+            TempVector := TempImage.FileData;
+
+            TempBuffer := TBytes(TempVector.Get_BinaryData);
+            TempStream := TMemoryStream.Create;
+            TempStream.Write(TempBuffer[0], TempVector.Count);
+
+            TempBitmap := TBitmap.Create;
+            TempStream.Seek(0, soBeginning);
+            TempBitmap.LoadFromStream(TempStream);
+
+            Image1.Picture.Assign(TempBitmap);
+
+            if not(TesseractOCR1.BaseAPI.SetImage(TempStream)) then
+              begin
+                Memo1.Lines.Clear;
+                Memo1.Lines.Add('There was an issue loading the image.');
+              end;
+          end;
+      end;
+  finally
+    TempDialog := nil;
+    TempImage  := nil;
+    TempVector := nil;
+
+    if (TempStream <> nil) then FreeAndNil(TempStream);
+    if (TempBitmap <> nil) then FreeAndNil(TempBitmap);
+
+    CoUninitialize;
+  end;
 end;
 
 procedure TMainForm.AnalyzeLayout;

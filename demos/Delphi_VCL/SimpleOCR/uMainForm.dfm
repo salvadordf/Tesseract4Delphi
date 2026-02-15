@@ -22,9 +22,9 @@ object MainForm: TMainForm
     BevelOuter = bvNone
     TabOrder = 0
     object Panel1: TPanel
-      Left = 382
+      Left = 508
       Top = 0
-      Width = 599
+      Width = 473
       Height = 41
       Align = alClient
       BevelOuter = bvNone
@@ -33,6 +33,8 @@ object MainForm: TMainForm
       Padding.Right = 10
       Padding.Bottom = 10
       TabOrder = 0
+      ExplicitLeft = 382
+      ExplicitWidth = 599
       object Label1: TLabel
         Left = 10
         Top = 10
@@ -46,7 +48,7 @@ object MainForm: TMainForm
       object ModeCb: TComboBox
         Left = 49
         Top = 10
-        Width = 540
+        Width = 414
         Height = 23
         Align = alClient
         Style = csDropDownList
@@ -70,12 +72,13 @@ object MainForm: TMainForm
           'Find as much text as possible in no particular order'
           'Sparse text with orientation and script det.'
           'Treat the image as a single text line, Tesseract-specific')
+        ExplicitWidth = 540
       end
     end
     object Panel2: TPanel
       Left = 0
       Top = 0
-      Width = 382
+      Width = 508
       Height = 41
       Align = alLeft
       BevelOuter = bvNone
@@ -102,9 +105,10 @@ object MainForm: TMainForm
         Caption = 'Open sample'
         TabOrder = 1
         OnClick = OpenSampleBtnClick
+        ExplicitTop = 4
       end
       object RecognizeBtn: TButton
-        Left = 257
+        Left = 383
         Top = 5
         Width = 120
         Height = 31
@@ -112,6 +116,17 @@ object MainForm: TMainForm
         Caption = 'Recognize'
         TabOrder = 2
         OnClick = RecognizeBtnClick
+        ExplicitLeft = 387
+        ExplicitTop = 4
+      end
+      object ScanBtn: TButton
+        Left = 257
+        Top = 5
+        Width = 120
+        Height = 31
+        Caption = 'Scan image...'
+        TabOrder = 3
+        OnClick = ScanBtnClick
       end
     end
   end
@@ -142,10 +157,7 @@ object MainForm: TMainForm
       Center = True
       Proportional = True
       Stretch = True
-      ExplicitLeft = 96
-      ExplicitTop = 88
-      ExplicitWidth = 105
-      ExplicitHeight = 105
+      ExplicitTop = 1
     end
     object StatusBar1: TStatusBar
       Left = 0

@@ -62,5 +62,5 @@ You can also support this project with Liberapay.
 * [LAZARUS FREE PASCAL Développement rapide](https://lazaruscomponents.com/2025/11/08/livrel-lazarus-free-pascad/)
 
 ## Attribution
-* [FatCow Farm-Fresh Web Icons](https://github.com/gammasoft/fatcow)
+* [WIAPascal project](https://github.com/maxm74/WIAPascal)
 

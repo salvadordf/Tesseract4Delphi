@@ -4,7 +4,7 @@ program SimpleOCR;
 
 uses
   Forms, Interfaces,
-  uMainForm in 'uMainForm.pas' {MainForm};
+  uMainForm in 'uMainForm.pas', WIA_TLB {MainForm};
 
 {$R *.res}
 

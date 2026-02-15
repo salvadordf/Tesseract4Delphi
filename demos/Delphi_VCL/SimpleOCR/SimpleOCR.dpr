@@ -1,9 +1,9 @@
 program SimpleOCR;
 
 uses
-  //FastMM4,
   Vcl.Forms,
-  uMainForm in 'uMainForm.pas' {MainForm};
+  uMainForm in 'uMainForm.pas' {MainForm},
+  WIA_TLB in 'WIA_TLB.pas';
 
 {$R *.res}
 

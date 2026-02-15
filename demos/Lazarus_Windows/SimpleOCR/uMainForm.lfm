@@ -28,11 +28,11 @@ object MainForm: TMainForm
       Left = 0
       Height = 23
       Top = 0
-      Width = 377
+      Width = 500
       Align = alLeft
       BevelOuter = bvNone
       ClientHeight = 23
-      ClientWidth = 377
+      ClientWidth = 500
       ParentBackground = False
       TabOrder = 0
       object OpenSampleBtn: TButton
@@ -55,7 +55,7 @@ object MainForm: TMainForm
         OnClick = OpenBtnClick
       end
       object RecognizeBtn: TButton
-        Left = 257
+        Left = 380
         Height = 23
         Top = 0
         Width = 120
@@ -64,16 +64,25 @@ object MainForm: TMainForm
         TabOrder = 2
         OnClick = RecognizeBtnClick
       end
+      object ScanBtn: TButton
+        Left = 254
+        Height = 23
+        Top = 0
+        Width = 120
+        Caption = 'Scan image...'
+        TabOrder = 3
+        OnClick = ScanBtnClick
+      end
     end
     object Panel2: TPanel
-      Left = 377
+      Left = 500
       Height = 23
       Top = 0
-      Width = 578
+      Width = 455
       Align = alClient
       BevelOuter = bvNone
       ClientHeight = 23
-      ClientWidth = 578
+      ClientWidth = 455
       ParentBackground = False
       TabOrder = 1
       object Label1: TLabel
@@ -89,11 +98,11 @@ object MainForm: TMainForm
       end
       object ModeCb: TComboBox
         Left = 56
-        Height = 23
+        Height = 24
         Top = 0
-        Width = 522
+        Width = 399
         Align = alClient
-        ItemHeight = 15
+        ItemHeight = 16
         ItemIndex = 0
         Items.Strings = (
           'Orientation and script detection only'
