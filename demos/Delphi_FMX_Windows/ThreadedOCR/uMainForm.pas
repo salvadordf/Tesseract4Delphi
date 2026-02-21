@@ -117,7 +117,7 @@ begin
     end;
 
   EnqueueThreadMessage(OCRTHREADMSG_INITIALIZE,
-                       'org.sw.demo.danbloomberg.leptonica-1.86.0.dll',
+                       'org.sw.demo.danbloomberg.leptonica-1.87.0.dll',
                        'google.tesseract.libtesseract-main.dll',
                        '..\assets\tessdata\',
                        'eng');

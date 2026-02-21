@@ -144,6 +144,12 @@ type
       /// </summary>
       function    Init(const data: TStream; const language: string; mode: TessOcrEngineMode; const configs, vars_vec, vars_values: TStringList; set_only_non_debug_params: boolean) : boolean; overload;
       function    Init(const datapath, language: string; oem: TessOcrEngineMode; const configs: TStringList = nil) : boolean; overload;
+      /// <summary>
+      /// <para>Initializes the Tesseract engine.</para>
+      /// <para>This function (or one of the other Init functions) must be called before processing any images.</para>
+      /// <param name="datapath">The path to the tessdata directory. If NULL, the function attempts to use the TESSDATA_PREFIX environment variable or a compile-time default.</param>
+      /// <param name="language">The language code(s) (e.g., "eng", "eng+deu").</param>
+      /// </summary>
       function    Init(const datapath, language: string) : boolean; overload;
       /// <summary>
       /// Init only for page layout analysis. Use only for calls to SetImage and

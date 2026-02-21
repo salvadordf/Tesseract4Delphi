@@ -1753,6 +1753,10 @@
 <param name="Name" value="FComponents">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FComponents">
 </object>
+<li><object type="text/sitemap">
+<param name="Name" value="FSyncObj">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#FSyncObj">
+</object>
 </ul>
 <li><object type="text/sitemap">
 <param name="Name" value="Properties">
@@ -1852,6 +1856,14 @@
 <li><object type="text/sitemap">
 <param name="Name" value="LoadProgressMonitorFunctions">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#LoadProgressMonitorFunctions">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="Lock">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#Lock">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="Unlock">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#Unlock">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="Create">
@@ -3817,6 +3829,10 @@
 <param name="Name" value="FStatus">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FStatus">
 </object>
+<li><object type="text/sitemap">
+<param name="Name" value="FSyncObj">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#FSyncObj">
+</object>
 </ul>
 <li><object type="text/sitemap">
 <param name="Name" value="Properties">
@@ -3938,12 +3954,20 @@
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#LoadResultIteratorFunctions">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="Lock">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#Lock">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="AfterConstruction">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#AfterConstruction">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="FreeTesseractLibrary">
 <param name="Local" value="uTesseractLoader.TTesseractLoader.html#FreeTesseractLibrary">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="Unlock">
+<param name="Local" value="uTesseractLoader.TTesseractLoader.html#Unlock">
 </object>
 </ul>
 </ul>

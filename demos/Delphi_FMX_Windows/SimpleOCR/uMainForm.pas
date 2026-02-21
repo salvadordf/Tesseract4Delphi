@@ -104,7 +104,7 @@ begin
    else
     FVideoCap := nil;
 
-  if not(TesseractOCR1.Initialize('org.sw.demo.danbloomberg.leptonica-1.86.0.dll',
+  if not(TesseractOCR1.Initialize('org.sw.demo.danbloomberg.leptonica-1.87.0.dll',
                                   'google.tesseract.libtesseract-main.dll',
                                   '..\assets\tessdata\',
                                   'eng')) then
