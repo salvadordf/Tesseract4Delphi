@@ -1,0 +1,15 @@
+{
+  "UpdateLazPackages" : [
+    {
+      "ForceNotify" : true,
+      "InternalVersion" : 884,
+      "Name" : "cef4delphi_lazarus.lpk",
+      "Version" : "150.0.14"
+    }
+  ],
+  "UpdatePackageData" : {
+    "DisableInOPM" : false,
+    "DownloadZipURL" : "https://github.com/salvadordf/CEF4Delphi/archive/master.zip",
+    "Name" : "CEF4Delphi"
+  }
+}
