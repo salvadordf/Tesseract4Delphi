@@ -16,7 +16,7 @@
     </CompilerOptions>
     <Description Value="Tesseract4Delphi"/>
     <License Value="MIT"/>
-    <Version Major="1" Minor="2" Release="3"/>
+    <Version Major="1" Minor="2" Release="4"/>
     <Files>
       <Item>
         <Filename Value="..\source\tesseract.inc"/>
