@@ -5,7 +5,7 @@ Tesseract4Delphi is based in the [TTesseractOCR4 project](https://github.com/r1m
 
 The _assets\tessdata_ directory contains the models for several languages. For additional languages and trained models visit the [Tessdata repository](https://github.com/tesseract-ocr/tessdata).
 
-Tesseract4Delphi was developed and tested on Delphi 13.1, Delphi 6 and Lazarus 4.4/FPC 3.2.2. 
+Tesseract4Delphi was developed and tested on Delphi 13.2, Delphi 6 and Lazarus 4.8/FPC 3.2.2. 
 
 Tesseract4Delphi demos have been tested in Windows 10, Windows 11 and Linux Mint 22.3.
 
