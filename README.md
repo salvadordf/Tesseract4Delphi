@@ -43,6 +43,7 @@ You can also support this project with Liberapay.
 ## Related projects 
 * [CEF4Delphi](https://github.com/salvadordf/CEF4Delphi) 
 * [WebView4Delphi](https://github.com/salvadordf/WebView4Delphi)
+* [Python4Pascal](https://github.com/salvadordf/Python4Pascal)
 * [WebUI4Delphi](https://github.com/salvadordf/WebUI4Delphi)
 * [WebUI4CSharp](https://github.com/salvadordf/WebUI4CSharp)
 * [VirtualTouchKeyboard4Delphi](https://github.com/salvadordf/VirtualTouchKeyboard4Delphi)
