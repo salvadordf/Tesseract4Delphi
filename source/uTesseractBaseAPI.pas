@@ -111,8 +111,10 @@ type
       ///
       /// <para>The datapath must be the name of the tessdata directory.</para>
       ///
-      /// <para>The language is (usually) an ISO 639-3 string or empty will default to
-      /// eng. It is entirely safe (and eventually will be efficient too) to call
+      /// <para>The language is (usually) an ISO 639-3 string. If it is nullptr or empty,
+      /// no language data is loaded: this is enough for page layout analysis, but
+      /// Recognize fails (returns -1) until Init is called with a language.
+      /// It is entirely safe (and eventually will be efficient too) to call
       /// Init multiple times on the same instance to change language, or just
       /// to reset the classifier.</para>
       ///
@@ -239,6 +241,7 @@ type
       function    SetSourceResolution(ppi: Integer) : boolean;
       /// <summary>
       /// Restrict recognition to a sub-rectangle of the image. Call after SetImage.
+      /// The rectangle is clipped to the image.
       /// Each SetRectangle clears the recogntion results so multiple rectangles
       /// can be recognized with the same image.
       /// </summary>
@@ -490,6 +493,10 @@ type
       /// script_name is an ASCII string, the name of the script, e.g. "Latin"
       /// script_conf is confidence level in the script
       /// Returns true on success and writes values to each parameter as an output
+      /// Returns false if the primary (first) language was loaded without the
+      /// legacy engine (for example the tessdata_fast or tessdata_best model of a
+      /// language, or a combined model loaded with OEM_LSTM_ONLY): use the osd
+      /// model, or put a model with a legacy engine first in the language list.
       /// </summary>
       function    DetectOrientationScript(out orient_deg: Integer; out orient_conf: Single; out script_name: string; out script_conf: Single) : boolean;
       /// <summary>

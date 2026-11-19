@@ -1,7 +1,7 @@
 # Tesseract4Delphi [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Use%20Tesseract4Delphi%20to%20recognize%20text%20in%20images&url=https://github.com/salvadordf/Tesseract4Delphi&via=briskbard&hashtags=Tesseract4Delphi,delphi,lazarus,fpc)
 Tesseract4Delphi is a [Delphi](https://www.embarcadero.com/products/delphi/starter) and [Lazarus/FPC](https://www.lazarus-ide.org/) component that uses the [Tesseract project](https://github.com/tesseract-ocr/tesseract) to recognize text in images (OCR).
 
-Tesseract4Delphi is based in the [TTesseractOCR4 project](https://github.com/r1me/TTesseractOCR4) made by Damian Woroch.
+Tesseract4Delphi is based in the [TTesseractOCR4 project](https://github.com/r1me/TTesseractOCR4) made by Damian Woroch and it uses [Tesseract 5.5.4](https://github.com/tesseract-ocr/tesseract).
 
 The _assets\tessdata_ directory contains the models for several languages. For additional languages and trained models visit the [Tessdata repository](https://github.com/tesseract-ocr/tessdata).
 

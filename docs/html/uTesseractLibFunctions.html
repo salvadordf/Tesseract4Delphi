@@ -3,443 +3,447 @@
 <head>
 <title>tesseract4delphi: uTesseractLibFunctions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="PasDoc 0.17.0.snapshot">
+<meta name="generator" content="PasDoc 1.0.5.snapshot">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="StyleSheet" type="text/css" href="bootstrap.min.css">
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
-</head>
+<style type="text/css">
+body { margin: 0.5em; }
+.badge { padding: 0.1em 0.5em; color: white; }
+</style></head>
 <body>
 <h1 class="unit">Unit uTesseractLibFunctions</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Uses</div><div class="one_section">Classes, Interfaces, Objects and Records</div><div class="one_section">Functions and Procedures</div><div class="one_section">Types</div><div class="one_section">Constants</div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p class="nodescription">This item has no description.</p><span id="PasDoc-Uses"></span><h2 class="overview">Overview</h2>
 <span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
 <table class="summary wide_list">
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessVersion">TessVersion</a></strong>: function(): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessDeleteText">TessDeleteText</a></strong>: procedure(const text: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessDeleteTextArray">TessDeleteTextArray</a></strong>: procedure(arr: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessDeleteIntArray">TessDeleteIntArray</a></strong>: procedure(const arr: PInteger); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessTextRendererCreate">TessTextRendererCreate</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessHOcrRendererCreate">TessHOcrRendererCreate</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessHOcrRendererCreate2">TessHOcrRendererCreate2</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; font_info: BOOL): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessAltoRendererCreate">TessAltoRendererCreate</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPAGERendererCreate">TessPAGERendererCreate</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessTsvRendererCreate">TessTsvRendererCreate</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPDFRendererCreate">TessPDFRendererCreate</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const datadir: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; textonly: BOOL): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessUnlvRendererCreate">TessUnlvRendererCreate</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBoxTextRendererCreate">TessBoxTextRendererCreate</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessLSTMBoxRendererCreate">TessLSTMBoxRendererCreate</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessWordStrBoxRendererCreate">TessWordStrBoxRendererCreate</a></strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessDeleteResultRenderer">TessDeleteResultRenderer</a></strong>: procedure(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultRendererInsert">TessResultRendererInsert</a></strong>: procedure(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; next: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultRendererNext">TessResultRendererNext</a></strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultRendererBeginDocument">TessResultRendererBeginDocument</a></strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; const title: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultRendererAddImage">TessResultRendererAddImage</a></strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; api: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultRendererEndDocument">TessResultRendererEndDocument</a></strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultRendererExtention">TessResultRendererExtention</a></strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultRendererTitle">TessResultRendererTitle</a></strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultRendererImageNum">TessResultRendererImageNum</a></strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): Integer; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPICreate">TessBaseAPICreate</a></strong>: function(): <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIDelete">TessBaseAPIDelete</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetInputName">TessBaseAPISetInputName</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetInputName">TessBaseAPIGetInputName</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetInputImage">TessBaseAPISetInputImage</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const pix: <a href="uLeptonicaTypes.html#PPix">PPix</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetInputImage">TessBaseAPIGetInputImage</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PPix">PPix</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetSourceYResolution">TessBaseAPIGetSourceYResolution</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): Integer; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetDatapath">TessBaseAPIGetDatapath</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetOutputName">TessBaseAPISetOutputName</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetVariable">TessBaseAPISetVariable</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const value: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetDebugVariable">TessBaseAPISetDebugVariable</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const value: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetIntVariable">TessBaseAPIGetIntVariable</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; out value: Integer): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetBoolVariable">TessBaseAPIGetBoolVariable</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; out value: BOOL): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetDoubleVariable">TessBaseAPIGetDoubleVariable</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; out value: double): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetStringVariable">TessBaseAPIGetStringVariable</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIPrintVariables">TessBaseAPIPrintVariables</a></strong>: procedure(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; fp: <a href="uTesseractTypes.html#PFileDescriptor">PFileDescriptor</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIPrintVariablesToFile">TessBaseAPIPrintVariablesToFile</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const filename: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIInit1">TessBaseAPIInit1</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const datapath: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const language: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; oem: <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a>; configs: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; configs_size: Integer): Integer; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIInit2">TessBaseAPIInit2</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const datapath: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const language: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; oem: <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a>): Integer; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIInit3">TessBaseAPIInit3</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const datapath: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const language: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): Integer; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIInit4">TessBaseAPIInit4</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const datapath: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const language: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; oem: <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a>; configs: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; configs_size: Integer; vars_vec, vars_values: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; vars_vec_size: <a href="uLeptonicaTypes.html#NativeUInt">NativeUInt</a>; set_only_non_debug_params: BOOL): Integer; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIInit5">TessBaseAPIInit5</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const data: Pointer; data_size: Integer; const language: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; mode: <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a>; configs: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; configs_size: Integer; vars_vec, vars_values: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; vars_vec_size: <a href="uLeptonicaTypes.html#NativeUInt">NativeUInt</a>; set_only_non_debug_params: BOOL): Integer; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetInitLanguagesAsString">TessBaseAPIGetInitLanguagesAsString</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetLoadedLanguagesAsVector">TessBaseAPIGetLoadedLanguagesAsVector</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetAvailableLanguagesAsVector">TessBaseAPIGetAvailableLanguagesAsVector</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIInitForAnalysePage">TessBaseAPIInitForAnalysePage</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIReadConfigFile">TessBaseAPIReadConfigFile</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const filename: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIReadDebugConfigFile">TessBaseAPIReadDebugConfigFile</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const filename: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetPageSegMode">TessBaseAPISetPageSegMode</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; mode: <a href="uTesseractTypes.html#TessPageSegMode">TessPageSegMode</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetPageSegMode">TessBaseAPIGetPageSegMode</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#TessPageSegMode">TessPageSegMode</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIRect">TessBaseAPIRect</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const imagedata: PByte; bytes_per_pixel: Integer; bytes_per_line: Integer; left: Integer; top: Integer; width: Integer; height: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIClearAdaptiveClassifier">TessBaseAPIClearAdaptiveClassifier</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetImage">TessBaseAPISetImage</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const imagedata: PByte; width: Integer; height: Integer; bytes_per_pixel: Integer; bytes_per_line: Integer); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetImage2">TessBaseAPISetImage2</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; pix: <a href="uLeptonicaTypes.html#PPix">PPix</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetSourceResolution">TessBaseAPISetSourceResolution</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; ppi: Integer); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetRectangle">TessBaseAPISetRectangle</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; left: Integer; top: Integer; width: Integer; height: Integer); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetThresholdedImage">TessBaseAPIGetThresholdedImage</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PPix">PPix</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetGradient">TessBaseAPIGetGradient</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): Single; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetRegions">TessBaseAPIGetRegions</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetTextlines">TessBaseAPIGetTextlines</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>; blockids: <a href="uTesseractTypes.html#PPInteger">PPInteger</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetTextlines1">TessBaseAPIGetTextlines1</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const raw_image: BOOL; const raw_padding: Integer; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>; blockids, paraids: <a href="uTesseractTypes.html#PPInteger">PPInteger</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetStrips">TessBaseAPIGetStrips</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>; blockids: <a href="uTesseractTypes.html#PPInteger">PPInteger</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetWords">TessBaseAPIGetWords</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetConnectedComponents">TessBaseAPIGetConnectedComponents</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out cc: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetComponentImages">TessBaseAPIGetComponentImages</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; text_only: BOOL; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>; blockids: <a href="uTesseractTypes.html#PPInteger">PPInteger</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetComponentImages1">TessBaseAPIGetComponentImages1</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; text_only: BOOL; raw_image: BOOL; raw_padding: Integer; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>; blockids, paraids: <a href="uTesseractTypes.html#PPInteger">PPInteger</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetThresholdedImageScaleFactor">TessBaseAPIGetThresholdedImageScaleFactor</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): Integer; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIAnalyseLayout">TessBaseAPIAnalyseLayout</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIRecognize">TessBaseAPIRecognize</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>): Integer; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIProcessPages">TessBaseAPIProcessPages</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const filename: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const retry_config: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; timeout_millisec: Integer; renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIProcessPage">TessBaseAPIProcessPage</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; pix: <a href="uLeptonicaTypes.html#PPix">PPix</a>; page_index: Integer; const filename: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const retry_config: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; timeout_millisec: Integer; renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetIterator">TessBaseAPIGetIterator</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetMutableIterator">TessBaseAPIGetMutableIterator</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#TessMutableIterator">TessMutableIterator</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetUTF8Text">TessBaseAPIGetUTF8Text</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetHOCRText">TessBaseAPIGetHOCRText</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetAltoText">TessBaseAPIGetAltoText</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetPAGEText">TessBaseAPIGetPAGEText</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetTsvText">TessBaseAPIGetTsvText</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetBoxText">TessBaseAPIGetBoxText</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetLSTMBoxText">TessBaseAPIGetLSTMBoxText</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetWordStrBoxText">TessBaseAPIGetWordStrBoxText</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetUNLVText">TessBaseAPIGetUNLVText</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIMeanTextConf">TessBaseAPIMeanTextConf</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): Integer; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIAllWordConfidences">TessBaseAPIAllWordConfidences</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): PInteger; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIAdaptToWordStr">TessBaseAPIAdaptToWordStr</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; mode: <a href="uTesseractTypes.html#TessPageSegMode">TessPageSegMode</a>; const wordstr: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIClear">TessBaseAPIClear</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIEnd">TessBaseAPIEnd</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIIsValidWord">TessBaseAPIIsValidWord</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const word: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): Integer; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetTextDirection">TessBaseAPIGetTextDirection</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out out_offset: Integer; out out_slope: single): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIGetUnichar">TessBaseAPIGetUnichar</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; unichar_id: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIClearPersistentCache">TessBaseAPIClearPersistentCache</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIDetectOrientationScript">TessBaseAPIDetectOrientationScript</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out orient_deg: Integer; out orient_conf: Single; out script_name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; out script_conf: Single): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPISetMinOrientationMargin">TessBaseAPISetMinOrientationMargin</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; margin: double); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPINumDawgs">TessBaseAPINumDawgs</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): Integer; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseAPIOem">TessBaseAPIOem</a></strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessBaseGetBlockTextOrientations">TessBaseGetBlockTextOrientations</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out block_orientation: Pinteger; out vertical_writing: <a href="uLeptonicaTypes.html#PBOOL">PBOOL</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorDelete">TessPageIteratorDelete</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorCopy">TessPageIteratorCopy</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>): <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorBegin">TessPageIteratorBegin</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorNext">TessPageIteratorNext</a></strong>: function(handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorIsAtBeginningOf">TessPageIteratorIsAtBeginningOf</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorIsAtFinalElement">TessPageIteratorIsAtFinalElement</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; element: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorBoundingBox">TessPageIteratorBoundingBox</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out left: Integer; out top: Integer; out right: Integer; out bottom: Integer): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorBlockType">TessPageIteratorBlockType</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>): <a href="uTesseractTypes.html#TessPolyBlockType">TessPolyBlockType</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorGetBinaryImage">TessPageIteratorGetBinaryImage</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): <a href="uLeptonicaTypes.html#PPix">PPix</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorGetImage">TessPageIteratorGetImage</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; padding: Integer; original_image: <a href="uLeptonicaTypes.html#PPix">PPix</a>; out left: Integer; out top: Integer): <a href="uLeptonicaTypes.html#PPix">PPix</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorBaseline">TessPageIteratorBaseline</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out x1: Integer; out y1: Integer; out x2: Integer; out y2: Integer): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorOrientation">TessPageIteratorOrientation</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; out orientation: <a href="uTesseractTypes.html#TessOrientation">TessOrientation</a>; out writing_direction: <a href="uTesseractTypes.html#TessWritingDirection">TessWritingDirection</a>; out textline_order: <a href="uTesseractTypes.html#TessTextlineOrder">TessTextlineOrder</a>; out deskew_angle: single); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessPageIteratorParagraphInfo">TessPageIteratorParagraphInfo</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; out justification: <a href="uTesseractTypes.html#TessParagraphJustification">TessParagraphJustification</a>; out is_list_item: BOOL; out is_crown: BOOL; out first_line_indent: Integer); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorDelete">TessResultIteratorDelete</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorCopy">TessResultIteratorCopy</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorGetPageIterator">TessResultIteratorGetPageIterator</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorGetPageIteratorConst">TessResultIteratorGetPageIteratorConst</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorGetChoiceIterator">TessResultIteratorGetChoiceIterator</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): <a href="uTesseractTypes.html#TessChoiceIterator">TessChoiceIterator</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorNext">TessResultIteratorNext</a></strong>: function(handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorGetUTF8Text">TessResultIteratorGetUTF8Text</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorConfidence">TessResultIteratorConfidence</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): single; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorWordRecognitionLanguage">TessResultIteratorWordRecognitionLanguage</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorWordFontAttributes">TessResultIteratorWordFontAttributes</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; out is_bold: BOOL; out is_italic: BOOL; out is_underlined: BOOL; out is_monospace: BOOL; out is_serif: BOOL; out is_smallcaps: BOOL; out pointsize: Integer; out font_id: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorWordIsFromDictionary">TessResultIteratorWordIsFromDictionary</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorWordIsNumeric">TessResultIteratorWordIsNumeric</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorSymbolIsSuperscript">TessResultIteratorSymbolIsSuperscript</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorSymbolIsSubscript">TessResultIteratorSymbolIsSubscript</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessResultIteratorSymbolIsDropcap">TessResultIteratorSymbolIsDropcap</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessChoiceIteratorDelete">TessChoiceIteratorDelete</a></strong>: procedure(handle: <a href="uTesseractTypes.html#TessChoiceIterator">TessChoiceIterator</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessChoiceIteratorNext">TessChoiceIteratorNext</a></strong>: function(handle: <a href="uTesseractTypes.html#TessChoiceIterator">TessChoiceIterator</a>): BOOL; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessChoiceIteratorGetUTF8Text">TessChoiceIteratorGetUTF8Text</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessChoiceIterator">TessChoiceIterator</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessChoiceIteratorConfidence">TessChoiceIteratorConfidence</a></strong>: function(const handle: <a href="uTesseractTypes.html#TessChoiceIterator">TessChoiceIterator</a>): single; cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessMonitorCreate">TessMonitorCreate</a></strong>: function(): <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessMonitorDelete">TessMonitorDelete</a></strong>: procedure(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessMonitorSetCancelFunc">TessMonitorSetCancelFunc</a></strong>: procedure(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>; cancelFunc: <a href="uTesseractTypes.html#TessCancelFunc">TessCancelFunc</a>); cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessMonitorSetCancelThis">TessMonitorSetCancelThis</a></strong>: procedure(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>; cancelThis: Pointer); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessMonitorGetCancelThis">TessMonitorGetCancelThis</a></strong>: function(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>): Pointer; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessMonitorSetProgressFunc">TessMonitorSetProgressFunc</a></strong>: procedure(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>; progressFunc: <a href="uTesseractTypes.html#TessProgressFunc">TessProgressFunc</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessMonitorGetProgress">TessMonitorGetProgress</a></strong>: function(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>): Integer; cdecl;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="uTesseractLibFunctions.html#TessMonitorSetDeadlineMSecs">TessMonitorSetDeadlineMSecs</a></strong>: procedure(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>; deadline: Integer); cdecl;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Variables</h3>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessVersion"></span><code><strong>TessVersion</strong>: function(): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -447,29 +451,29 @@
 * General free functions *</p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessDeleteText"></span><code><strong>TessDeleteText</strong>: procedure(const text: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessDeleteTextArray"></span><code><strong>TessDeleteTextArray</strong>: procedure(arr: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessDeleteIntArray"></span><code><strong>TessDeleteIntArray</strong>: procedure(const arr: PInteger); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessTextRendererCreate"></span><code><strong>TessTextRendererCreate</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -477,141 +481,141 @@
 * Renderer API *</p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessHOcrRendererCreate"></span><code><strong>TessHOcrRendererCreate</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessHOcrRendererCreate2"></span><code><strong>TessHOcrRendererCreate2</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; font_info: BOOL): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessAltoRendererCreate"></span><code><strong>TessAltoRendererCreate</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPAGERendererCreate"></span><code><strong>TessPAGERendererCreate</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessTsvRendererCreate"></span><code><strong>TessTsvRendererCreate</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPDFRendererCreate"></span><code><strong>TessPDFRendererCreate</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const datadir: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; textonly: BOOL): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessUnlvRendererCreate"></span><code><strong>TessUnlvRendererCreate</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBoxTextRendererCreate"></span><code><strong>TessBoxTextRendererCreate</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessLSTMBoxRendererCreate"></span><code><strong>TessLSTMBoxRendererCreate</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessWordStrBoxRendererCreate"></span><code><strong>TessWordStrBoxRendererCreate</strong>: function(const outputbase: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessDeleteResultRenderer"></span><code><strong>TessDeleteResultRenderer</strong>: procedure(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultRendererInsert"></span><code><strong>TessResultRendererInsert</strong>: procedure(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; next: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultRendererNext"></span><code><strong>TessResultRendererNext</strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultRendererBeginDocument"></span><code><strong>TessResultRendererBeginDocument</strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; const title: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultRendererAddImage"></span><code><strong>TessResultRendererAddImage</strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>; api: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultRendererEndDocument"></span><code><strong>TessResultRendererEndDocument</strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultRendererExtention"></span><code><strong>TessResultRendererExtention</strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultRendererTitle"></span><code><strong>TessResultRendererTitle</strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultRendererImageNum"></span><code><strong>TessResultRendererImageNum</strong>: function(renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPICreate"></span><code><strong>TessBaseAPICreate</strong>: function(): <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -619,372 +623,372 @@
 * Base API *</p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIDelete"></span><code><strong>TessBaseAPIDelete</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetInputName"></span><code><strong>TessBaseAPISetInputName</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetInputName"></span><code><strong>TessBaseAPIGetInputName</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetInputImage"></span><code><strong>TessBaseAPISetInputImage</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const pix: <a href="uLeptonicaTypes.html#PPix">PPix</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetInputImage"></span><code><strong>TessBaseAPIGetInputImage</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PPix">PPix</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetSourceYResolution"></span><code><strong>TessBaseAPIGetSourceYResolution</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetDatapath"></span><code><strong>TessBaseAPIGetDatapath</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetOutputName"></span><code><strong>TessBaseAPISetOutputName</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetVariable"></span><code><strong>TessBaseAPISetVariable</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const value: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetDebugVariable"></span><code><strong>TessBaseAPISetDebugVariable</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const value: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetIntVariable"></span><code><strong>TessBaseAPIGetIntVariable</strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; out value: Integer): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetBoolVariable"></span><code><strong>TessBaseAPIGetBoolVariable</strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; out value: BOOL): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetDoubleVariable"></span><code><strong>TessBaseAPIGetDoubleVariable</strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; out value: double): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetStringVariable"></span><code><strong>TessBaseAPIGetStringVariable</strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIPrintVariables"></span><code><strong>TessBaseAPIPrintVariables</strong>: procedure(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; fp: <a href="uTesseractTypes.html#PFileDescriptor">PFileDescriptor</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIPrintVariablesToFile"></span><code><strong>TessBaseAPIPrintVariablesToFile</strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const filename: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIInit1"></span><code><strong>TessBaseAPIInit1</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const datapath: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const language: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; oem: <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a>; configs: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; configs_size: Integer): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIInit2"></span><code><strong>TessBaseAPIInit2</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const datapath: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const language: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; oem: <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a>): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIInit3"></span><code><strong>TessBaseAPIInit3</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const datapath: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const language: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIInit4"></span><code><strong>TessBaseAPIInit4</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const datapath: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const language: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; oem: <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a>; configs: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; configs_size: Integer; vars_vec, vars_values: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; vars_vec_size: <a href="uLeptonicaTypes.html#NativeUInt">NativeUInt</a>; set_only_non_debug_params: BOOL): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIInit5"></span><code><strong>TessBaseAPIInit5</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const data: Pointer; data_size: Integer; const language: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; mode: <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a>; configs: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; configs_size: Integer; vars_vec, vars_values: <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; vars_vec_size: <a href="uLeptonicaTypes.html#NativeUInt">NativeUInt</a>; set_only_non_debug_params: BOOL): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetInitLanguagesAsString"></span><code><strong>TessBaseAPIGetInitLanguagesAsString</strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetLoadedLanguagesAsVector"></span><code><strong>TessBaseAPIGetLoadedLanguagesAsVector</strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetAvailableLanguagesAsVector"></span><code><strong>TessBaseAPIGetAvailableLanguagesAsVector</strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#PPUTF8Char">PPUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIInitForAnalysePage"></span><code><strong>TessBaseAPIInitForAnalysePage</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIReadConfigFile"></span><code><strong>TessBaseAPIReadConfigFile</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const filename: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIReadDebugConfigFile"></span><code><strong>TessBaseAPIReadDebugConfigFile</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const filename: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetPageSegMode"></span><code><strong>TessBaseAPISetPageSegMode</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; mode: <a href="uTesseractTypes.html#TessPageSegMode">TessPageSegMode</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetPageSegMode"></span><code><strong>TessBaseAPIGetPageSegMode</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#TessPageSegMode">TessPageSegMode</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIRect"></span><code><strong>TessBaseAPIRect</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const imagedata: PByte; bytes_per_pixel: Integer; bytes_per_line: Integer; left: Integer; top: Integer; width: Integer; height: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIClearAdaptiveClassifier"></span><code><strong>TessBaseAPIClearAdaptiveClassifier</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetImage"></span><code><strong>TessBaseAPISetImage</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const imagedata: PByte; width: Integer; height: Integer; bytes_per_pixel: Integer; bytes_per_line: Integer); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetImage2"></span><code><strong>TessBaseAPISetImage2</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; pix: <a href="uLeptonicaTypes.html#PPix">PPix</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetSourceResolution"></span><code><strong>TessBaseAPISetSourceResolution</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; ppi: Integer); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetRectangle"></span><code><strong>TessBaseAPISetRectangle</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; left: Integer; top: Integer; width: Integer; height: Integer); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetThresholdedImage"></span><code><strong>TessBaseAPIGetThresholdedImage</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PPix">PPix</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetGradient"></span><code><strong>TessBaseAPIGetGradient</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): Single; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetRegions"></span><code><strong>TessBaseAPIGetRegions</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetTextlines"></span><code><strong>TessBaseAPIGetTextlines</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>; blockids: <a href="uTesseractTypes.html#PPInteger">PPInteger</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetTextlines1"></span><code><strong>TessBaseAPIGetTextlines1</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const raw_image: BOOL; const raw_padding: Integer; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>; blockids, paraids: <a href="uTesseractTypes.html#PPInteger">PPInteger</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetStrips"></span><code><strong>TessBaseAPIGetStrips</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>; blockids: <a href="uTesseractTypes.html#PPInteger">PPInteger</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetWords"></span><code><strong>TessBaseAPIGetWords</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetConnectedComponents"></span><code><strong>TessBaseAPIGetConnectedComponents</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out cc: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetComponentImages"></span><code><strong>TessBaseAPIGetComponentImages</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; text_only: BOOL; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>; blockids: <a href="uTesseractTypes.html#PPInteger">PPInteger</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetComponentImages1"></span><code><strong>TessBaseAPIGetComponentImages1</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; text_only: BOOL; raw_image: BOOL; raw_padding: Integer; out pixa: <a href="uLeptonicaTypes.html#PPixa">PPixa</a>; blockids, paraids: <a href="uTesseractTypes.html#PPInteger">PPInteger</a>): <a href="uLeptonicaTypes.html#PBoxa">PBoxa</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetThresholdedImageScaleFactor"></span><code><strong>TessBaseAPIGetThresholdedImageScaleFactor</strong>: function(const handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIAnalyseLayout"></span><code><strong>TessBaseAPIAnalyseLayout</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIRecognize"></span><code><strong>TessBaseAPIRecognize</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIProcessPages"></span><code><strong>TessBaseAPIProcessPages</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const filename: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const retry_config: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; timeout_millisec: Integer; renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIProcessPage"></span><code><strong>TessBaseAPIProcessPage</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; pix: <a href="uLeptonicaTypes.html#PPix">PPix</a>; page_index: Integer; const filename: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; const retry_config: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; timeout_millisec: Integer; renderer: <a href="uTesseractTypes.html#TessResultRenderer">TessResultRenderer</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetIterator"></span><code><strong>TessBaseAPIGetIterator</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetMutableIterator"></span><code><strong>TessBaseAPIGetMutableIterator</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#TessMutableIterator">TessMutableIterator</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetUTF8Text"></span><code><strong>TessBaseAPIGetUTF8Text</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -992,162 +996,162 @@
 ******************</p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetHOCRText"></span><code><strong>TessBaseAPIGetHOCRText</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetAltoText"></span><code><strong>TessBaseAPIGetAltoText</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetPAGEText"></span><code><strong>TessBaseAPIGetPAGEText</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetTsvText"></span><code><strong>TessBaseAPIGetTsvText</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetBoxText"></span><code><strong>TessBaseAPIGetBoxText</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetLSTMBoxText"></span><code><strong>TessBaseAPIGetLSTMBoxText</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetWordStrBoxText"></span><code><strong>TessBaseAPIGetWordStrBoxText</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; page_number: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetUNLVText"></span><code><strong>TessBaseAPIGetUNLVText</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIMeanTextConf"></span><code><strong>TessBaseAPIMeanTextConf</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIAllWordConfidences"></span><code><strong>TessBaseAPIAllWordConfidences</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): PInteger; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIAdaptToWordStr"></span><code><strong>TessBaseAPIAdaptToWordStr</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; mode: <a href="uTesseractTypes.html#TessPageSegMode">TessPageSegMode</a>; const wordstr: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIClear"></span><code><strong>TessBaseAPIClear</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIEnd"></span><code><strong>TessBaseAPIEnd</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIIsValidWord"></span><code><strong>TessBaseAPIIsValidWord</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; const word: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetTextDirection"></span><code><strong>TessBaseAPIGetTextDirection</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out out_offset: Integer; out out_slope: single): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIGetUnichar"></span><code><strong>TessBaseAPIGetUnichar</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; unichar_id: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIClearPersistentCache"></span><code><strong>TessBaseAPIClearPersistentCache</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIDetectOrientationScript"></span><code><strong>TessBaseAPIDetectOrientationScript</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out orient_deg: Integer; out orient_conf: Single; out script_name: <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; out script_conf: Single): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPISetMinOrientationMargin"></span><code><strong>TessBaseAPISetMinOrientationMargin</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; margin: double); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPINumDawgs"></span><code><strong>TessBaseAPINumDawgs</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseAPIOem"></span><code><strong>TessBaseAPIOem</strong>: function(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>): <a href="uTesseractTypes.html#TessOcrEngineMode">TessOcrEngineMode</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessBaseGetBlockTextOrientations"></span><code><strong>TessBaseGetBlockTextOrientations</strong>: procedure(handle: <a href="uTesseractTypes.html#TessBaseAPI">TessBaseAPI</a>; out block_orientation: Pinteger; out vertical_writing: <a href="uLeptonicaTypes.html#PBOOL">PBOOL</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorDelete"></span><code><strong>TessPageIteratorDelete</strong>: procedure(handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -1155,92 +1159,92 @@
 * Page iterator *</p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorCopy"></span><code><strong>TessPageIteratorCopy</strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>): <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorBegin"></span><code><strong>TessPageIteratorBegin</strong>: procedure(handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorNext"></span><code><strong>TessPageIteratorNext</strong>: function(handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorIsAtBeginningOf"></span><code><strong>TessPageIteratorIsAtBeginningOf</strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorIsAtFinalElement"></span><code><strong>TessPageIteratorIsAtFinalElement</strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; element: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorBoundingBox"></span><code><strong>TessPageIteratorBoundingBox</strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out left: Integer; out top: Integer; out right: Integer; out bottom: Integer): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorBlockType"></span><code><strong>TessPageIteratorBlockType</strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>): <a href="uTesseractTypes.html#TessPolyBlockType">TessPolyBlockType</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorGetBinaryImage"></span><code><strong>TessPageIteratorGetBinaryImage</strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): <a href="uLeptonicaTypes.html#PPix">PPix</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorGetImage"></span><code><strong>TessPageIteratorGetImage</strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; padding: Integer; original_image: <a href="uLeptonicaTypes.html#PPix">PPix</a>; out left: Integer; out top: Integer): <a href="uLeptonicaTypes.html#PPix">PPix</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorBaseline"></span><code><strong>TessPageIteratorBaseline</strong>: function(const handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out x1: Integer; out y1: Integer; out x2: Integer; out y2: Integer): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorOrientation"></span><code><strong>TessPageIteratorOrientation</strong>: procedure(handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; out orientation: <a href="uTesseractTypes.html#TessOrientation">TessOrientation</a>; out writing_direction: <a href="uTesseractTypes.html#TessWritingDirection">TessWritingDirection</a>; out textline_order: <a href="uTesseractTypes.html#TessTextlineOrder">TessTextlineOrder</a>; out deskew_angle: single); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessPageIteratorParagraphInfo"></span><code><strong>TessPageIteratorParagraphInfo</strong>: procedure(handle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; out justification: <a href="uTesseractTypes.html#TessParagraphJustification">TessParagraphJustification</a>; out is_list_item: BOOL; out is_crown: BOOL; out first_line_indent: Integer); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorDelete"></span><code><strong>TessResultIteratorDelete</strong>: procedure(handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -1248,106 +1252,106 @@
 * Result iterator *</p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorCopy"></span><code><strong>TessResultIteratorCopy</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorGetPageIterator"></span><code><strong>TessResultIteratorGetPageIterator</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorGetPageIteratorConst"></span><code><strong>TessResultIteratorGetPageIteratorConst</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorGetChoiceIterator"></span><code><strong>TessResultIteratorGetChoiceIterator</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): <a href="uTesseractTypes.html#TessChoiceIterator">TessChoiceIterator</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorNext"></span><code><strong>TessResultIteratorNext</strong>: function(handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorGetUTF8Text"></span><code><strong>TessResultIteratorGetUTF8Text</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorConfidence"></span><code><strong>TessResultIteratorConfidence</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>): single; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorWordRecognitionLanguage"></span><code><strong>TessResultIteratorWordRecognitionLanguage</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorWordFontAttributes"></span><code><strong>TessResultIteratorWordFontAttributes</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>; out is_bold: BOOL; out is_italic: BOOL; out is_underlined: BOOL; out is_monospace: BOOL; out is_serif: BOOL; out is_smallcaps: BOOL; out pointsize: Integer; out font_id: Integer): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorWordIsFromDictionary"></span><code><strong>TessResultIteratorWordIsFromDictionary</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorWordIsNumeric"></span><code><strong>TessResultIteratorWordIsNumeric</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorSymbolIsSuperscript"></span><code><strong>TessResultIteratorSymbolIsSuperscript</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorSymbolIsSubscript"></span><code><strong>TessResultIteratorSymbolIsSubscript</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessResultIteratorSymbolIsDropcap"></span><code><strong>TessResultIteratorSymbolIsDropcap</strong>: function(const handle: <a href="uTesseractTypes.html#TessResultIterator">TessResultIterator</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessChoiceIteratorDelete"></span><code><strong>TessChoiceIteratorDelete</strong>: procedure(handle: <a href="uTesseractTypes.html#TessChoiceIterator">TessChoiceIterator</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -1355,29 +1359,29 @@
 * Choice iterator *</p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessChoiceIteratorNext"></span><code><strong>TessChoiceIteratorNext</strong>: function(handle: <a href="uTesseractTypes.html#TessChoiceIterator">TessChoiceIterator</a>): BOOL; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessChoiceIteratorGetUTF8Text"></span><code><strong>TessChoiceIteratorGetUTF8Text</strong>: function(const handle: <a href="uTesseractTypes.html#TessChoiceIterator">TessChoiceIterator</a>): <a href="uLeptonicaTypes.html#PUTF8Char">PUTF8Char</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessChoiceIteratorConfidence"></span><code><strong>TessChoiceIteratorConfidence</strong>: function(const handle: <a href="uTesseractTypes.html#TessChoiceIterator">TessChoiceIterator</a>): single; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessMonitorCreate"></span><code><strong>TessMonitorCreate</strong>: function(): <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -1385,55 +1389,55 @@
 * Progress monitor *</p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessMonitorDelete"></span><code><strong>TessMonitorDelete</strong>: procedure(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessMonitorSetCancelFunc"></span><code><strong>TessMonitorSetCancelFunc</strong>: procedure(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>; cancelFunc: <a href="uTesseractTypes.html#TessCancelFunc">TessCancelFunc</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessMonitorSetCancelThis"></span><code><strong>TessMonitorSetCancelThis</strong>: procedure(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>; cancelThis: Pointer); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessMonitorGetCancelThis"></span><code><strong>TessMonitorGetCancelThis</strong>: function(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>): Pointer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessMonitorSetProgressFunc"></span><code><strong>TessMonitorSetProgressFunc</strong>: procedure(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>; progressFunc: <a href="uTesseractTypes.html#TessProgressFunc">TessProgressFunc</a>); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessMonitorGetProgress"></span><code><strong>TessMonitorGetProgress</strong>: function(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>): Integer; cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="TessMonitorSetDeadlineMSecs"></span><code><strong>TessMonitorSetDeadlineMSecs</strong>: procedure(monitor: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>; deadline: Integer); cdecl;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.5.snapshot</a>. </em>
 </span>
 </body></html>

@@ -24,9 +24,11 @@ type
   PFileDescriptor = ^TFileDescriptor;
 
   PPUTF8Char = ^PUTF8Char;
-  PPInteger  = ^PInteger;
 
-  TessResultRenderer  = Pointer;
+  PPInteger  = ^PInteger;
+
+
+  TessResultRenderer  = Pointer;
   TessBaseAPI         = Pointer;
   TessPageIterator    = Pointer;
   TessResultIterator  = Pointer;

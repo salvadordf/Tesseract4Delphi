@@ -3,10 +3,14 @@
 <head>
 <title>tesseract4delphi: uTesseractPageIterator: Class TTesseractPageIterator</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="PasDoc 0.17.0.snapshot">
+<meta name="generator" content="PasDoc 1.0.5.snapshot">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="StyleSheet" type="text/css" href="bootstrap.min.css">
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
-</head>
+<style type="text/css">
+body { margin: 0.5em; }
+.badge { padding: 0.1em 0.5em; color: white; }
+</style></head>
 <body>
 <span id="TTesseractPageIterator"></span><h1 class="cio">Class TTesseractPageIterator</h1>
 <div class="sections">
@@ -33,139 +37,139 @@
 <li class="thisitem">TTesseractPageIterator</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Fields"></span><h3 class="summary">Fields</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#FHandle">FHandle</a></strong>: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#GetInitialized">GetInitialized</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list2 visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>procedure <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#CopyHandle-TessPageIterator-">CopyHandle</a></strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); virtual;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>constructor <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Create-TessPageIterator-">Create</a></strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>);</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>destructor <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Destroy">Destroy</a></strong>; override;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>procedure <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Begin_">Begin_</a></strong>;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Next-TessPageIteratorLevel-">Next</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean; virtual;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#IsAtBeginningOf-TessPageIteratorLevel-">IsAtBeginningOf</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#IsAtFinalElement-TessPageIteratorLevel-TessPageIteratorLevel-">IsAtFinalElement</a></strong>(level, element: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#BoundingBox-TessPageIteratorLevel-Integer-Integer-Integer-Integer-">BoundingBox</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out left, top, right, bottom: Integer) : boolean; overload;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#BoundingBox-TessPageIteratorLevel-TRect-">BoundingBox</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out aRect: TRect) : boolean; overload;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#BlockType">BlockType</a></strong>: <a href="uTesseractTypes.html#TessPolyBlockType">TessPolyBlockType</a>;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#GetBinaryImage-TessPageIteratorLevel-">GetBinaryImage</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : <a href="uLeptonicaPix.TLeptonicaPix.html">TLeptonicaPix</a>;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#GetImage-TessPageIteratorLevel-Integer-TLeptonicaPix-Integer-Integer-">GetImage</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; padding: Integer; const original_image: <a href="uLeptonicaPix.TLeptonicaPix.html">TLeptonicaPix</a>; out left, top: Integer) : <a href="uLeptonicaPix.TLeptonicaPix.html">TLeptonicaPix</a>;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Baseline-TessPageIteratorLevel-Integer-Integer-Integer-Integer-">Baseline</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out x1, y1, x2, y2: Integer) : boolean; overload;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Baseline-TessPageIteratorLevel-TTesseractBaseLine-">Baseline</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out aBaseline : <a href="uTesseractTypes.html#TTesseractBaseLine">TTesseractBaseLine</a>) : boolean; overload;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Orientation-TessOrientation-TessWritingDirection-TessTextlineOrder-single-">Orientation</a></strong>(out orientation_: <a href="uTesseractTypes.html#TessOrientation">TessOrientation</a>; out writing_direction: <a href="uTesseractTypes.html#TessWritingDirection">TessWritingDirection</a>; out textline_order: <a href="uTesseractTypes.html#TessTextlineOrder">TessTextlineOrder</a>; out deskew_angle: single) : boolean;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#ParagraphInfo-TessParagraphJustification-boolean-boolean-Integer-">ParagraphInfo</a></strong>(out justification: <a href="uTesseractTypes.html#TessParagraphJustification">TessParagraphJustification</a>; out is_list_item: boolean; out is_crown: boolean; out first_line_indent: Integer) : boolean;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Properties"></span><h3 class="summary">Properties</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>property <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Handle">Handle</a></strong>       : <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>    read <a href="uTesseractPageIterator.TTesseractPageIterator.html#FHandle">FHandle</a>;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>property <strong><a href="uTesseractPageIterator.TTesseractPageIterator.html#Initialized">Initialized</a></strong>  : boolean             read <a href="uTesseractPageIterator.TTesseractPageIterator.html#GetInitialized">GetInitialized</a>;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Fields</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="FHandle"></span><code><strong>FHandle</strong>: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
 <h3 class="detail">Methods</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="GetInitialized"></span><code>function <strong>GetInitialized</strong>: boolean;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="CopyHandle-TessPageIterator-"></span><code>procedure <strong>CopyHandle</strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); virtual;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Create-TessPageIterator-"></span><code>constructor <strong>Create</strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>);</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Destroy"></span><code>destructor <strong>Destroy</strong>; override;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Begin_"></span><code>procedure <strong>Begin_</strong>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -173,9 +177,9 @@
  Moves the iterator to point to the start of the page to begin an iteration. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Next-TessPageIteratorLevel-"></span><code>function <strong>Next</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean; virtual;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -191,9 +195,9 @@
 <p></p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="IsAtBeginningOf-TessPageIteratorLevel-"></span><code>function <strong>IsAtBeginningOf</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -216,9 +220,9 @@ it.IsAtBeginningOf(RIL_SYMBOL) = true</pre>
 <p> </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="IsAtFinalElement-TessPageIteratorLevel-TessPageIteratorLevel-"></span><code>function <strong>IsAtFinalElement</strong>(level, element: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -251,9 +255,9 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 <p> </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="BoundingBox-TessPageIteratorLevel-Integer-Integer-Integer-Integer-"></span><code>function <strong>BoundingBox</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out left, top, right, bottom: Integer) : boolean; overload;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -269,9 +273,9 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 <p></p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="BoundingBox-TessPageIteratorLevel-TRect-"></span><code>function <strong>BoundingBox</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out aRect: TRect) : boolean; overload;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -287,9 +291,9 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 <p></p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="BlockType"></span><code>function <strong>BlockType</strong>: <a href="uTesseractTypes.html#TessPolyBlockType">TessPolyBlockType</a>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -297,9 +301,9 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
  Returns the type of the current block. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="GetBinaryImage-TessPageIteratorLevel-"></span><code>function <strong>GetBinaryImage</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : <a href="uLeptonicaPix.TLeptonicaPix.html">TLeptonicaPix</a>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -313,9 +317,9 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 <p></p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="GetImage-TessPageIteratorLevel-Integer-TLeptonicaPix-Integer-Integer-"></span><code>function <strong>GetImage</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; padding: Integer; const original_image: <a href="uLeptonicaPix.TLeptonicaPix.html">TLeptonicaPix</a>; out left, top: Integer) : <a href="uLeptonicaPix.TLeptonicaPix.html">TLeptonicaPix</a>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -331,9 +335,9 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 <p></p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Baseline-TessPageIteratorLevel-Integer-Integer-Integer-Integer-"></span><code>function <strong>Baseline</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out x1, y1, x2, y2: Integer) : boolean; overload;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -351,9 +355,9 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 <p></p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Baseline-TessPageIteratorLevel-TTesseractBaseLine-"></span><code>function <strong>Baseline</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>; out aBaseline : <a href="uTesseractTypes.html#TTesseractBaseLine">TTesseractBaseLine</a>) : boolean; overload;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -371,9 +375,9 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 <p></p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Orientation-TessOrientation-TessWritingDirection-TessTextlineOrder-single-"></span><code>function <strong>Orientation</strong>(out orientation_: <a href="uTesseractTypes.html#TessOrientation">TessOrientation</a>; out writing_direction: <a href="uTesseractTypes.html#TessWritingDirection">TessWritingDirection</a>; out textline_order: <a href="uTesseractTypes.html#TessTextlineOrder">TessTextlineOrder</a>; out deskew_angle: single) : boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -391,9 +395,9 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 <p></p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="ParagraphInfo-TessParagraphJustification-boolean-boolean-Integer-"></span><code>function <strong>ParagraphInfo</strong>(out justification: <a href="uTesseractTypes.html#TessParagraphJustification">TessParagraphJustification</a>; out is_list_item: boolean; out is_crown: boolean; out first_line_indent: Integer) : boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -414,17 +418,17 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
 </td></tr>
 </table>
 <h3 class="detail">Properties</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Handle"></span><code>property <strong>Handle</strong>       : <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>    read <a href="uTesseractPageIterator.TTesseractPageIterator.html#FHandle">FHandle</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Initialized"></span><code>property <strong>Initialized</strong>  : boolean             read <a href="uTesseractPageIterator.TTesseractPageIterator.html#GetInitialized">GetInitialized</a>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -432,6 +436,6 @@ it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</pre>
  Returns true when this instance is fully initialized. </p>
 </td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.5.snapshot</a>. </em>
 </span>
 </body></html>

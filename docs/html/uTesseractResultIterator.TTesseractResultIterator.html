@@ -3,14 +3,18 @@
 <head>
 <title>tesseract4delphi: uTesseractResultIterator: Class TTesseractResultIterator</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="PasDoc 0.17.0.snapshot">
+<meta name="generator" content="PasDoc 1.0.5.snapshot">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="StyleSheet" type="text/css" href="bootstrap.min.css">
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
-</head>
+<style type="text/css">
+body { margin: 0.5em; }
+.badge { padding: 0.1em 0.5em; color: white; }
+</style></head>
 <body>
 <span id="TTesseractResultIterator"></span><h1 class="cio">Class TTesseractResultIterator</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section">Fields</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Properties</a></div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Properties</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="unit">Unit</h2>
 <p class="unitlink">
 <a href="uTesseractResultIterator.html">uTesseractResultIterator</a></p>
@@ -34,99 +38,99 @@
 <li class="thisitem">TTesseractResultIterator</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#GetPageIterator">GetPageIterator</a></strong>: <a href="uTesseractPageIterator.TTesseractPageIterator.html">TTesseractPageIterator</a>;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list2 visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#GetChoiceIterator">GetChoiceIterator</a></strong>: <a href="uTesseractChoiceIterator.TTesseractChoiceIterator.html">TTesseractChoiceIterator</a>;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>procedure <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#CopyHandle-TessPageIterator-">CopyHandle</a></strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); override;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#Next-TessPageIteratorLevel-">Next</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean; override;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#GetText-TessPageIteratorLevel-">GetText</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : string;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#Confidence-TessPageIteratorLevel-">Confidence</a></strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : single;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#WordRecognitionLanguage">WordRecognitionLanguage</a></strong>: string;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#WordFontAttributes-boolean-boolean-boolean-boolean-boolean-boolean-Integer-Integer-">WordFontAttributes</a></strong>(out is_bold, is_italic, is_underlined, is_monospace, is_serif, is_smallcaps: boolean; out pointsize, font_id: Integer) : string;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#WordIsFromDictionary">WordIsFromDictionary</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#WordIsNumeric">WordIsNumeric</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#SymbolIsSuperscript">SymbolIsSuperscript</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#SymbolIsSubscript">SymbolIsSubscript</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#SymbolIsDropcap">SymbolIsDropcap</a></strong>: boolean;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Properties"></span><h3 class="summary">Properties</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>property <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#PageIterator">PageIterator</a></strong>     : <a href="uTesseractPageIterator.TTesseractPageIterator.html">TTesseractPageIterator</a>     read  <a href="uTesseractResultIterator.TTesseractResultIterator.html#GetPageIterator">GetPageIterator</a>;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>property <strong><a href="uTesseractResultIterator.TTesseractResultIterator.html#ChoiceIterator">ChoiceIterator</a></strong>   : <a href="uTesseractChoiceIterator.TTesseractChoiceIterator.html">TTesseractChoiceIterator</a>   read  <a href="uTesseractResultIterator.TTesseractResultIterator.html#GetChoiceIterator">GetChoiceIterator</a>;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Methods</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="GetPageIterator"></span><code>function <strong>GetPageIterator</strong>: <a href="uTesseractPageIterator.TTesseractPageIterator.html">TTesseractPageIterator</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="GetChoiceIterator"></span><code>function <strong>GetChoiceIterator</strong>: <a href="uTesseractChoiceIterator.TTesseractChoiceIterator.html">TTesseractChoiceIterator</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="CopyHandle-TessPageIterator-"></span><code>procedure <strong>CopyHandle</strong>(aHandle: <a href="uTesseractTypes.html#TessPageIterator">TessPageIterator</a>); override;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Next-TessPageIteratorLevel-"></span><code>function <strong>Next</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : boolean; override;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -142,9 +146,9 @@
 <p></p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="GetText-TessPageIteratorLevel-"></span><code>function <strong>GetText</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : string;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -152,9 +156,9 @@
  Returns the text string for the current object at the given level. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Confidence-TessPageIteratorLevel-"></span><code>function <strong>Confidence</strong>(level: <a href="uTesseractTypes.html#TessPageIteratorLevel">TessPageIteratorLevel</a>) : single;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -162,9 +166,9 @@
  Returns the mean confidence of the current object at the given level. The number should be interpreted as a percent probability. (0.0f-100.0f) </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="WordRecognitionLanguage"></span><code>function <strong>WordRecognitionLanguage</strong>: string;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -172,9 +176,9 @@
  Return the name of the language used to recognize this word. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="WordFontAttributes-boolean-boolean-boolean-boolean-boolean-boolean-Integer-Integer-"></span><code>function <strong>WordFontAttributes</strong>(out is_bold, is_italic, is_underlined, is_monospace, is_serif, is_smallcaps: boolean; out pointsize, font_id: Integer) : string;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -188,9 +192,9 @@
 <p></p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="WordIsFromDictionary"></span><code>function <strong>WordIsFromDictionary</strong>: boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -198,9 +202,9 @@
  Returns true if the current word was found in a dictionary. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="WordIsNumeric"></span><code>function <strong>WordIsNumeric</strong>: boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -208,9 +212,9 @@
  Returns true if the current word is numeric. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="SymbolIsSuperscript"></span><code>function <strong>SymbolIsSuperscript</strong>: boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -218,9 +222,9 @@
  Returns true if the current symbol is a superscript. If iterating at a higher level object than symbols, eg words, then this will return the attributes of the first symbol in that word. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="SymbolIsSubscript"></span><code>function <strong>SymbolIsSubscript</strong>: boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -228,9 +232,9 @@
  Returns true if the current symbol is a subscript. If iterating at a higher level object than symbols, eg words, then this will return the attributes of the first symbol in that word. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="SymbolIsDropcap"></span><code>function <strong>SymbolIsDropcap</strong>: boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -239,9 +243,9 @@
 </td></tr>
 </table>
 <h3 class="detail">Properties</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="PageIterator"></span><code>property <strong>PageIterator</strong>     : <a href="uTesseractPageIterator.TTesseractPageIterator.html">TTesseractPageIterator</a>     read  <a href="uTesseractResultIterator.TTesseractResultIterator.html#GetPageIterator">GetPageIterator</a>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -249,9 +253,9 @@
  Returns a TTesseractPageIterator instance. It's a copy of this iterator. It must be destroyed. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="ChoiceIterator"></span><code>property <strong>ChoiceIterator</strong>   : <a href="uTesseractChoiceIterator.TTesseractChoiceIterator.html">TTesseractChoiceIterator</a>   read  <a href="uTesseractResultIterator.TTesseractResultIterator.html#GetChoiceIterator">GetChoiceIterator</a>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -259,6 +263,6 @@
  Returns a new TTesseractChoiceIterator instance. It must be destroyed. </p>
 </td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.5.snapshot</a>. </em>
 </span>
 </body></html>

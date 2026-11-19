@@ -3,10 +3,14 @@
 <head>
 <title>tesseract4delphi: uTesseractMonitor: Class TTesseractMonitor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="PasDoc 0.17.0.snapshot">
+<meta name="generator" content="PasDoc 1.0.5.snapshot">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="StyleSheet" type="text/css" href="bootstrap.min.css">
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
-</head>
+<style type="text/css">
+body { margin: 0.5em; }
+.badge { padding: 0.1em 0.5em; color: white; }
+</style></head>
 <body>
 <span id="TTesseractMonitor"></span><h1 class="cio">Class TTesseractMonitor</h1>
 <div class="sections">
@@ -39,131 +43,131 @@
 <li class="thisitem">TTesseractMonitor</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Fields"></span><h3 class="summary">Fields</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uTesseractMonitor.TTesseractMonitor.html#FHandle">FHandle</a></strong>: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractMonitor.TTesseractMonitor.html#GetInitialized">GetInitialized</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list2 visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractMonitor.TTesseractMonitor.html#GetCancelThis">GetCancelThis</a></strong>: Pointer;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractMonitor.TTesseractMonitor.html#GetProgress">GetProgress</a></strong>: integer;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<tr class="list2 visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>procedure <strong><a href="uTesseractMonitor.TTesseractMonitor.html#SetCancelThis-Pointer-">SetCancelThis</a></strong>(cancelThis : Pointer);</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>constructor <strong><a href="uTesseractMonitor.TTesseractMonitor.html#Create">Create</a></strong>;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>destructor <strong><a href="uTesseractMonitor.TTesseractMonitor.html#Destroy">Destroy</a></strong>; override;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractMonitor.TTesseractMonitor.html#SetCancelFunc-TessCancelFunc-">SetCancelFunc</a></strong>(const cancelFunc : <a href="uTesseractTypes.html#TessCancelFunc">TessCancelFunc</a>) : boolean;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractMonitor.TTesseractMonitor.html#SetProgressFunc-TessProgressFunc-">SetProgressFunc</a></strong>(const progressFunc : <a href="uTesseractTypes.html#TessProgressFunc">TessProgressFunc</a>) : boolean;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uTesseractMonitor.TTesseractMonitor.html#SetDeadlineMSecs-Integer-">SetDeadlineMSecs</a></strong>(deadline : Integer) : boolean;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Properties"></span><h3 class="summary">Properties</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>property <strong><a href="uTesseractMonitor.TTesseractMonitor.html#Handle">Handle</a></strong>       : <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>         read <a href="uTesseractMonitor.TTesseractMonitor.html#FHandle">FHandle</a>;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>property <strong><a href="uTesseractMonitor.TTesseractMonitor.html#Initialized">Initialized</a></strong>  : boolean             read <a href="uTesseractMonitor.TTesseractMonitor.html#GetInitialized">GetInitialized</a>;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>property <strong><a href="uTesseractMonitor.TTesseractMonitor.html#CancelThis">CancelThis</a></strong>   : Pointer             read <a href="uTesseractMonitor.TTesseractMonitor.html#GetCancelThis">GetCancelThis</a>      write <a href="uTesseractMonitor.TTesseractMonitor.html#SetCancelThis-Pointer-">SetCancelThis</a>;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>property <strong><a href="uTesseractMonitor.TTesseractMonitor.html#Progress">Progress</a></strong>     : integer             read <a href="uTesseractMonitor.TTesseractMonitor.html#GetProgress">GetProgress</a>;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Fields</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="FHandle"></span><code><strong>FHandle</strong>: <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
 <h3 class="detail">Methods</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="GetInitialized"></span><code>function <strong>GetInitialized</strong>: boolean;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="GetCancelThis"></span><code>function <strong>GetCancelThis</strong>: Pointer;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="GetProgress"></span><code>function <strong>GetProgress</strong>: integer;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="SetCancelThis-Pointer-"></span><code>procedure <strong>SetCancelThis</strong>(cancelThis : Pointer);</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Destroy"></span><code>destructor <strong>Destroy</strong>; override;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="SetCancelFunc-TessCancelFunc-"></span><code>function <strong>SetCancelFunc</strong>(const cancelFunc : <a href="uTesseractTypes.html#TessCancelFunc">TessCancelFunc</a>) : boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -171,9 +175,9 @@
  Sets the Cancel function. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="SetProgressFunc-TessProgressFunc-"></span><code>function <strong>SetProgressFunc</strong>(const progressFunc : <a href="uTesseractTypes.html#TessProgressFunc">TessProgressFunc</a>) : boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -181,9 +185,9 @@
  Sets the progress function, which is called whenever progress increases. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="SetDeadlineMSecs-Integer-"></span><code>function <strong>SetDeadlineMSecs</strong>(deadline : Integer) : boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -192,17 +196,17 @@
 </td></tr>
 </table>
 <h3 class="detail">Properties</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Handle"></span><code>property <strong>Handle</strong>       : <a href="uTesseractTypes.html#PETEXT_DESC">PETEXT_DESC</a>         read <a href="uTesseractMonitor.TTesseractMonitor.html#FHandle">FHandle</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Initialized"></span><code>property <strong>Initialized</strong>  : boolean             read <a href="uTesseractMonitor.TTesseractMonitor.html#GetInitialized">GetInitialized</a>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -210,9 +214,9 @@
  Returns true when this instance is fully initialized. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="CancelThis"></span><code>property <strong>CancelThis</strong>   : Pointer             read <a href="uTesseractMonitor.TTesseractMonitor.html#GetCancelThis">GetCancelThis</a>      write <a href="uTesseractMonitor.TTesseractMonitor.html#SetCancelThis-Pointer-">SetCancelThis</a>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -220,9 +224,9 @@
  Pointer used as an argument in the Cancel function. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Progress"></span><code>property <strong>Progress</strong>     : integer             read <a href="uTesseractMonitor.TTesseractMonitor.html#GetProgress">GetProgress</a>;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -230,6 +234,6 @@
  Percent complete increasing (0-100). Progress monitor covers word recognition and it does not cover layout analysis. </p>
 </td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.5.snapshot</a>. </em>
 </span>
 </body></html>

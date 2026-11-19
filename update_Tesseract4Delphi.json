@@ -2,9 +2,9 @@
   "UpdateLazPackages" : [
     {
       "ForceNotify" : true,
-      "InternalVersion" : 15,
+      "InternalVersion" : 16,
       "Name" : "tesseract4delphi.lpk",
-      "Version" : "1.2.4"
+      "Version" : "1.2.5"
     }
   ],
   "UpdatePackageData" : {
